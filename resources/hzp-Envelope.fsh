@@ -1,4 +1,4 @@
-Alias: $nl-core-Problem = http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem
+Alias: $nl-core-Problem = http://nictiz.nl/fhir/StructureDefinition/hzp-Core
 
 Profile: HzpEnvelope
 Parent: ServiceRequest
@@ -15,10 +15,8 @@ Title: "hzp Envelope"
 * supportingInfo ^slicing.discriminator.path = "resolve()"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo contains
-    facilitiesNeededForConsultation 0..* and
-    core 0..* and
-    problem 0..*
-* supportingInfo[problem].type only $nl-core-Problem
+    core 0..*
+* supportingInfo[core].type only $hzp-Core
 
 Mapping: hzp-Envelope
 Id: hzp-Envelope
@@ -29,11 +27,10 @@ Target: "https://decor.nictiz.nl/art-decor/decor-datasets--hg"
 * category -> "hg-dataelement-1685" "TypeBericht"
 * priority -> "hg-dataelement-1702" "Urgentie"
 * orderDetail -> "hg-dataelement-1696" "Zorgpad"
+* orderDetail -> "hg-dataelement-1696" "VoorzieningenNodigBijConsult"
 * subject -> "hg-dataelement-1679" "Patiëntgegevens"
 * authoredOn -> "hg-dataelement-1684" "DatumTijdVerzenden"
 * requester -> "hg-dataelement-1678" "Verzender"
 * performer -> "hg-dataelement-1680" "Ontvanger"
-* supportingInfo[facilitiesNeededForConsultation] -> "hg-dataelement-1708" "VoorzieningenNodigBijConsult"
 * supportingInfo[core] -> "hg-dataelement-1709" "Kern"
-* supportingInfo[problem] -> "hg-dataelement-1886" "Probleem"
 * note -> "hg-dataelement-1864" "ToelichtingAfbrekenBericht"
