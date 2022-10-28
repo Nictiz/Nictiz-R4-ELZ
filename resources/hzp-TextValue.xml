@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/hzp-StringValue" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hzp-TextValue" />
   <name value="TextValue" />
   <status value="draft" />
   <publisher value="Nictiz" />
@@ -12,7 +12,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Extension to capture the string values for the hzp-Core elements." />
+  <description value="Extension to capture the Text (string) values for the hzp-Core elements." />
   <copyright value="CC0" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
