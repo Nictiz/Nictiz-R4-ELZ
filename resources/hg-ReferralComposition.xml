@@ -7,7 +7,7 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
         <valueCode value="not-classified" />
     </extension>
-    <url value="http://example.org/StructureDefinition/hg-ReferralComposition" />
+    <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
     <version value="1.0.0" />
     <name value="HgReferralComposition" />
     <title value="hg ReferralComposition" />
