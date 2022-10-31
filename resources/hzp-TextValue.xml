@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/hzp-TextValue" />
-  <name value="TextValue" />
-  <status value="draft" />
-  <publisher value="Nictiz" />
-  <contact>
-    <name value="Nictiz" />
-    <telecom>
-      <system value="url" />
-      <value value="https://www.nictiz.nl" />
-      <use value="work" />
-    </telecom>
-  </contact>
-  <description value="Extension to capture the Text (string) values for the hzp-Core elements." />
-  <copyright value="CC0" />
-  <fhirVersion value="4.0.1" />
-  <kind value="complex-type" />
-  <abstract value="false" />
-  <context>
-    <type value="element" />
-    <expression value="Composition.section" />
-  </context>
-  <type value="Extension" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/hzp-TextValue" />
-    </element>
-    <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-  </differential>
+    <id value="hg-TextValue" />
+    <url value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+    <name value="HgTextValue" />
+    <title value="hg TextValue" />
+    <status value="draft" />
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="url" />
+            <value value="https://www.nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="Extension to capture the values for the various text (string) based elements in the data set." />
+    <copyright value="CC0" />
+    <fhirVersion value="4.0.1" />
+    <kind value="complex-type" />
+    <abstract value="false" />
+    <context>
+        <type value="element" />
+        <expression value="Composition.section" />
+    </context>
+    <type value="Extension" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Extension.url">
+            <path value="Extension.url" />
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+        </element>
+        <element id="Extension.value[x]">
+            <path value="Extension.value[x]" />
+            <type>
+                <code value="string" />
+            </type>
+        </element>
+    </differential>
 </StructureDefinition>

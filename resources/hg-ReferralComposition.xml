@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralComposition" />
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
+        <valueString value="Foundation.Documents" />
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
+        <valueCode value="not-classified" />
+    </extension>
+    <url value="http://example.org/StructureDefinition/hg-ReferralComposition" />
+    <version value="1.0.0" />
+    <name value="HgReferralComposition" />
+    <title value="hg ReferralComposition" />
+    <status value="draft" />
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="url" />
+            <value value="https://www.nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="tbd" />
+    <fhirVersion value="4.0.1" />
+    <mapping>
+        <identity value="workflow" />
+        <uri value="http://hl7.org/fhir/workflow" />
+        <name value="Workflow Pattern" />
+    </mapping>
+    <mapping>
+        <identity value="rim" />
+        <uri value="http://hl7.org/v3" />
+        <name value="RIM Mapping" />
+    </mapping>
+    <mapping>
+        <identity value="cda" />
+        <uri value="http://hl7.org/v3/cda" />
+        <name value="CDA (R2)" />
+    </mapping>
+    <mapping>
+        <identity value="fhirdocumentreference" />
+        <uri value="http://hl7.org/fhir/documentreference" />
+        <name value="FHIR DocumentReference" />
+    </mapping>
+    <mapping>
+        <identity value="w5" />
+        <uri value="http://hl7.org/fhir/fivews" />
+        <name value="FiveWs Pattern Mapping" />
+    </mapping>
+    <mapping>
+        <identity value="hg-ReferralComposition-to-Envelop" />
+        <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
+        <name value="Huisarts- en paramedische overdrachten - Envelop" />
+        <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
+    </mapping>
+    <mapping>
+        <identity value="hg-ReferralComposition-to-Kern" />
+        <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
+        <name value="Huisarts- en paramedische overdrachten - Kern" />
+        <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
+    </mapping>
+    <kind value="resource" />
+    <abstract value="false" />
+    <type value="Composition" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Composition.type">
+            <path value="Composition.type" />
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://loinc.org" />
+                    <code value="57133-1" />
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Composition.subject">
+            <path value="Composition.subject" />
+            <min value="1" />
+            <type>
+                <code value="Reference" />
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+            </type>
+        </element>
+        <element id="Composition.section">
+            <path value="Composition.section" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="coding.code" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+        </element>
+        <element id="Composition.section:carePath">
+            <path value="Composition.section" />
+            <sliceName value="carePath" />
+            <mapping>
+                <identity value="hg-ReferralComposition-to-Envelop" />
+                <map value="hg-dataelement-1696" />
+                <comment value="Zorgpad" />
+            </mapping>
+        </element>
+        <element id="Composition.section:carePath.extension">
+            <path value="Composition.section.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Composition.section:carePath.extension:textValue">
+            <path value="Composition.section.extension" />
+            <sliceName value="textValue" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            </type>
+            <isModifier value="false" />
+        </element>
+        <element id="Composition.section:requiredConsultationFacilities">
+            <path value="Composition.section" />
+            <sliceName value="requiredConsultationFacilities" />
+            <mapping>
+                <identity value="hg-ReferralComposition-to-Envelop" />
+                <map value="hg-dataelement-1708" />
+                <comment value="VoorzieningenNodigBijConsult" />
+            </mapping>
+        </element>
+        <element id="Composition.section:requiredConsultationFacilities.extension">
+            <path value="Composition.section.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Composition.section:requiredConsultationFacilities.extension:textValue">
+            <path value="Composition.section.extension" />
+            <sliceName value="textValue" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            </type>
+            <isModifier value="false" />
+        </element>
+        <element id="Composition.section:referralReason">
+            <path value="Composition.section" />
+            <sliceName value="referralReason" />
+            <mapping>
+                <identity value="hg-ReferralComposition-to-Kern" />
+                <map value="hg-dataelement-1872" />
+                <comment value="RedenBericht" />
+            </mapping>
+        </element>
+        <element id="Composition.section:referralReason.extension">
+            <path value="Composition.section.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Composition.section:referralReason.extension:textValue">
+            <path value="Composition.section.extension" />
+            <sliceName value="textValue" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            </type>
+            <isModifier value="false" />
+        </element>
+        <element id="Composition.section:referralReason.code">
+            <path value="Composition.section.code" />
+            <min value="1" />
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct" />
+                    <code value="440378000" />
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Composition.section:referralReason.section">
+            <path value="Composition.section.section" />
+            <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
+        </element>
+        <element id="Composition.section:setTreatment">
+            <path value="Composition.section" />
+            <sliceName value="setTreatment" />
+            <mapping>
+                <identity value="hg-ReferralComposition-to-Kern" />
+                <map value="hg-dataelement-1711" />
+                <comment value="IngesteldeBehandeling" />
+            </mapping>
+        </element>
+        <element id="Composition.section:setTreatment.extension">
+            <path value="Composition.section.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Composition.section:setTreatment.extension:textValue">
+            <path value="Composition.section.extension" />
+            <sliceName value="textValue" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            </type>
+            <isModifier value="false" />
+        </element>
+        <element id="Composition.section:setTreatment.code">
+            <path value="Composition.section.code" />
+            <min value="1" />
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct" />
+                    <code value="108631000146107" />
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Composition.section:setTreatment.section">
+            <path value="Composition.section.section" />
+            <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
+        </element>
+        <element id="Composition.section:proposedProcedure">
+            <path value="Composition.section" />
+            <sliceName value="proposedProcedure" />
+            <mapping>
+                <identity value="hg-ReferralComposition-to-Kern" />
+                <map value="hg-dataelement-1712" />
+                <comment value="ProcedureVoorstel" />
+            </mapping>
+        </element>
+        <element id="Composition.section:proposedProcedure.extension">
+            <path value="Composition.section.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Composition.section:proposedProcedure.extension:textValue">
+            <path value="Composition.section.extension" />
+            <sliceName value="textValue" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            </type>
+            <isModifier value="false" />
+        </element>
+        <element id="Composition.section:furtherImportant">
+            <path value="Composition.section" />
+            <sliceName value="furtherImportant" />
+            <mapping>
+                <identity value="hg-ReferralComposition-to-Kern" />
+                <map value="hg-dataelement-1713" />
+                <comment value="VerderVanBelang" />
+            </mapping>
+        </element>
+        <element id="Composition.section:furtherImportant.extension">
+            <path value="Composition.section.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Composition.section:furtherImportant.extension:textValue">
+            <path value="Composition.section.extension" />
+            <sliceName value="textValue" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            </type>
+            <isModifier value="false" />
+        </element>
+        <element id="Composition.section:furtherImportant.code">
+            <path value="Composition.section.code" />
+            <min value="1" />
+            <patternCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct" />
+                    <code value="159121000146100" />
+                </coding>
+            </patternCodeableConcept>
+        </element>
+        <element id="Composition.section:furtherImportant.section">
+            <path value="Composition.section.section" />
+            <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
+        </element>
+        <element id="Composition.section:questionResponse">
+            <path value="Composition.section" />
+            <sliceName value="questionResponse" />
+            <mapping>
+                <identity value="hg-ReferralComposition-to-Kern" />
+                <map value="hg-dataelement-17" />
+                <comment value="VerderVanBelang" />
+            </mapping>
+        </element>
+        <element id="Composition.section:questionResponse.extension">
+            <path value="Composition.section.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="Composition.section:questionResponse.extension:textValue">
+            <path value="Composition.section.extension" />
+            <sliceName value="textValue" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            </type>
+            <isModifier value="false" />
+        </element>
+    </differential>
+</StructureDefinition>

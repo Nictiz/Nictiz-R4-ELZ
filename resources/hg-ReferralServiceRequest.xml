@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest" />
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
+        <valueString value="Clinical.Care Provision" />
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
+        <valueCode value="patient" />
+    </extension>
+    <url value="http://example.org/StructureDefinition/hg-ReferralServiceRequest" />
+    <version value="1.0.0" />
+    <name value="HgReferralServiceRequest" />
+    <title value="hg ReferralServiceRequest" />
+    <status value="draft" />
+    <publisher value="Nictiz" />
+    <contact>
+        <name value="Nictiz" />
+        <telecom>
+            <system value="url" />
+            <value value="https://www.nictiz.nl" />
+            <use value="work" />
+        </telecom>
+    </contact>
+    <description value="tbd" />
+    <fhirVersion value="4.0.1" />
+    <mapping>
+        <identity value="workflow" />
+        <uri value="http://hl7.org/fhir/workflow" />
+        <name value="Workflow Pattern" />
+    </mapping>
+    <mapping>
+        <identity value="v2" />
+        <uri value="http://hl7.org/v2" />
+        <name value="HL7 v2 Mapping" />
+    </mapping>
+    <mapping>
+        <identity value="rim" />
+        <uri value="http://hl7.org/v3" />
+        <name value="RIM Mapping" />
+    </mapping>
+    <mapping>
+        <identity value="w5" />
+        <uri value="http://hl7.org/fhir/fivews" />
+        <name value="FiveWs Pattern Mapping" />
+    </mapping>
+    <mapping>
+        <identity value="quick" />
+        <uri value="http://siframework.org/cqf" />
+        <name value="Quality Improvement and Clinical Knowledge (QUICK)" />
+    </mapping>
+    <mapping>
+        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
+        <name value="Huisarts- en paramedische overdrachten - Envelop" />
+        <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
+    </mapping>
+    <kind value="resource" />
+    <abstract value="false" />
+    <type value="ServiceRequest" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="ServiceRequest.intent">
+            <path value="ServiceRequest.intent" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1863" />
+                <comment value="VervolgActieOpTypeBericht" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.category">
+            <path value="ServiceRequest.category" />
+            <min value="1" />
+            <max value="1" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1685" />
+                <comment value="TypeBericht" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.priority">
+            <path value="ServiceRequest.priority" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1702" />
+                <comment value="Urgentie" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.subject">
+            <path value="ServiceRequest.subject" />
+            <type>
+                <code value="Reference" />
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+            </type>
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1679" />
+                <comment value="Patiëntgegevens" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.authoredOn">
+            <path value="ServiceRequest.authoredOn" />
+            <min value="1" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1684" />
+                <comment value="DatumTijdVerzenden" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.requester">
+            <path value="ServiceRequest.requester" />
+            <min value="1" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1678" />
+                <comment value="Verzender" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.performer">
+            <path value="ServiceRequest.performer" />
+            <min value="1" />
+            <max value="1" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1680" />
+                <comment value="Ontvanger" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.supportingInfo">
+            <path value="ServiceRequest.supportingInfo" />
+            <type>
+                <code value="Reference" />
+                <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
+            </type>
+        </element>
+        <element id="ServiceRequest.note">
+            <path value="ServiceRequest.note" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1864" />
+                <comment value="ToelichtingAfbrekenBericht" />
+            </mapping>
+        </element>
+    </differential>
+</StructureDefinition>
