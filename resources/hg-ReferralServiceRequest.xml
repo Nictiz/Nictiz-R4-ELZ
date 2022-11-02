@@ -7,7 +7,7 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
         <valueCode value="patient" />
     </extension>
-    <url value="http://example.org/StructureDefinition/hg-ReferralServiceRequest" />
+    <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest" />
     <version value="1.0.0" />
     <name value="HgReferralServiceRequest" />
     <title value="hg ReferralServiceRequest" />
