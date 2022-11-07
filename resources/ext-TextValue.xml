@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="hg-TextValue" />
-    <url value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
-    <name value="HgTextValue" />
-    <title value="hg TextValue" />
+    <id value="ext-TextValue" />
+    <url value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
+    <name value="ExtTextValue" />
+    <title value="ext TextValue" />
     <status value="draft" />
     <publisher value="Nictiz" />
     <contact>
@@ -15,7 +15,7 @@
         </telecom>
     </contact>
     <description value="Extension to capture the values for the various text (string) based elements in the data set." />
-    <copyright value="CC0" />
+    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
     <fhirVersion value="4.0.1" />
     <kind value="complex-type" />
     <abstract value="false" />
@@ -29,7 +29,7 @@
     <differential>
         <element id="Extension.url">
             <path value="Extension.url" />
-            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+            <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
         </element>
         <element id="Extension.value[x]">
             <path value="Extension.value[x]" />
