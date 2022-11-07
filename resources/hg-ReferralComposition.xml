@@ -8,7 +8,6 @@
         <valueCode value="not-classified" />
     </extension>
     <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
-    <version value="1.0.0" />
     <name value="HgReferralComposition" />
     <title value="hg ReferralComposition" />
     <status value="draft" />
@@ -22,6 +21,7 @@
         </telecom>
     </contact>
     <description value="tbd" />
+    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
     <fhirVersion value="4.0.1" />
     <mapping>
         <identity value="workflow" />
@@ -121,9 +121,13 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
             </type>
             <isModifier value="false" />
+        </element>
+        <element id="Composition.section:carePath.section">
+            <path value="Composition.section.section" />
+            <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
         </element>
         <element id="Composition.section:requiredConsultationFacilities">
             <path value="Composition.section" />
@@ -152,9 +156,13 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
             </type>
             <isModifier value="false" />
+        </element>
+        <element id="Composition.section:requiredConsultationFacilities.section">
+            <path value="Composition.section.section" />
+            <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
         </element>
         <element id="Composition.section:referralReason">
             <path value="Composition.section" />
@@ -183,7 +191,7 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
             </type>
             <isModifier value="false" />
         </element>
@@ -228,7 +236,7 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
             </type>
             <isModifier value="false" />
         </element>
@@ -273,9 +281,13 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
             </type>
             <isModifier value="false" />
+        </element>
+        <element id="Composition.section:proposedProcedure.section">
+            <path value="Composition.section.section" />
+            <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
         </element>
         <element id="Composition.section:furtherImportant">
             <path value="Composition.section" />
@@ -304,7 +316,7 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
             </type>
             <isModifier value="false" />
         </element>
@@ -349,9 +361,13 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-TextValue" />
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
             </type>
             <isModifier value="false" />
+        </element>
+        <element id="Composition.section:questionResponse.section">
+            <path value="Composition.section.section" />
+            <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
         </element>
     </differential>
 </StructureDefinition>
