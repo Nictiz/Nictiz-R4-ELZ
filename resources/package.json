@@ -1,11 +1,26 @@
 {
-  "name": "resources",
-  "version": "0.1.0",
-  "description": "Put a description here",
+  "name": "nictiz.fhir.nl.r4.gpcareparamedicalcare",
+  "version": "0.1.0-dev",
+  "homepage": "https://informatiestandaarden.nictiz.nl/wiki/Vdraft/FHIR_GPCare_ParamedicalCare",
+  "title": "FHIR implementation of GP care and Paramedical care",
+  "description": "NL package of FHIR R4 conformance resources for GP care and Paramedical care.",
   "dependencies": {
-    "nictiz.fhir.nl.r4.nl-core": "0.6.0-beta.2"
+    "nictiz.fhir.nl.r4.nl-core": "0.6.0-beta.2",
+    "hl7.fhir.r4.core": "4.0.x"
   },
   "fhirVersions": [
     "4.0.1"
-  ]
+  ],
+  "keywords": [
+    "nl",
+    "Nictiz"
+  ],
+  "author": "Nictiz",
+  "maintainers": [
+    {
+      "name": "Nictiz",
+      "url": "https://www.nictiz.nl"
+    }
+  ],
+  "license": "CC0-1.0"
 }
