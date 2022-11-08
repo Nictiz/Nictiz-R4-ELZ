@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralComposition-01"/>
+    <status value="final"/>
+    <type>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="57133-1"/>
+            <display value="Referral note"/>
+        </coding>
+    </type>
+    <subject>
+        <reference value="Patient/hg-ReferralServiceRequest-01-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Marijne van XXX_Prins"/>
+    </subject>
+    <date value="2022-10-05"/>
+    <author>
+        <reference value="PractitionerRole/hg-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. B.A. van Galen"/>
+    </author>
+    <title value="Referral note"/>
+    <section>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+            <valueString value="Ik verwijs mevrouw voor knieklachten links. Sinds 3 maanden ontstaan na periode van overbelasting. Beeld mijns inziens passend bij gonartrose."/>
+        </extension>
+        <title value="Reden bericht"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="440378000"/>
+                <display value="Referral for (observable entity)"/>
+            </coding>
+        </code>
+        <text>
+            <status value="extensions"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">Reden bericht: L15 Knie symptomen/klachten, Ik verwijs mevrouw voor knieklachten links. Sinds 3 maanden ontstaan na periode van overbelasting. Beeld mijns inziens passend bij gonartrose.</div>
+        </text>
+        <entry>
+            <reference value="Condition/hg-ReferralServiceRequest-01-Condition-01"/>
+            <type value="Condition"/>
+            <display value="L15 Knie symptomen/klachten"/>
+        </entry>
+    </section>
+    <section>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+            <valueString value="paracetamol indien nodig"/>
+        </extension>
+        <title value="Ingestelde behandeling"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="108631000146107"/>
+                <display value="behandeling lopende (situatie)"/>
+            </coding>
+        </code>
+        <text>
+            <status value="extensions"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">Ingestelde behandeling: paracetamol indien nodig</div>
+        </text>
+    </section>
+    <section>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+            <valueString value="graag uw fysiotherapeutische diagnose en behandeling, indien na 3 maanden geen verbetering retour voor eventuele doorverwijzing naar orthopeed"/>
+        </extension>
+        <title value="Procedurevoorstel"/>
+        <text>
+            <status value="extensions"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">Procedurevoorstel: graag uw fysiotherapeutische diagnose en behandeling, indien na 3 maanden geen verbetering retour voor eventuele doorverwijzing naar orthopeed</div>
+        </text>
+    </section>
+    <section>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+            <valueString value="Mevr. is ook onder behandeling voor COPD Gold II."/>
+        </extension>
+        <title value="Verder van belang"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="159121000146100"/>
+                <display value="toelichting op voorgesteld beleid (waarneembare entiteit)"/>
+            </coding>
+        </code>
+        <text>
+            <status value="extensions"/>
+            <div xmlns="http://www.w3.org/1999/xhtml">Verder van belang: Mevr. is ook onder behandeling voor COPD Gold II.</div>
+        </text>
+    </section>
+</Composition>
