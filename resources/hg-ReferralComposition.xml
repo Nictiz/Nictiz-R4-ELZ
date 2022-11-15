@@ -235,7 +235,7 @@
             <path value="Composition.section.extension.value[x]" />
             <mapping>
                 <identity value="hg-ReferralComposition-to-Kern" />
-                <map value="hg-dataelement-1872" />
+                <map value="hg-dataelement-1710" />
                 <comment value="RedenBericht" />
             </mapping>
         </element>
@@ -275,7 +275,7 @@
             <max value="1" />
             <mapping>
                 <identity value="hg-ReferralComposition-to-Kern" />
-                <map value="hg-dataelement-1872" />
+                <map value="hg-dataelement-1886" />
                 <comment value="Probleem" />
             </mapping>
         </element>
