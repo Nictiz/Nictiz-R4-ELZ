@@ -35,13 +35,54 @@
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
     <derivation value="constraint" />
     <differential>
-        <element id="ServiceRequest.intent">
-            <path value="ServiceRequest.intent" />
+        <element id="ServiceRequest.extension">
+            <path value="ServiceRequest.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+            <min value="0" />
+        </element>
+        <element id="ServiceRequest.extension:commentRevokeReason">
+            <path value="ServiceRequest.extension" />
+            <sliceName value="commentRevokeReason" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/StructureDefinition/request-statusReason" />
+            </type>
+            <isModifier value="false" />
+        </element>
+        <element id="ServiceRequest.extension:commentRevokeReason.value[x].coding">
+            <path value="ServiceRequest.extension.value[x].coding" />
+            <max value="0" />
+        </element>
+        <element id="ServiceRequest.extension:commentRevokeReason.value[x].text">
+            <path value="ServiceRequest.extension.value[x].text" />
+            <short value="CommentRevokeReason" />
+            <definition value="Geeft de toelichting op het afbreken van het bericht." />
+            <alias value="ToelichtingAfbrekenBericht" />
+            <mapping>
+                <identity value="hg-ReferralServiceRequest-to-Envelop" />
+                <map value="hg-dataelement-1864" />
+                <comment value="ToelichtingAfbrekenBericht" />
+            </mapping>
+        </element>
+        <element id="ServiceRequest.status">
+            <path value="ServiceRequest.status" />
             <mapping>
                 <identity value="hg-ReferralServiceRequest-to-Envelop" />
                 <map value="hg-dataelement-1863" />
                 <comment value="VervolgActieOpTypeBericht" />
             </mapping>
+        </element>
+        <element id="ServiceRequest.intent">
+            <path value="ServiceRequest.intent" />
+            <fixedCode value="order" />
         </element>
         <element id="ServiceRequest.category">
             <path value="ServiceRequest.category" />
@@ -62,6 +103,7 @@
         <element id="ServiceRequest.priority">
             <path value="ServiceRequest.priority" />
             <short value="Urgency" />
+            <definition value="Geeft de inhoud van de urgentie.&#xD;&#xA; &#xD;&#xA;Voorbeeld in de HASP-richtlijn van de NHG: Voorstel voor snelheid waarmee patiënt of cliënt moet worden gezien." />
             <alias value="Urgentie" />
             <mapping>
                 <identity value="hg-ReferralServiceRequest-to-Envelop" />
@@ -71,8 +113,9 @@
         </element>
         <element id="ServiceRequest.subject">
             <path value="ServiceRequest.subject" />
-            <short value="Patient data" />
-            <alias value="Patiëntgegevens" />
+            <short value="Patient" />
+            <definition value="Geeft de gegevens van de patiënt en de eventuele gegevens over de contactpersonen van de patiënt." />
+            <alias value="Patient" />
             <type>
                 <code value="Reference" />
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
@@ -80,8 +123,8 @@
             </type>
             <mapping>
                 <identity value="hg-ReferralServiceRequest-to-Envelop" />
-                <map value="hg-dataelement-1679" />
-                <comment value="Patiëntgegevens" />
+                <map value="hg-dataelement-1676" />
+                <comment value="Patient" />
             </mapping>
         </element>
         <element id="ServiceRequest.authoredOn">
@@ -95,6 +138,9 @@
         </element>
         <element id="ServiceRequest.requester">
             <path value="ServiceRequest.requester" />
+            <short value="Sender" />
+            <definition value="Geeft de volledige identificatie- en contactgegevens van de verzender van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn van de NHG is aangegeven dat de beheerder meestal de verzender is van het bericht." />
+            <alias value="Verzender" />
             <min value="1" />
             <mapping>
                 <identity value="hg-ReferralServiceRequest-to-Envelop" />
@@ -119,14 +165,6 @@
                 <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
                 <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
             </type>
-        </element>
-        <element id="ServiceRequest.note">
-            <path value="ServiceRequest.note" />
-            <mapping>
-                <identity value="hg-ReferralServiceRequest-to-Envelop" />
-                <map value="hg-dataelement-1864" />
-                <comment value="ToelichtingAfbrekenBericht" />
-            </mapping>
         </element>
     </differential>
 </StructureDefinition>
