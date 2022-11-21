@@ -54,7 +54,6 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/request-statusReason" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="ServiceRequest.extension:commentRevokeReason.value[x].coding">
       <path value="ServiceRequest.extension.value[x].coding" />
@@ -85,8 +84,23 @@
     </element>
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.category:messageType">
+      <path value="ServiceRequest.category" />
+      <sliceName value="messageType" />
       <short value="MessageType" />
+      <definition value="Geeft het type bericht dat verstuurd wordt door de verzender." />
       <alias value="TypeBericht" />
+      <min value="1" />
+      <max value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.4.30.69" />
@@ -128,6 +142,9 @@
     </element>
     <element id="ServiceRequest.authoredOn">
       <path value="ServiceRequest.authoredOn" />
+      <short value="SendDateTime" />
+      <definition value="Geeft het tijdstip waarop de verzender het bericht afrondt en aanbiedt voor verzending.&#xD;&#xA; &#xD;&#xA;Dit gegeven kan automatisch worden ingevuld door de verzendende applicatie." />
+      <alias value="DatumTijdVerzenden" />
       <min value="1" />
       <mapping>
         <identity value="hg-ReferralServiceRequest-to-Envelop" />
@@ -200,6 +217,9 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Recipient" />
+      <definition value="Geeft de volledige identificatie- en contactgegevens van de ontvanger van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn wordt de ontvanger aangeduid met de geadresseerde." />
+      <alias value="Ontvanger" />
       <min value="1" />
       <max value="1" />
       <type>

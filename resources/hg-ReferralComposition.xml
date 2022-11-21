@@ -137,7 +137,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="coding.code" />
+          <path value="code.coding" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -167,7 +167,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:carePath.extension:carePathTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
@@ -186,6 +185,10 @@
         <label value="Example for referral" />
         <valueString value="Zorgpad" />
       </example>
+    </element>
+    <element id="Composition.section:carePath.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:carePath.section">
       <path value="Composition.section.section" />
@@ -216,7 +219,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:requiredConsultationFacilities.extension:requiredConsultationFacilitiesTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
@@ -236,6 +238,10 @@
         <valueString value="Voorzieningen nodig bij consult" />
       </example>
     </element>
+    <element id="Composition.section:requiredConsultationFacilities.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+    </element>
     <element id="Composition.section:requiredConsultationFacilities.section">
       <path value="Composition.section.section" />
       <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
@@ -246,6 +252,7 @@
       <label value="RedenBericht" />
       <short value="MessageReason" />
       <definition value="Geeft de reden van de bericht. Dit kan middels een beschrijving als tekst en/of met een ICPC-code." />
+      <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="hg-ReferralComposition-to-Kern" />
@@ -267,19 +274,18 @@
     <element id="Composition.section:messageReason.extension:messageReasonTextValue">
       <path value="Composition.section.extension" />
       <sliceName value="messageReasonTextValue" />
-      <short value="MessageReason" />
-      <definition value="Geeft aan waarom de huisarts de patiënt verwijst, en waarom op dit moment.&#xD;&#xA;In de richtlijnen HASP Medisch specialist en Paramedicus wordt dit veld in het huisarts - medisch specialist/paramedicus update bericht Reden Bericht genoemd.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft aan:&#xD;&#xA; &#xD;&#xA;De huisarts bedenkt of de geconsulteerde naast de korte verwijsreden nog extra context nodig heeft om het stokje goed te kunnen overnemen.&#xD;&#xA;&#xD;&#xA;Vaak kan de Reden verwijzing kort zijn: de huisarts verwijst omdat er afspraken zijn om de noodzakelijke zorg in de tweede lijn te geven en het type verwijzing komt vaak voor, zie ook de voorbeelden in het volgende kader. Belangrijk is om concreet aan te geven:&#xD;&#xA;• welk alarmsymptoom de huisarts ziet;&#xD;&#xA;• welk ongewone beloop het ziektebeeld vertoont.&#xD;&#xA;Of er speelt meer mee om deze patiënt op dit moment te verwijzen; de huisarts verwijst omdat:&#xD;&#xA;• de klachten het functioneren van de patiënt te veel in de weg staan;&#xD;&#xA;• de thuissituatie hierom vraagt;&#xD;&#xA;• de huisarts de eigen koers onvoldoende vertrouwt;&#xD;&#xA;• de huisarts een oorzaak wil uitsluiten alvorens een andere weg in te slaan;&#xD;&#xA;• er sprake is van lastig te managen complexiteit.&#xD;&#xA;Juist deze aanvullingen zijn essentieel om de medisch specialist het juiste startpunt te bieden." />
-      <alias value="RedenBericht" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:messageReason.extension:messageReasonTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
+      <short value="MessageReason" />
+      <definition value="Geeft aan waarom de huisarts de patiënt verwijst, en waarom op dit moment.&#xD;&#xA;In de richtlijnen HASP Medisch specialist en Paramedicus wordt dit veld in het huisarts - medisch specialist/paramedicus update bericht Reden Bericht genoemd.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft aan:&#xD;&#xA; &#xD;&#xA;De huisarts bedenkt of de geconsulteerde naast de korte verwijsreden nog extra context nodig heeft om het stokje goed te kunnen overnemen.&#xD;&#xA;&#xD;&#xA;Vaak kan de Reden verwijzing kort zijn: de huisarts verwijst omdat er afspraken zijn om de noodzakelijke zorg in de tweede lijn te geven en het type verwijzing komt vaak voor, zie ook de voorbeelden in het volgende kader. Belangrijk is om concreet aan te geven:&#xD;&#xA;• welk alarmsymptoom de huisarts ziet;&#xD;&#xA;• welk ongewone beloop het ziektebeeld vertoont.&#xD;&#xA;Of er speelt meer mee om deze patiënt op dit moment te verwijzen; de huisarts verwijst omdat:&#xD;&#xA;• de klachten het functioneren van de patiënt te veel in de weg staan;&#xD;&#xA;• de thuissituatie hierom vraagt;&#xD;&#xA;• de huisarts de eigen koers onvoldoende vertrouwt;&#xD;&#xA;• de huisarts een oorzaak wil uitsluiten alvorens een andere weg in te slaan;&#xD;&#xA;• er sprake is van lastig te managen complexiteit.&#xD;&#xA;Juist deze aanvullingen zijn essentieel om de medisch specialist het juiste startpunt te bieden." />
+      <alias value="RedenBericht" />
       <mapping>
         <identity value="hg-ReferralComposition-to-Kern" />
         <map value="hg-dataelement-1710" />
@@ -320,6 +326,10 @@
       <definition value="De probleemnaam definieert het probleem. Afhankelijk van de setting kunnen verschillende codestelsels worden gebruikt. De ProbleemNaamCodelijst geeft een overzicht van de mogelijke codestelsels." />
       <alias value="Probleem" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem" />
+      </type>
       <mapping>
         <identity value="hg-ReferralComposition-to-Kern" />
         <map value="hg-dataelement-1886" />
@@ -333,6 +343,7 @@
     <element id="Composition.section:setTreatment">
       <path value="Composition.section" />
       <sliceName value="setTreatment" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:setTreatment.extension">
@@ -355,7 +366,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:setTreatment.extension:setTreatmentTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
@@ -414,7 +424,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:proposedProcedure.extension:proposedProcedureTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
@@ -433,6 +442,10 @@
         <label value="Example for referral" />
         <valueString value="Procedurevoorstel" />
       </example>
+    </element>
+    <element id="Composition.section:proposedProcedure.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:proposedProcedure.section">
       <path value="Composition.section.section" />
@@ -463,7 +476,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:furtherImportant.extension:furtherImportantTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
@@ -522,7 +534,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:questionResponse.extension:questionResponseTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
@@ -541,6 +552,10 @@
         <label value="Example for referral" />
         <valueString value="Antwoord op uw vraag" />
       </example>
+    </element>
+    <element id="Composition.section:questionResponse.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:questionResponse.section">
       <path value="Composition.section.section" />
