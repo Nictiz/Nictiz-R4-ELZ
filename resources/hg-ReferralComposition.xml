@@ -54,6 +54,10 @@
         <comment value="Kern" />
       </mapping>
     </element>
+    <element id="Composition.status">
+      <path value="Composition.status" />
+      <fixedCode value="final" />
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <patternCodeableConcept>
