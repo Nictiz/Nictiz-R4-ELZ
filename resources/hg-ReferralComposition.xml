@@ -41,6 +41,19 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition">
+      <path value="Composition" />
+      <mapping>
+        <identity value="ART-DECOR-hg-Envelop" />
+        <map value="hg-dataelement-1673" />
+        <comment value="Envelop" />
+      </mapping>
+      <mapping>
+        <identity value="ART-DECOR-hg-Kern" />
+        <map value="hg-dataelement-1709" />
+        <comment value="Kern" />
+      </mapping>
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <patternCodeableConcept>

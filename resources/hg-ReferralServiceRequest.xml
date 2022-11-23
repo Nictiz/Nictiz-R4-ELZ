@@ -29,12 +29,26 @@
     <name value="Huisarts- en paramedische overdrachten - Envelop" />
     <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
   </mapping>
+  <mapping>
+    <identity value="ART-DECOR-hg-Kern" />
+    <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
+    <name value="Huisarts- en paramedische overdrachten - Kern" />
+    <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="ServiceRequest" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
   <derivation value="constraint" />
   <differential>
+    <element id="ServiceRequest">
+      <path value="ServiceRequest" />
+      <mapping>
+        <identity value="ART-DECOR-hg-Envelop" />
+        <map value="hg-dataelement-1673" />
+        <comment value="Envelop" />
+      </mapping>
+    </element>
     <element id="ServiceRequest.extension">
       <path value="ServiceRequest.extension" />
       <slicing>
@@ -283,6 +297,16 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
       </type>
+      <mapping>
+        <identity value="ART-DECOR-hg-Envelop" />
+        <map value="hg-dataelement-1673" />
+        <comment value="Envelop" />
+      </mapping>
+      <mapping>
+        <identity value="ART-DECOR-hg-Kern" />
+        <map value="hg-dataelement-1709" />
+        <comment value="Kern" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
