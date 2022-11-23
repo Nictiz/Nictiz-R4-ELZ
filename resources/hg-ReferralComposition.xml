@@ -264,7 +264,7 @@
       <sliceName value="messageReason" />
       <label value="RedenBericht" />
       <short value="MessageReason" />
-      <definition value="Geeft de reden van de bericht. Dit kan middels een beschrijving als tekst en/of met een ICPC-code." />
+      <definition value="Geeft de reden van de bericht. Dit kan middels een beschrijving als tekst en/of met een code." />
       <min value="1" />
       <max value="1" />
       <mapping>
