@@ -355,7 +355,7 @@
       <path value="Composition.section.entry" />
       <sliceName value="problem" />
       <short value="Problem" />
-      <definition value="De probleemnaam definieert het probleem. Afhankelijk van de setting kunnen verschillende codestelsels worden gebruikt. De ProbleemNaamCodelijst geeft een overzicht van de mogelijke codestelsels." />
+      <definition value="Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose)." />
       <alias value="Probleem" />
       <max value="1" />
       <type>
