@@ -24,7 +24,7 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="hg-ReferralServiceRequest-to-Envelop" />
+    <identity value="ART-DECOR-hg-Envelop" />
     <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
     <name value="Huisarts- en paramedische overdrachten - Envelop" />
     <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
@@ -65,7 +65,7 @@
       <definition value="Geeft de toelichting op het afbreken van het bericht." />
       <alias value="ToelichtingAfbrekenBericht" />
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1864" />
         <comment value="ToelichtingAfbrekenBericht" />
       </mapping>
@@ -73,7 +73,7 @@
     <element id="ServiceRequest.status">
       <path value="ServiceRequest.status" />
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1863" />
         <comment value="VervolgActieOpTypeBericht" />
       </mapping>
@@ -108,7 +108,7 @@
         </coding>
       </patternCodeableConcept>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1685" />
         <comment value="TypeBericht" />
       </mapping>
@@ -119,7 +119,7 @@
       <definition value="Geeft de inhoud van de urgentie.&#xD;&#xA; &#xD;&#xA;Voorbeeld in de HASP-richtlijn van de NHG: Voorstel voor snelheid waarmee patiënt of cliënt moet worden gezien." />
       <alias value="Urgentie" />
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1702" />
         <comment value="Urgentie" />
       </mapping>
@@ -135,7 +135,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1676" />
         <comment value="Patient" />
       </mapping>
@@ -147,7 +147,7 @@
       <alias value="DatumTijdVerzenden" />
       <min value="1" />
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1684" />
         <comment value="DatumTijdVerzenden" />
       </mapping>
@@ -172,7 +172,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1678" />
         <comment value="Verzender" />
       </mapping>
@@ -188,7 +188,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-5120" />
         <comment value="Zorgverlener" />
       </mapping>
@@ -203,7 +203,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-5090" />
         <comment value="Zorgaanbieder" />
       </mapping>
@@ -229,7 +229,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1680" />
         <comment value="Ontvanger" />
       </mapping>
@@ -246,7 +246,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-4849" />
         <comment value="Zorgverlener" />
       </mapping>
@@ -262,7 +262,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="hg-ReferralServiceRequest-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-4989" />
         <comment value="Zorgaanbieder" />
       </mapping>

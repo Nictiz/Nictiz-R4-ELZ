@@ -24,13 +24,13 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="hg-ReferralComposition-to-Envelop" />
+    <identity value="ART-DECOR-hg-Envelop" />
     <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
     <name value="Huisarts- en paramedische overdrachten - Envelop" />
     <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
   </mapping>
   <mapping>
-    <identity value="hg-ReferralComposition-to-Kern" />
+    <identity value="ART-DECOR-hg-Kern" />
     <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
     <name value="Huisarts- en paramedische overdrachten - Kern" />
     <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
@@ -62,7 +62,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="hg-ReferralComposition-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1676" />
         <comment value="Patient" />
       </mapping>
@@ -87,7 +87,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <mapping>
-        <identity value="hg-ReferralComposition-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1678" />
         <comment value="Verzender" />
       </mapping>
@@ -104,7 +104,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
       <mapping>
-        <identity value="hg-ReferralComposition-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-5120" />
         <comment value="Zorgverlener" />
       </mapping>
@@ -120,7 +120,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="hg-ReferralComposition-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-5090" />
         <comment value="Zorgaanbieder" />
       </mapping>
@@ -174,7 +174,7 @@
       <definition value="Geeft de inhoud van het zorgpad.&#xD;&#xA; &#xD;&#xA;Voorbeeld in de HASP-richtlijn: Voorstel voor de zorgstraat of het zorgpad dat van toepassing wordt geacht voor deze patiënt of cliënt." />
       <alias value="Zorgpad" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1696" />
         <comment value="Zorgpad" />
       </mapping>
@@ -226,7 +226,7 @@
       <definition value="Geeft de extra maatregelen of aandachtspunten die nodig zijn voor een consult met deze patiënt.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft als voorbeeld een tolkentelefoon." />
       <alias value="VoorzieningenNodigBijConsult" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Envelop" />
+        <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1708" />
         <comment value="VoorzieningenNodigBijConsult" />
       </mapping>
@@ -255,7 +255,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Kern" />
+        <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1872" />
         <comment value="RedenBericht" />
       </mapping>
@@ -287,7 +287,7 @@
       <definition value="Geeft aan waarom de huisarts de patiënt verwijst, en waarom op dit moment.&#xD;&#xA;In de richtlijnen HASP Medisch specialist en Paramedicus wordt dit veld in het huisarts - medisch specialist/paramedicus update bericht Reden Bericht genoemd.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft aan:&#xD;&#xA; &#xD;&#xA;De huisarts bedenkt of de geconsulteerde naast de korte verwijsreden nog extra context nodig heeft om het stokje goed te kunnen overnemen.&#xD;&#xA;&#xD;&#xA;Vaak kan de Reden verwijzing kort zijn: de huisarts verwijst omdat er afspraken zijn om de noodzakelijke zorg in de tweede lijn te geven en het type verwijzing komt vaak voor, zie ook de voorbeelden in het volgende kader. Belangrijk is om concreet aan te geven:&#xD;&#xA;• welk alarmsymptoom de huisarts ziet;&#xD;&#xA;• welk ongewone beloop het ziektebeeld vertoont.&#xD;&#xA;Of er speelt meer mee om deze patiënt op dit moment te verwijzen; de huisarts verwijst omdat:&#xD;&#xA;• de klachten het functioneren van de patiënt te veel in de weg staan;&#xD;&#xA;• de thuissituatie hierom vraagt;&#xD;&#xA;• de huisarts de eigen koers onvoldoende vertrouwt;&#xD;&#xA;• de huisarts een oorzaak wil uitsluiten alvorens een andere weg in te slaan;&#xD;&#xA;• er sprake is van lastig te managen complexiteit.&#xD;&#xA;Juist deze aanvullingen zijn essentieel om de medisch specialist het juiste startpunt te bieden." />
       <alias value="RedenBericht" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Kern" />
+        <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1710" />
         <comment value="RedenBericht" />
       </mapping>
@@ -331,7 +331,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem" />
       </type>
       <mapping>
-        <identity value="hg-ReferralComposition-to-Kern" />
+        <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1886" />
         <comment value="Probleem" />
       </mapping>
@@ -373,7 +373,7 @@
       <definition value="Geeft de ingestelde behandeling in het verwijsbericht, de update en het DT-bericht.&#xD;&#xA;In de richtlijn HASP Paramedicus wordt dit veld in de verwijzing, de update door de paramedicus en het DT-bericht 'Beleid, ingestelde behandeling' genoemd.&#xD;&#xA;In de richtlijn HASP Medisch Specialist wordt dit veld in het ontslagbericht 'Beleid' genoemd.&#xD;&#xA; &#xD;&#xA;Zie voor het verwijsbericht en de update de HASP-medische specialist richtlijn en HASP-paramedische richtlijn van de NHG.&#xD;&#xA; &#xD;&#xA;Zie voor het DT-bericht de HASP-paramedische richtlijn van de NHG." />
       <alias value="IngesteldeBehandeling" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Kern" />
+        <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1711" />
         <comment value="IngesteldeBehandeling" />
       </mapping>
@@ -431,7 +431,7 @@
       <definition value="Geeft het voorstel van de procedure in het verwijsbericht van de huisarts.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft als voorbeeld een voorstel van de huisarts voor de verdere samenwerking: ‘Graag eenmalig advies’ of ‘Gaarne overname behandeling’." />
       <alias value="ProcedureVoorstel" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Kern" />
+        <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1712" />
         <comment value="ProcedureVoorstel" />
       </mapping>
@@ -483,7 +483,7 @@
       <definition value="Geeft aan wat verder van belang is in het verwijsbericht, de updates en de eindrapportage.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft verschillende voorbeelden, zoals:&#xD;&#xA;- Eerder in 2015 speelden er surmenageklachten.&#xD;&#xA;- Lopend traject bij neuroloog vanwege spierklachten.&#xD;&#xA;- Op verzoek moeder." />
       <alias value="VerderVanBelang" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Kern" />
+        <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1713" />
         <comment value="VerderVanBelang" />
       </mapping>
@@ -541,7 +541,7 @@
       <definition value="Geeft in de update-berichten het antwoord op de gestelde vraag.&#xD;&#xA; &#xD;&#xA;In de HASP-paramedicus (NHG) is aangegeven dat zowel de huisarts als de paramedicus antwoord kunnen geven op vragen." />
       <alias value="AntwoordOpUwVraag" />
       <mapping>
-        <identity value="hg-ReferralComposition-to-Kern" />
+        <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1747" />
         <comment value="AntwoordOpUwVraag" />
       </mapping>
