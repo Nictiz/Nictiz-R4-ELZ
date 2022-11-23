@@ -202,6 +202,12 @@
     <element id="Composition.section:carePath.code">
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="370858005" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:carePath.section">
       <path value="Composition.section.section" />
@@ -253,7 +259,14 @@
     </element>
     <element id="Composition.section:requiredConsultationFacilities.code">
       <path value="Composition.section.code" />
+      <comment value="The code present on the pattern is temporary; the definitive code still needs to be determined." />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="405781008" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:requiredConsultationFacilities.section">
       <path value="Composition.section.section" />
@@ -458,6 +471,7 @@
     </element>
     <element id="Composition.section:proposedProcedure.code">
       <path value="Composition.section.code" />
+      <comment value="The pattern code still needs to be determined." />
       <min value="1" />
     </element>
     <element id="Composition.section:proposedProcedure.section">
@@ -568,6 +582,7 @@
     </element>
     <element id="Composition.section:questionResponse.code">
       <path value="Composition.section.code" />
+      <comment value="The pattern code still needs to be determined." />
       <min value="1" />
     </element>
     <element id="Composition.section:questionResponse.section">
