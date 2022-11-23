@@ -46,20 +46,16 @@
       </slicing>
       <min value="0" />
     </element>
-    <element id="ServiceRequest.extension:commentRevokeReason">
+    <element id="ServiceRequest.extension:messageRevokeReason">
       <path value="ServiceRequest.extension" />
-      <sliceName value="commentRevokeReason" />
+      <sliceName value="messageRevokeReason" />
       <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/request-statusReason" />
       </type>
     </element>
-    <element id="ServiceRequest.extension:commentRevokeReason.value[x].coding">
-      <path value="ServiceRequest.extension.value[x].coding" />
-      <max value="0" />
-    </element>
-    <element id="ServiceRequest.extension:commentRevokeReason.value[x].text">
+    <element id="ServiceRequest.extension:messageRevokeReason.value[x].text">
       <path value="ServiceRequest.extension.value[x].text" />
       <short value="CommentRevokeReason" />
       <definition value="Geeft de toelichting op het afbreken van het bericht." />
@@ -269,9 +265,22 @@
     </element>
     <element id="ServiceRequest.supportingInfo">
       <path value="ServiceRequest.supportingInfo" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="ServiceRequest.supportingInfo:referralComposition">
+      <path value="ServiceRequest.supportingInfo" />
+      <sliceName value="referralComposition" />
+      <min value="1" />
+      <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
       </type>
     </element>
