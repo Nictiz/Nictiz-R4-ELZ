@@ -43,6 +43,12 @@
   <differential>
     <element id="ServiceRequest">
       <path value="ServiceRequest" />
+      <constraint>
+        <key value="hg-ReferralServiceRequest-1" />
+        <severity value="error" />
+        <human value="The messageRevokeReason is only present if the ServiceRequest has been revoked" />
+        <xpath value="extension.where(url = 'http://hl7.org/fhir/StructureDefinition/request-statusReason').exists() implies status = 'revoked'" />
+      </constraint>
       <mapping>
         <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1673" />
@@ -68,6 +74,7 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/request-statusReason" />
       </type>
+      <condition value="hg-ReferralServiceRequest-1" />
     </element>
     <element id="ServiceRequest.extension:messageRevokeReason.value[x].text">
       <path value="ServiceRequest.extension.value[x].text" />
@@ -82,6 +89,7 @@
     </element>
     <element id="ServiceRequest.status">
       <path value="ServiceRequest.status" />
+      <condition value="hg-ReferralServiceRequest-1" />
       <mapping>
         <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1863" />
