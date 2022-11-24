@@ -47,7 +47,7 @@
         <key value="hg-ReferralServiceRequest-1" />
         <severity value="error" />
         <human value="The messageRevokeReason is only present if the ServiceRequest has been revoked" />
-        <xpath value="extension.where(url = 'http://hl7.org/fhir/StructureDefinition/request-statusReason').exists() implies status = 'revoked'" />
+        <expression value="extension.where(url = 'http://hl7.org/fhir/StructureDefinition/request-statusReason').exists() implies status = 'revoked'" />
       </constraint>
       <mapping>
         <identity value="ART-DECOR-hg-Envelop" />
