@@ -65,6 +65,13 @@
             <valueString value="graag uw fysiotherapeutische diagnose en behandeling, indien na 3 maanden geen verbetering retour voor eventuele doorverwijzing naar orthopeed"/>
         </extension>
         <title value="Procedurevoorstel"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="240471000146100"/>
+                <display value="vertaling toelichting op aard van verwijzing (waarneembare entiteit)"/>
+            </coding>
+        </code>
         <text>
             <status value="extensions"/>
             <div xmlns="http://www.w3.org/1999/xhtml">Procedurevoorstel: graag uw fysiotherapeutische diagnose en behandeling, indien na 3 maanden geen verbetering retour voor eventuele doorverwijzing naar orthopeed</div>
