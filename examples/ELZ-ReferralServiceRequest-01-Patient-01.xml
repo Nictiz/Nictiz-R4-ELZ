@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patient xmlns="http://hl7.org/fhir">
-    <id value="hg-ReferralServiceRequest-01-Patient-01"/>
+    <id value="ELZ-ReferralServiceRequest-01-Patient-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
     </meta>
@@ -183,7 +183,7 @@
         </address>
     </contact>
     <generalPractitioner>
-        <reference value="PractitionerRole/hg-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <reference value="PractitionerRole/ELZ-ReferralServiceRequest-01-PractitionerRole-01"/>
         <type value="PractitionerRole"/>
         <display value="dr. B.A. van Galen"/>
     </generalPractitioner>

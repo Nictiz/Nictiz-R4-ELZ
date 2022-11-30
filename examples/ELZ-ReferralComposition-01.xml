@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Composition xmlns="http://hl7.org/fhir">
-    <id value="hg-ReferralComposition-01"/>
+    <id value="ELZ-ReferralComposition-01"/>
     <status value="final"/>
     <type>
         <coding>
@@ -10,13 +10,13 @@
         </coding>
     </type>
     <subject>
-        <reference value="Patient/hg-ReferralServiceRequest-01-Patient-01"/>
+        <reference value="Patient/ELZ-ReferralServiceRequest-01-Patient-01"/>
         <type value="Patient"/>
         <display value="Marijne van XXX_Prins"/>
     </subject>
     <date value="2022-10-05"/>
     <author>
-        <reference value="PractitionerRole/hg-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <reference value="PractitionerRole/ELZ-ReferralServiceRequest-01-PractitionerRole-01"/>
         <type value="PractitionerRole"/>
         <display value="dr. B.A. van Galen"/>
     </author>
@@ -38,7 +38,7 @@
             <div xmlns="http://www.w3.org/1999/xhtml">Reden bericht: L15 Knie symptomen/klachten, Ik verwijs mevrouw voor knieklachten links. Sinds 3 maanden ontstaan na periode van overbelasting. Beeld mijns inziens passend bij gonartrose.</div>
         </text>
         <entry>
-            <reference value="Condition/hg-ReferralServiceRequest-01-Condition-01"/>
+            <reference value="Condition/ELZ-ReferralServiceRequest-01-Condition-01"/>
             <type value="Condition"/>
             <display value="L15 Knie symptomen/klachten"/>
         </entry>

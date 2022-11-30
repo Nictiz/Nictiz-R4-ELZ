@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="ELZ-ReferralServiceRequest-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ELZ-ReferralServiceRequest"/>
+        <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/common-tags"/>
+            <code value="actionable"/>
+        </tag>
+    </meta>
+    <status value="active"/>
+    <intent value="order"/>
+    <category>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.30.69"/>
+            <code value="1"/>
+            <display value="Verwijsbrief"/>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/ELZ-ReferralServiceRequest-01-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Marijne van XXX_Prins"/>
+    </subject>
+    <authoredOn value="2022-08-12"/>
+    <requester>
+        <reference value="PractitionerRole/ELZ-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. B.A. van Galen"/>
+    </requester>
+    <performer>
+        <reference value="PractitionerRole/ELZ-ReferralServiceRequest-01-PractitionerRole-02"/>
+        <type value="PractitionerRole"/>
+        <display value="P. Snaar MSc"/>
+    </performer>
+    <supportingInfo>
+        <reference value="Composition/ELZ-ReferralComposition-01"/>
+        <type value="Composition"/>
+        <display value="Referral note"/>
+    </supportingInfo>
+</ServiceRequest>
