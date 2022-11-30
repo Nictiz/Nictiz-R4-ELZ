@@ -90,11 +90,6 @@
     <element id="ServiceRequest.status">
       <path value="ServiceRequest.status" />
       <condition value="hg-ReferralServiceRequest-1" />
-      <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
-        <map value="hg-dataelement-1863" />
-        <comment value="VervolgActieOpTypeBericht" />
-      </mapping>
     </element>
     <element id="ServiceRequest.intent">
       <path value="ServiceRequest.intent" />
