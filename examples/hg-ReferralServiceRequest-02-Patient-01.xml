@@ -103,7 +103,7 @@
         </relationship>
         <name>
             <use value="official"/>
-            <text value=" Marieke van XXX_Quigley - Streng"/>
+            <text value="Marieke van XXX_Quigley - Streng"/>
             <family value="van XXX_Quigley - Streng">
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
                     <valueString value="Streng"/>
