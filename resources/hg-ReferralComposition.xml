@@ -480,8 +480,14 @@
     </element>
     <element id="Composition.section:proposedProcedure.code">
       <path value="Composition.section.code" />
-      <comment value="The pattern code still needs to be determined." />
+      <comment value="The code present on the pattern is temporary; the definitive code still needs to be determined." />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="240471000146100" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:proposedProcedure.section">
       <path value="Composition.section.section" />
