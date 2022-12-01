@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patient xmlns="http://hl7.org/fhir">
-    <id value="ELZ-ReferralServiceRequest-02-Patient-01"/>
+    <id value="hg-ReferralServiceRequest-02-Patient-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
     </meta>
@@ -104,15 +104,15 @@
         <name>
             <use value="official"/>
             <text value=" Marieke van XXX_Quigley - Streng"/>
-            <family value="van Gestel">
+            <family value="van XXX_Quigley - Streng">
+                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                    <valueString value="Streng"/>
+                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
                     <valueString value="van"/>
                 </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
                     <valueString value="XXX_Quigley"/>
-                </extension>
-                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-                    <valueString value="Streng"/>
                 </extension>
             </family>
             <given value="Marieke">
@@ -179,7 +179,7 @@
         </address>
     </contact>
     <generalPractitioner>
-        <reference value="PractitionerRole/ELZ-ReferralServiceRequest-02-PractitionerRole-01"/>
+        <reference value="PractitionerRole/hg-ReferralServiceRequest-02-PractitionerRole-01"/>
         <type value="PractitionerRole"/>
         <display value="dr. P. van Schijndel"/>
     </generalPractitioner>

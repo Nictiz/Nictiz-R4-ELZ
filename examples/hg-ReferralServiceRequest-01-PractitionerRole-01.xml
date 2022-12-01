@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PractitionerRole xmlns="http://hl7.org/fhir">
-    <id value="ELZ-ReferralServiceRequest-01-PractitionerRole-01"/>
+    <id value="hg-ReferralServiceRequest-01-PractitionerRole-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
     </meta>
     <practitioner>
-        <reference value="Practitioner/ELZ-ReferralServiceRequest-01-Practitioner-01"/>
+        <reference value="Practitioner/hg-ReferralServiceRequest-01-Practitioner-01"/>
         <type value="Practitioner"/>
         <display value="dr. B.A. van Galen"/>
     </practitioner>
     <organization>
-        <reference value="Organization/ELZ-ReferralServiceRequest-01-Organization-01"/>
+        <reference value="Organization/hg-ReferralServiceRequest-01-Organization-01"/>
         <type value="Organization"/>
         <display value="Gezondheidscentrum Aesculaap"/>
     </organization>
@@ -22,7 +22,7 @@
         </coding>
     </specialty>
     <location>
-        <reference value="Location/ELZ-ReferralServiceRequest-01-Location-01"/>
+        <reference value="Location/hg-ReferralServiceRequest-01-Location-01"/>
         <type value="Location"/>
         <display value="de Valk"/>
     </location>

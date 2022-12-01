@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Composition xmlns="http://hl7.org/fhir">
-    <id value="ELZ-ReferralComposition-01"/>
+ <Composition xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralComposition-02"/>
+     <meta>
+         <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition"/>
+     </meta>
     <status value="final"/>
     <type>
         <coding>
@@ -10,20 +13,20 @@
         </coding>
     </type>
     <subject>
-        <reference value="Patient/ELZ-ReferralServiceRequest-01-Patient-01"/>
+        <reference value="Patient/hg-ReferralServiceRequest-02-Patient-01"/>
         <type value="Patient"/>
-        <display value="Marijne van XXX_Prins"/>
+        <display value="Marc van XXX_Quigley"/>
     </subject>
-    <date value="2022-10-05"/>
+    <date value="2022-12-01"/>
     <author>
-        <reference value="PractitionerRole/ELZ-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <reference value="PractitionerRole/hg-ReferralServiceRequest-02-PractitionerRole-01"/>
         <type value="PractitionerRole"/>
-        <display value="dr. B.A. van Galen"/>
+        <display value="dr. P. van Schijndel"/>
     </author>
     <title value="Referral note"/>
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="Ik verwijs mevrouw voor knieklachten links. Sinds 3 maanden ontstaan na periode van overbelasting. Beeld mijns inziens passend bij gonartrose."/>
+            <valueString value="Dhr. heeft sinds enkele weken stemklachten. Graag onderzoek naar ernst en prognose bij logopedische therapie."/>
         </extension>
         <title value="Reden bericht"/>
         <code>
@@ -35,17 +38,17 @@
         </code>
         <text>
             <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Reden bericht: L15 Knie symptomen/klachten, Ik verwijs mevrouw voor knieklachten links. Sinds 3 maanden ontstaan na periode van overbelasting. Beeld mijns inziens passend bij gonartrose.</div>
+            <div xmlns="http://www.w3.org/1999/xhtml">Reden bericht: R23 Symptomen/klachten stem, Dhr. heeft sinds enkele weken stemklachten. Graag onderzoek naar ernst en prognose bij logopedische therapie.</div>
         </text>
         <entry>
-            <reference value="Condition/ELZ-ReferralServiceRequest-01-Condition-01"/>
+            <reference value="Condition/hg-ReferralServiceRequest-02-Condition-01"/>
             <type value="Condition"/>
-            <display value="L15 Knie symptomen/klachten"/>
+            <display value="R23 Symptomen/klachten stem"/>
         </entry>
     </section>
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="paracetamol indien nodig"/>
+            <valueString value="geen"/>
         </extension>
         <title value="Ingestelde behandeling"/>
         <code>
@@ -57,12 +60,12 @@
         </code>
         <text>
             <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Ingestelde behandeling: paracetamol indien nodig</div>
+            <div xmlns="http://www.w3.org/1999/xhtml">Ingestelde behandeling: geen</div>
         </text>
     </section>
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="graag uw fysiotherapeutische diagnose en behandeling, indien na 3 maanden geen verbetering retour voor eventuele doorverwijzing naar orthopeed"/>
+            <valueString value="Graag eenmalig onderzoek naar de stem en prognose bij eventuele logopedische therapie."/>
         </extension>
         <title value="Procedurevoorstel"/>
         <code>
@@ -74,12 +77,12 @@
         </code>
         <text>
             <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Procedurevoorstel: graag uw fysiotherapeutische diagnose en behandeling, indien na 3 maanden geen verbetering retour voor eventuele doorverwijzing naar orthopeed</div>
+            <div xmlns="http://www.w3.org/1999/xhtml">Procedurevoorstel: Graag eenmalig onderzoek naar de stem en prognose bij eventuele logopedische therapie.</div>
         </text>
     </section>
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="Mevr. is ook onder behandeling voor COPD Gold II."/>
+            <valueString value="Dhr. maakt zich veel zorgen"/>
         </extension>
         <title value="Verder van belang"/>
         <code>
@@ -91,7 +94,7 @@
         </code>
         <text>
             <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Verder van belang: Mevr. is ook onder behandeling voor COPD Gold II.</div>
+            <div xmlns="http://www.w3.org/1999/xhtml">Verder van belang: Dhr. maakt zich veel zorgen</div>
         </text>
     </section>
 </Composition>

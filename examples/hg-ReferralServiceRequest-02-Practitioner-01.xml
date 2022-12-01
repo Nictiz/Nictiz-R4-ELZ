@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Practitioner xmlns="http://hl7.org/fhir">
-    <id value="ELZ-ReferralServiceRequest-01-Practitioner-02"/>
+    <id value="hg-ReferralServiceRequest-02-Practitioner-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"/>
     </meta>
     <name>
         <use value="official"/>
-        <text value="P. Snaar MSc"/>
-        <family value="Snaar">
+        <text value="dr. P. van Schijndel"/>
+        <family value="van Schijndel">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                <valueString value="van"/>
+            </extension>
             <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-                <valueString value="Snaar"/>
+                <valueString value="Schijndel"/>
             </extension>
         </family>
         <given value="P.">
@@ -17,7 +20,7 @@
                 <valueCode value="IN"/>
             </extension>
         </given>
-        <suffix value="MSc"/>
+        <prefix value="dr."/>
     </name>
     <gender value="male"/>
 </Practitioner>
