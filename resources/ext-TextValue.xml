@@ -14,7 +14,7 @@
             <use value="work" />
         </telecom>
     </contact>
-    <description value="Extension to capture the values for the various text (string) based elements in the data set." />
+    <description value="Extension to capture the values for the various text (string) based elements in the ELZ data set." />
     <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
     <fhirVersion value="4.0.1" />
     <kind value="complex-type" />
