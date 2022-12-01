@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest-01-PractitionerRole-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+    </meta>
+    <practitioner>
+        <reference value="Practitioner/hg-ReferralServiceRequest-01-Practitioner-02"/>
+        <type value="Practitioner"/>
+        <display value="P. Snaar MSc"/>
+    </practitioner>
+    <organization>
+        <reference value="Organization/hg-ReferralServiceRequest-01-Organization-02"/>
+        <type value="Organization"/>
+        <display value="Fysiotherapie de Krakert"/>
+    </organization>
+    <specialty>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+            <code value="0404"/>
+            <display value="Fysiotherapeuten, manuele therapie"/>
+        </coding>
+    </specialty>
+    <location>
+        <reference value="Location/hg-ReferralServiceRequest-01-Location-02"/>
+        <type value="Location"/>
+        <display value="West 1"/>
+    </location>
+</PractitionerRole>

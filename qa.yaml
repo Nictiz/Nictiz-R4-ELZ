@@ -1,0 +1,22 @@
+main branch: origin/main
+ignored issues: known-issues.yml
+igs:
+  - resources
+  - nictiz.fhir.nl.r4.nl-core#0.7.0-beta.1
+
+patterns:
+  profiles: resources/*.xml
+  terminology: resources/**/terminology/*.xml
+  examples: examples/*.xml
+
+steps:
+  validate profiles:
+    description: Validate all profiles
+    patterns: profiles
+    profile: http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions
+  validate terminology:
+    description: Validate the terminology resources
+    patterns: terminology
+  validate examples:
+    description: Validate the examples
+    patterns: examples

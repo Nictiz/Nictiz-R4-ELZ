@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Location xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest-01-Location-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"/>
+    </meta>
+    <name value="de Valk"/>
+</Location>

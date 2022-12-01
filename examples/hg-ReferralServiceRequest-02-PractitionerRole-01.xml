@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest-02-PractitionerRole-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+    </meta>
+    <practitioner>
+        <reference value="Practitioner/hg-ReferralServiceRequest-02-Practitioner-01"/>
+        <type value="Practitioner"/>
+        <display value="dr. P. van Schijndel"/>
+    </practitioner>
+    <organization>
+        <reference value="Organization/hg-ReferralServiceRequest-02-Organization-01"/>
+        <type value="Organization"/>
+        <display value="Gezondheidscentrum Aesculaap"/>
+    </organization>
+    <specialty>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+            <code value="0110"/>
+            <display value="Huisartsen, apotheekhoudend"/>
+        </coding>
+    </specialty>
+    <location>
+        <reference value="Location/hg-ReferralServiceRequest-02-Location-01"/>
+        <type value="Location"/>
+        <display value="de Valk"/>
+    </location>
+</PractitionerRole>

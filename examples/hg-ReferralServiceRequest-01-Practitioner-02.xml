@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest-01-Practitioner-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"/>
+    </meta>
+    <name>
+        <use value="official"/>
+        <text value="P. Snaar MSc"/>
+        <family value="Snaar">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Snaar"/>
+            </extension>
+        </family>
+        <given value="P.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="IN"/>
+            </extension>
+        </given>
+        <suffix value="MSc"/>
+    </name>
+    <gender value="male"/>
+</Practitioner>

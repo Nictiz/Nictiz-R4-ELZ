@@ -1,8 +1,8 @@
-# Nictiz R4 GP care and Paramedical care
+# Nictiz R4 ELZ
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard GP care and Paramedical care (Dutch: Huisartsenzorg en Paramedische zorg). Currently in development and therefore not yet suitable for implementation. The FHIR IG, also in development, can be found at the [informatiestandaarden wiki](https://informatiestandaarden.nictiz.nl/wiki/Vdraft/FHIR_GPCare_ParamedicalCare).
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for ELZ (Dutch: EersteLijnsZorg, English: Primary Care). Currently in development and therefore not yet suitable for implementation. The FHIR IG, also in draft status, can be found at the [informatiestandaarden wiki](https://informatiestandaarden.nictiz.nl/wiki/hg:V1_FHIR_ELZ).
 
-This repository is maintained by the Dutch National Intitute for ICT in Healthcare (Nictiz).
+This repository is maintained by the Dutch National Institute for ICT in Healthcare (Nictiz).
 
 ## Official releases
 
