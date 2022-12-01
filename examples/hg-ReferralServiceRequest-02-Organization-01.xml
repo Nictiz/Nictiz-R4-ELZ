@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest-02-Organization-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+    </meta>
+    <type>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+            <code value="0111"/>
+            <display value="Huisartsen, niet apotheekhoudend, medicatiebeoordeling"/>
+        </coding>
+    </type>
+    <name value="Gezondheidscentrum Aesculaap"/>
+    <telecom>
+        <system value="phone">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                    <code value="LL"/>
+                    <display value="Land Line"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        </system>
+        <value value="+31434073577"/>
+        <use value="work"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="aesculaap@test.nl"/>
+        <use value="work"/>
+    </telecom>
+    <address>
+        <use value="work"/>
+        <type value="both"/>
+        <text value="Valkendael 45, 6245HK, Maastricht"/>
+        <line value="Valkendael 45">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Valkendael"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="45"/>
+            </extension>
+        </line>
+        <city value="Maastricht"/>
+        <district value="Maastricht"/>
+        <postalCode value="6245HK"/>
+        <country value="Nederland">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:iso:std:iso:3166"/>
+                        <code value="NL"/>
+                        <display value="Nederland"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </country>
+    </address>
+</Organization>

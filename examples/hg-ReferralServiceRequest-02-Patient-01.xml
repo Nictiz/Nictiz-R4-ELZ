@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest-02-Patient-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+    </meta>
+    <name>
+        <use value="official"/>
+        <text value="Marc van XXX_Quigley"/>
+        <family value="van XXX_Quigley">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                <valueString value="van"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="XXX_Quigley"/>
+            </extension>
+        </family>
+        <given value="Marcus">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="BR"/>
+            </extension>
+        </given>
+        <given value="Marc">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="CL"/>
+            </extension>
+        </given>
+    </name>
+    <telecom>
+        <system value="phone">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                        <code value="MC"/>
+                        <display value="Mobile Phone"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </system>
+        <value value="0612324322"/>
+        <use value="home"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="XXX_Quigley@test.nl"/>
+        <use value="home"/>
+    </telecom>
+    <gender value="male"/>
+    <birthDate value="1985-11-04"/>
+    <deceasedBoolean value="false"/>
+    <address>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                    <code value="HP"/>
+                    <display value="Primary Home"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <use value="home"/>
+        <type value="both"/>
+        <text value="Knolweg 1003, 9999ZZ, STITSWERD"/>
+        <line value="Knolweg 1003">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Knolweg"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="1003"/>
+            </extension>
+        </line>
+        <city value="STITSWERD"/>
+        <district value="STITSWERD"/>
+        <postalCode value="9999ZZ"/>
+        <country value="Nederland">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="urn:iso:std:iso:3166"/>
+                        <code value="NL"/>
+                        <display value="Nederland"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+        </country>
+    </address>
+    <maritalStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+            <code value="M"/>
+            <display value="Gehuwd"/>
+        </coding>
+    </maritalStatus>
+    <multipleBirthBoolean value="true"/>
+    <contact>
+        <relationship>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+                <code value="DOMPART"/>
+                <display value="Partner"/>
+            </coding>
+        </relationship>
+        <name>
+            <use value="official"/>
+            <text value="Marieke van XXX_Quigley - Streng"/>
+            <family value="van XXX_Quigley - Streng">
+                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                    <valueString value="Streng"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+                    <valueString value="van"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+                    <valueString value="XXX_Quigley"/>
+                </extension>
+            </family>
+            <given value="Marieke">
+                <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                    <valueCode value="BR"/>
+                </extension>
+            </given>
+        </name>
+        <telecom>
+            <system value="phone">
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                            <code value="MC"/>
+                            <display value="Mobile Phone"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+            </system>
+            <value value="0699887712"/>
+            <use value="work"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="Streng@test.nl"/>
+            <use value="work"/>
+        </telecom>
+        <address>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                        <code value="HP"/>
+                        <display value="Primary Home"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <use value="home"/>
+            <type value="both"/>
+            <text value="Knolweg 1003, 9999ZZ, STITSWERD"/>
+            <line value="Knolweg 1003">
+                <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                    <valueString value="Knolweg"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                    <valueString value="1003"/>
+                </extension>
+            </line>
+            <city value="STITSWERD"/>
+            <district value="STITSWERD"/>
+            <postalCode value="9999ZZ"/>
+            <country value="Nederland">
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="urn:iso:std:iso:3166"/>
+                            <code value="NL"/>
+                            <display value="Nederland"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+            </country>
+        </address>
+    </contact>
+    <generalPractitioner>
+        <reference value="PractitionerRole/hg-ReferralServiceRequest-02-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. P. van Schijndel"/>
+    </generalPractitioner>
+</Patient>
