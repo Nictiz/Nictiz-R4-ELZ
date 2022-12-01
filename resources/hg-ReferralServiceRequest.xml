@@ -43,53 +43,11 @@
   <differential>
     <element id="ServiceRequest">
       <path value="ServiceRequest" />
-      <constraint>
-        <key value="hg-ReferralServiceRequest-1" />
-        <severity value="error" />
-        <human value="The messageRevokeReason is only present if the ServiceRequest has been revoked" />
-        <expression value="extension.where(url = 'http://hl7.org/fhir/StructureDefinition/request-statusReason').exists() implies status = 'revoked'" />
-      </constraint>
       <mapping>
         <identity value="ART-DECOR-hg-Envelop" />
         <map value="hg-dataelement-1673" />
         <comment value="Envelop" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.extension">
-      <path value="ServiceRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="ServiceRequest.extension:messageRevokeReason">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="messageRevokeReason" />
-      <min value="0" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/request-statusReason" />
-      </type>
-      <condition value="hg-ReferralServiceRequest-1" />
-    </element>
-    <element id="ServiceRequest.extension:messageRevokeReason.value[x].text">
-      <path value="ServiceRequest.extension.value[x].text" />
-      <short value="CommentRevokeReason" />
-      <definition value="Geeft de toelichting op het afbreken van het bericht." />
-      <alias value="ToelichtingAfbrekenBericht" />
-      <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
-        <map value="hg-dataelement-1864" />
-        <comment value="ToelichtingAfbrekenBericht" />
-      </mapping>
-    </element>
-    <element id="ServiceRequest.status">
-      <path value="ServiceRequest.status" />
-      <condition value="hg-ReferralServiceRequest-1" />
     </element>
     <element id="ServiceRequest.intent">
       <path value="ServiceRequest.intent" />
