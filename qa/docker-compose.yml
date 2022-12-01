@@ -3,7 +3,7 @@ services:
   nictiz-r4-qa:
     build: https://github.com/Nictiz/Nictiz-R4-QA.git#main
     image: nictiz/nictiz-r4-qa
-    container_name: nictiz-r4-qa-GPCare-ParamedicalCare
+    container_name: nictiz-r4-qa-ELZ
     volumes:
       - type: bind
         source: ..
