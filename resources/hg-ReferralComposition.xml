@@ -25,13 +25,13 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="ART-DECOR-hg-Envelop" />
-    <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20221201T095845/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
     <name value="Huisarts- en paramedische overdrachten - Envelop" />
     <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
   </mapping>
   <mapping>
     <identity value="ART-DECOR-hg-Kern" />
-    <uri value="https://decor.nictiz.nl/ad/#/hg-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.103.1.1/2020-10-19T17:52:39" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20221201T095845/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
     <name value="Huisarts- en paramedische overdrachten - Kern" />
     <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
   </mapping>
