@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="hg-ReferralServiceRequest" />
+  <id value="hg-UpdateComposition" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
-    <valueString value="Clinical.Care Provision" />
+    <valueString value="Foundation.Documents" />
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
-    <valueCode value="patient" />
+    <valueCode value="not-classified" />
   </extension>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest" />
-  <name value="HgReferralServiceRequest" />
-  <title value="hg ReferralServiceRequest" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-UpdateComposition" />
+  <name value="HgUpdateComposition" />
+  <title value="hg UpdateComposition" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -20,7 +20,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A ServiceRequest resource as used within the referral use cases in ELZ." />
+  <description value="A Composition resource as used within the update use cases in ELZ." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -37,45 +37,25 @@
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
-  <type value="ServiceRequest" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/hg-ServiceRequest" />
+  <type value="Composition" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/hg-Composition" />
   <derivation value="constraint" />
   <differential>
-    <element id="ServiceRequest.category">
-      <path value="ServiceRequest.category" />
-      <min value="1" />
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="11506-3" />
+        </coding>
+      </patternCodeableConcept>
     </element>
-    <element id="ServiceRequest.category:messageType">
-      <path value="ServiceRequest.category" />
-      <sliceName value="messageType" />
-      <min value="1" />
-      <constraint>
-        <key value="hg-ReferralServiceRequest-1" />
-        <severity value="error" />
-        <human value="Only message type 'verwijsbericht' or 'consultatieaanvraag' is allowed" />
-        <expression value="$this.coding.code in (1 | 4)" />
-      </constraint>
-    </element>
-    <element id="ServiceRequest.authoredOn">
-      <path value="ServiceRequest.authoredOn" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.performer">
-      <path value="ServiceRequest.performer" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.supportingInfo">
-      <path value="ServiceRequest.supportingInfo" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.supportingInfo:composition">
-      <path value="ServiceRequest.supportingInfo" />
-      <sliceName value="composition" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
-      </type>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <example>
+        <label value="Example for update" />
+        <valueString value="Progress note" />
+      </example>
     </element>
   </differential>
 </StructureDefinition>

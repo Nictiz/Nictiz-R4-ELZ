@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="hg-UpdateComposition-GeneralPractitionerToParamedic" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
+    <valueString value="Foundation.Documents" />
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
+    <valueCode value="not-classified" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-UpdateComposition-GeneralPractitionerToParamedic" />
+  <name value="HgUpdateCompositionGeneralPractitionerToParamedic" />
+  <title value="hg UpdateComposition GeneralPractitionerToParamedic" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Composition resource as used within the send update from general practitioner to paramedic use case in ELZ." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="ART-DECOR-hg-Envelop" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20221201T095845/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="Huisarts- en paramedische overdrachten - Envelop" />
+    <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
+  </mapping>
+  <mapping>
+    <identity value="ART-DECOR-hg-Kern" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20221201T095845/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="Huisarts- en paramedische overdrachten - Kern" />
+    <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/hg-UpdateComposition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:carePath">
+      <path value="Composition.section" />
+      <sliceName value="carePath" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:requiredConsultationFacilities">
+      <path value="Composition.section" />
+      <sliceName value="requiredConsultationFacilities" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:messageReason">
+      <path value="Composition.section" />
+      <sliceName value="messageReason" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:setTreatment">
+      <path value="Composition.section" />
+      <sliceName value="setTreatment" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:proposedProcedure">
+      <path value="Composition.section" />
+      <sliceName value="proposedProcedure" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:furtherImportant">
+      <path value="Composition.section" />
+      <sliceName value="furtherImportant" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:questionReponse">
+      <path value="Composition.section" />
+      <sliceName value="questionReponse" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

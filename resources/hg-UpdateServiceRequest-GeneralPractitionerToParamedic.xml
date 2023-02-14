@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="hg-ReferralServiceRequest" />
+  <id value="hg-UpdateServiceRequest-GeneralPractitionerToParamedic" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
     <valueString value="Clinical.Care Provision" />
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient" />
   </extension>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest" />
-  <name value="HgReferralServiceRequest" />
-  <title value="hg ReferralServiceRequest" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-UpdateServiceRequest-GeneralPractitionerToParamedic" />
+  <name value="HgUpdateServiceRequestGeneralPractitionerToParamedic" />
+  <title value="hg UpdateServiceRequest GeneralPractitionerToParamedic" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -20,7 +20,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A ServiceRequest resource as used within the referral use cases in ELZ." />
+  <description value="A ServiceRequest resource as used within the send update from general practitioner to paramedic use case in ELZ." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -38,43 +38,47 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="ServiceRequest" />
-  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/hg-ServiceRequest" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/hg-UpdateServiceRequest" />
   <derivation value="constraint" />
   <differential>
-    <element id="ServiceRequest.category">
-      <path value="ServiceRequest.category" />
-      <min value="1" />
-    </element>
     <element id="ServiceRequest.category:messageType">
       <path value="ServiceRequest.category" />
       <sliceName value="messageType" />
-      <min value="1" />
       <constraint>
-        <key value="hg-ReferralServiceRequest-1" />
+        <key value="hg-UpdateServiceRequest-GeneralPractitionerToParamedic" />
         <severity value="error" />
-        <human value="Only message type 'verwijsbericht' or 'consultatieaanvraag' is allowed" />
-        <expression value="$this.coding.code in (1 | 4)" />
+        <human value="Only message type 'update', 'informatieverzoek' or 'informatieverstrekking' is allowed" />
+        <expression value="$this.coding.code in (2 | 7 | 8)" />
       </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.priority">
+      <path value="ServiceRequest.priority" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.subject">
+      <path value="ServiceRequest.subject" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.authoredOn">
       <path value="ServiceRequest.authoredOn" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.requester">
+      <path value="ServiceRequest.requester" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />
-      <min value="1" />
-    </element>
-    <element id="ServiceRequest.supportingInfo">
-      <path value="ServiceRequest.supportingInfo" />
-      <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.supportingInfo:composition">
       <path value="ServiceRequest.supportingInfo" />
       <sliceName value="composition" />
-      <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-UpdateComposition-GeneralPractitionerToParamedic" />
       </type>
     </element>
   </differential>
