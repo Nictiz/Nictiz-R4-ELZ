@@ -283,7 +283,7 @@
             <sliceName value="messageReason" />
             <label value="RedenBericht" />
             <short value="MessageReason" />
-            <definition value="Geeft de reden van het bericht. Deze kan worden geregistreerd als ICPC-code en worden uitgewisseld met de zib Probleem en/of als tekst." />
+            <definition value="Geeft de reden van de verwijzing of de update van een huisarts naar een paramedicus.&#xD;&#xA;Hierbij is de beschrijving als vrije tekst op aangeven van het NHG verplicht.&#xD;&#xA;Daarnaast kan er ook een ICPC-code van de episode worden meegestuurd, al dan niet aangevuld met meer details over de vastlegging van de ICPC." />
             <min value="1" />
             <max value="1" />
             <mapping>
