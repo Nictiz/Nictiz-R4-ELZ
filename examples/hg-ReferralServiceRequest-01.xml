@@ -4,7 +4,7 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest"/>
     </meta>
-    <status value="active"/>
+    <status value="completed"/>
     <intent value="order"/>
     <category>
         <coding>
