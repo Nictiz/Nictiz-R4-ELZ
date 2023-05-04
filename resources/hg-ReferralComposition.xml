@@ -301,12 +301,12 @@
                 </discriminator>
                 <rules value="open" />
             </slicing>
-            <min value="0" />
+            <min value="1" />
         </element>
         <element id="Composition.section:messageReason.extension:contextTextValue">
             <path value="Composition.section.extension" />
             <sliceName value="contextTextValue" />
-            <min value="0" />
+            <min value="1" />
             <max value="1" />
             <type>
                 <code value="Extension" />
@@ -318,6 +318,7 @@
             <short value="Context" />
             <definition value="Geeft aan waarom de huisarts de patiënt verwijst, en waarom op dit moment.&#xD;&#xA;In de richtlijnen HASP Medisch specialist en Paramedicus wordt dit veld in het updatebericht van huisarts naar medisch specialist/paramedicus 'Reden bericht' genoemd.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft aan:&#xD;&#xA; &#xD;&#xA;De huisarts bedenkt of de geconsulteerde naast de korte verwijsreden nog extra context nodig heeft om het stokje goed te kunnen overnemen.&#xD;&#xA;&#xD;&#xA;Vaak kan de reden van een verwijzing kort zijn: de huisarts verwijst omdat er afspraken zijn om de noodzakelijke zorg in de tweede lijn te geven en het type verwijzing komt vaak voor, zie ook de voorbeelden in het volgende kader. Belangrijk is om concreet aan te geven:&#xD;&#xA;• welk alarmsymptoom de huisarts ziet;&#xD;&#xA;• welk ongewone beloop het ziektebeeld vertoont.&#xD;&#xA;Of er speelt meer mee om deze patiënt op dit moment te verwijzen; de huisarts verwijst omdat:&#xD;&#xA;• de klachten het functioneren van de patiënt te veel in de weg staan;&#xD;&#xA;• de thuissituatie hierom vraagt;&#xD;&#xA;• de huisarts de eigen koers onvoldoende vertrouwt;&#xD;&#xA;• de huisarts een oorzaak wil uitsluiten alvorens een andere weg in te slaan;&#xD;&#xA;• er sprake is van lastig te managen complexiteit.&#xD;&#xA;Juist deze aanvullingen zijn essentieel om de medisch specialist het juiste startpunt te bieden." />
             <alias value="Context" />
+            <min value="1" />
             <mapping>
                 <identity value="ART-DECOR-hg-Kern" />
                 <map value="hg-dataelement-1710" />
