@@ -51,7 +51,7 @@
         </element>
         <element id="ServiceRequest.status">
             <path value="ServiceRequest.status" />
-            <definition value="In current referral use cases the referral is considered done when sent by the referral initiator. Therefore, status is set to a fixed value of _completed_." />
+            <definition value="In current referral use cases the referral is considered done when sent by the referral initiator. Therefore, in those use cases the .status is always set to completed." />
         </element>
         <element id="ServiceRequest.intent">
             <path value="ServiceRequest.intent" />
