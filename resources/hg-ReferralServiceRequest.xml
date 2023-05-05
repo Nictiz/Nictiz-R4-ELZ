@@ -91,7 +91,7 @@
     <element id="ServiceRequest.priority">
       <path value="ServiceRequest.priority" />
       <short value="Urgency" />
-      <definition value="Geeft de inhoud van de urgentie.&#xD;&#xA; &#xD;&#xA;Voorbeeld in de HASP-richtlijn van de NHG: Voorstel voor snelheid waarmee patiënt of cliënt moet worden gezien." />
+      <definition value="Geeft de inhoud van de urgentie.&#xD;&#xA; &#xD;&#xA;In de verdere uitwerking van de NHG HASP-richtlijn is met het NHG bepaald dat dit een gecodeerde waardelijst kan zijn in plaats van tekst. Er is gekozen om de FHIR ValueSet RequestPriority te gebruiken." />
       <alias value="Urgentie" />
       <mapping>
         <identity value="ART-DECOR-hg-Envelop" />
