@@ -214,10 +214,6 @@
                 </coding>
             </patternCodeableConcept>
         </element>
-    <element id="Composition.section:carePath.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
         <element id="Composition.section:requiredConsultationFacilities">
             <path value="Composition.section" />
             <sliceName value="requiredConsultationFacilities" />
@@ -274,10 +270,6 @@
                 </coding>
             </patternCodeableConcept>
         </element>
-    <element id="Composition.section:requiredConsultationFacilities.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
         <element id="Composition.section:messageReason">
             <path value="Composition.section" />
             <sliceName value="messageReason" />
@@ -369,10 +361,6 @@
                 <comment value="Probleem" />
             </mapping>
         </element>
-    <element id="Composition.section:messageReason.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
         <element id="Composition.section:setTreatment">
             <path value="Composition.section" />
             <sliceName value="setTreatment" />
@@ -429,10 +417,6 @@
                 </coding>
             </patternCodeableConcept>
         </element>
-    <element id="Composition.section:setTreatment.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
         <element id="Composition.section:proposedProcedure">
             <path value="Composition.section" />
             <sliceName value="proposedProcedure" />
@@ -490,10 +474,6 @@
                 </coding>
             </patternCodeableConcept>
         </element>
-    <element id="Composition.section:proposedProcedure.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
         <element id="Composition.section:furtherImportant">
             <path value="Composition.section" />
             <sliceName value="furtherImportant" />
@@ -549,9 +529,5 @@
                 </coding>
             </patternCodeableConcept>
         </element>
-    <element id="Composition.section:furtherImportant.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
     </differential>
 </StructureDefinition>
