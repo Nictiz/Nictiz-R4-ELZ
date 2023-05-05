@@ -49,6 +49,10 @@
         <comment value="Envelop" />
       </mapping>
     </element>
+    <element id="ServiceRequest.status">
+      <path value="ServiceRequest.status" />
+      <definition value="In current referral use cases the referral is considered done when sent by the referral initiator. Therefore, in those use cases the `.status` is always set to _completed_." />
+    </element>
     <element id="ServiceRequest.intent">
       <path value="ServiceRequest.intent" />
       <fixedCode value="order" />
