@@ -1,40 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/capabilitystatement.xsd">
-  <id value="hg-Referral-GeneralPractitionerToAlliedHealthProfessional"/>
-  <url value="http://nictiz.nl/fhir/CapabilityStatement/hg-Referral-GeneralPractitionerToAlliedHealthProfessional"/>
-  <name value="hg Referral GeneralPractitionerToAlliedHealthProfessional"/>
-  <status value="draft"/>
-  <date value="2023-05-23"/>
-  <publisher value="Nictiz"/>
-  <contact>
-    <name value="Nictiz"/>
-    <telecom>
-      <system value="url"/>
-      <value value="https://www.nictiz.nl"/>
-      <use value="work"/>
-    </telecom>
-  </contact>
-  <description value="This CapabilityStatement describes the minimal requirements for a client/server to fulfill the 'Referral from general practitioner to allied health professional' use case within ELZ version 0.2.0-beta.1. See [Landing page ELZ](https://informatiestandaarden.nictiz.nl/wiki/hg:Landingspagina_ELZ) for additional information."/>
-  <purpose value="This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide of the corresponding information standard should be consulted."/>
-  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
-  <kind value="requirements"/>
-  <fhirVersion value="4.0.1"/>
-  <format value="xml"/>
-  <format value="json"/>
-  <rest>
-    <mode value="client"/>
-    <documentation value="Minimal requirements for a client to fulfill the 'Referral from general practitioner to allied health professional' usecase (system role: HZP-VPS)."/>
-     <resource>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/capabilitystatement.xsd">
+    <id value="hg-Referral-GeneralPractitionerToAlliedHealthProfessional"/>
+    <url value="http://nictiz.nl/fhir/CapabilityStatement/hg-Referral-GeneralPractitionerToAlliedHealthProfessional"/>
+    <version value="0.2.0-beta.1"/>
+    <name value="hg Referral GeneralPractitionerToAlliedHealthProfessional"/>
+    <status value="draft"/>
+    <date value="2023-05-25"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description
+        value="This CapabilityStatement describes the minimal requirements for a client/server to fulfill the 'Referral from general practitioner to allied health professional' use case within ELZ version 0.2.0-beta.1. See [Landing page ELZ](https://informatiestandaarden.nictiz.nl/wiki/hg:Landingspagina_ELZ) for additional information."/>
+    <purpose
+        value="This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide of the corresponding information standard should be consulted."/>
+    <copyright
+        value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
+    <kind value="requirements"/>
+    <fhirVersion value="4.0.1"/>
+    <format value="xml"/>
+    <format value="json"/>
+    <rest>
+        <mode value="client"/>
+        <documentation
+            value="Minimal requirements for a client to fulfill the 'Referral from general practitioner to allied health professional' use case (system role: HZP-VPS)."/>
+        <resource>
             <type value="Task"/>
-            <profile>
-                <reference value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask"/>
-                <display value="hg ReferralTask"/>
-            </profile>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
+            <interaction>
+                <code value="update"/>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="ServiceRequest"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="Composition"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
+        </resource>
+    </rest>
+    <rest>
+        <mode value="server"/>
+        <documentation
+            value="Minimal requirements for a server to fulfill the 'Referral from general practitioner to allied health professional' use case (system role: HZP-VPO)."/>
+        <resource>
+            <type value="Task"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask"/>
             <interaction>
                 <code value="search-type"/>
+            </interaction>
+            <interaction>
+                <code value="create"/>
+            </interaction>
+            <interaction>
                 <code value="read"/>
+            </interaction>
+            <interaction>
                 <code value="update"/>
             </interaction>
             <searchParam>
@@ -44,62 +82,17 @@
         </resource>
         <resource>
             <type value="ServiceRequest"/>
-            <profile>
-                <reference value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest"/>
-                <display value="hg ReferralServiceRequest"/>
-            </profile>            
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest"/>
             <interaction>
-                <code value="read"/>
+                <code value="create"/>
             </interaction>
-        </resource>        
+        </resource>
         <resource>
             <type value="Composition"/>
-            <profile>
-                <reference value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition"/>
-                <display value="hg ReferralComposition"/>
-            </profile>            
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition"/>
             <interaction>
-                <code value="read"/>
+                <code value="create"/>
             </interaction>
         </resource>
-  </rest>
-  <rest>
-    <mode value="server"/>
-    <documentation value="Minimal requirements for a client to fulfill the 'Referral from general practitioner to allied health professional' usecase (system role: HZP-VPO)."/>
-              <resource>
-            <type value="Task"/>
-            <profile>
-                <reference value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask"/>
-                <display value="hg ReferralTask"/>
-            </profile>
-            <interaction>
-                <code value="search-type"/>
-                <code value="read"/>
-                <code value="update"/>
-            </interaction>
-            <searchParam>
-                <name value="code"/>
-                <type value="token"/>
-            </searchParam>
-        </resource>
-        <resource>
-            <type value="ServiceRequest"/>
-            <profile>
-                <reference value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest"/>
-                <display value="hg ReferralServiceRequest"/>
-            </profile>            
-            <interaction>
-                <code value="read"/>
-            </interaction>
-        </resource>        
-        <resource>
-            <type value="Composition"/>
-            <profile>
-                <reference value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition"/>
-                <display value="hg ReferralComposition"/>
-            </profile>            
-            <interaction>
-                <code value="read"/>
-            </interaction>
-        </resource>
+    </rest>
 </CapabilityStatement>
