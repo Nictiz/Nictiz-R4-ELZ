@@ -29,13 +29,24 @@
         </element>
         <element id="Task.code">
             <path value="Task.code" />
-            <min value="1" />
-            <patternCodeableConcept>
-                <coding>
-                    <system value="http://hl7.org/fhir/CodeSystem/task-code" />
-                    <code value="fulfill" />
-                </coding>
-            </patternCodeableConcept>
+            <example>
+                <label value="BSeR" />
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://hl7.org/fhir/CodeSystem/task-code" />
+                        <code value="fulfill" />
+                    </coding>
+                </valueCodeableConcept>
+            </example>
+            <example>
+                <label value="Example for referral" />
+                <valueCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct" />
+                        <code value="3457005" />
+                    </coding>
+                </valueCodeableConcept>
+            </example>
         </element>
         <element id="Task.focus">
             <path value="Task.focus" />
