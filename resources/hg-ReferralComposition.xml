@@ -214,10 +214,6 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:carePath.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
     <element id="Composition.section:requiredConsultationFacilities">
       <path value="Composition.section" />
       <sliceName value="requiredConsultationFacilities" />
@@ -274,16 +270,13 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:requiredConsultationFacilities.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
     <element id="Composition.section:messageReason">
       <path value="Composition.section" />
       <sliceName value="messageReason" />
       <label value="RedenBericht" />
       <short value="MessageReason" />
-      <definition value="Geeft de reden van de bericht. Dit kan middels een beschrijving als tekst en/of met een code." />
+      <definition value="Geeft de reden van de verwijzing of de update.&#xD;&#xA;Hierbij is de beschrijving als vrije tekst op aangeven van het NHG verplicht.&#xD;&#xA;Daarnaast kan er ook een ICPC-code van de episode worden meegestuurd, al dan niet aangevuld met meer details over de vastlegging van de ICPC." />
+      <comment value="The ICPC code should be communicated via `Condition.code` in the resource that is referenced in the _problem_ `.entry` below." />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -301,23 +294,24 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="0" />
+      <min value="1" />
     </element>
-    <element id="Composition.section:messageReason.extension:messageReasonTextValue">
+    <element id="Composition.section:messageReason.extension:contextTextValue">
       <path value="Composition.section.extension" />
-      <sliceName value="messageReasonTextValue" />
-      <min value="0" />
+      <sliceName value="contextTextValue" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
     </element>
-    <element id="Composition.section:messageReason.extension:messageReasonTextValue.value[x]">
+    <element id="Composition.section:messageReason.extension:contextTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
       <short value="Context" />
-      <definition value="Geeft aan waarom de huisarts de patiënt verwijst, en waarom op dit moment.&#xD;&#xA;In de richtlijnen HASP Medisch specialist en Paramedicus wordt dit veld in het updatebericht van huisarts naar medisch specialist/paramedicus 'Reden bericht' genoemd.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft aan:&#xD;&#xA; &#xD;&#xA;De huisarts bedenkt of de geconsulteerde naast de korte verwijsreden nog extra context nodig heeft om het stokje goed te kunnen overnemen.&#xD;&#xA;&#xD;&#xA;Vaak kan de reden van een verwijzing kort zijn: de huisarts verwijst omdat er afspraken zijn om de noodzakelijke zorg in de tweede lijn te geven en het type verwijzing komt vaak voor, zie ook de voorbeelden in het volgende kader. Belangrijk is om concreet aan te geven:&#xD;&#xA;• welk alarmsymptoom de huisarts ziet;&#xD;&#xA;• welk ongewone beloop het ziektebeeld vertoont.&#xD;&#xA;Of er speelt meer mee om deze patiënt op dit moment te verwijzen; de huisarts verwijst omdat:&#xD;&#xA;• de klachten het functioneren van de patiënt te veel in de weg staan;&#xD;&#xA;• de thuissituatie hierom vraagt;&#xD;&#xA;• de huisarts de eigen koers onvoldoende vertrouwt;&#xD;&#xA;• de huisarts een oorzaak wil uitsluiten alvorens een andere weg in te slaan;&#xD;&#xA;• er sprake is van lastig te managen complexiteit.&#xD;&#xA;Juist deze aanvullingen zijn essentieel om de medisch specialist het juiste startpunt te bieden." />
+      <definition value="Geeft aan waarom een zorgverlener (bijv. huisarts, paramedicus, medisch specialist) de patiënt verwijst, en waarom op dit moment.&#xD;&#xA;In de richtlijnen HASP Medisch specialist en Paramedicus wordt dit veld in het updatebericht van huisarts naar medisch specialist/paramedicus 'Reden bericht' genoemd.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft aan:&#xD;&#xA; &#xD;&#xA;De huisarts bedenkt of de geconsulteerde naast de korte verwijsreden nog extra context nodig heeft om het stokje goed te kunnen overnemen.&#xD;&#xA;&#xD;&#xA;Vaak kan de reden van een verwijzing kort zijn: de huisarts verwijst omdat er afspraken zijn om de noodzakelijke zorg in de tweede lijn te geven en het type verwijzing komt vaak voor, zie ook de voorbeelden in het volgende kader. Belangrijk is om concreet aan te geven:&#xD;&#xA;• welk alarmsymptoom de huisarts ziet;&#xD;&#xA;• welk ongewone beloop het ziektebeeld vertoont.&#xD;&#xA;Of er speelt meer mee om deze patiënt op dit moment te verwijzen; de huisarts verwijst omdat:&#xD;&#xA;• de klachten het functioneren van de patiënt te veel in de weg staan;&#xD;&#xA;• de thuissituatie hierom vraagt;&#xD;&#xA;• de huisarts de eigen koers onvoldoende vertrouwt;&#xD;&#xA;• de huisarts een oorzaak wil uitsluiten alvorens een andere weg in te slaan;&#xD;&#xA;• er sprake is van lastig te managen complexiteit.&#xD;&#xA;Juist deze aanvullingen zijn essentieel om de medisch specialist het juiste startpunt te bieden." />
       <alias value="Context" />
+      <min value="1" />
       <mapping>
         <identity value="ART-DECOR-hg-Kern" />
         <map value="hg-dataelement-1710" />
@@ -367,10 +361,6 @@
         <map value="hg-dataelement-1886" />
         <comment value="Probleem" />
       </mapping>
-    </element>
-    <element id="Composition.section:messageReason.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
     </element>
     <element id="Composition.section:setTreatment">
       <path value="Composition.section" />
@@ -428,10 +418,6 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:setTreatment.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
-    </element>
     <element id="Composition.section:proposedProcedure">
       <path value="Composition.section" />
       <sliceName value="proposedProcedure" />
@@ -462,7 +448,7 @@
     <element id="Composition.section:proposedProcedure.extension:proposedProcedureTextValue.value[x]">
       <path value="Composition.section.extension.value[x]" />
       <short value="ProposedProcedure" />
-      <definition value="Geeft het voorstel van de procedure in het verwijsbericht van de huisarts.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft als voorbeeld een voorstel van de huisarts voor de verdere samenwerking: ‘Graag eenmalig advies’ of ‘Gaarne overname behandeling’." />
+      <definition value="Geeft het voorstel van de procedure in het verwijsbericht van de verwijzer (bijv. huisarts, paramedicus, medisch specialist).&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft als voorbeeld een voorstel van de huisarts voor de verdere samenwerking: ‘Graag eenmalig advies’ of ‘Gaarne overname behandeling’." />
       <alias value="ProcedureVoorstel" />
       <min value="1" />
       <mapping>
@@ -488,10 +474,6 @@
           <code value="240471000146100" />
         </coding>
       </patternCodeableConcept>
-    </element>
-    <element id="Composition.section:proposedProcedure.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
     </element>
     <element id="Composition.section:furtherImportant">
       <path value="Composition.section" />
@@ -547,10 +529,6 @@
           <code value="159121000146100" />
         </coding>
       </patternCodeableConcept>
-    </element>
-    <element id="Composition.section:furtherImportant.section">
-      <path value="Composition.section.section" />
-      <contentReference value="http://hl7.org/fhir/StructureDefinition/Composition#Composition.section" />
     </element>
   </differential>
 </StructureDefinition>
