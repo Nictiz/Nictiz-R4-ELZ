@@ -223,7 +223,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:envelope.section:carePath.extension:carePathTextValue.value[x]">
       <path value="Composition.section.section.extension.value[x]" />
@@ -279,7 +278,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:envelope.section:requiredConsultationFacilities.extension:requiredConsultationFacilitiesTextValue.value[x]">
       <path value="Composition.section.section.extension.value[x]" />
@@ -384,7 +382,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:core.section:messageReason.extension:contextTextValue.value[x]">
       <path value="Composition.section.section.extension.value[x]" />
@@ -468,7 +465,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:core.section:setTreatment.extension:setTreatmentTextValue.value[x]">
       <path value="Composition.section.section.extension.value[x]" />
@@ -525,7 +521,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:core.section:proposedProcedure.extension:proposedProcedureTextValue.value[x]">
       <path value="Composition.section.section.extension.value[x]" />
@@ -581,7 +576,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:core.section:furtherImportant.extension:furtherImportantTextValue.value[x]">
       <path value="Composition.section.section.extension.value[x]" />
@@ -637,7 +631,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
-      <isModifier value="false" />
     </element>
     <element id="Composition.section:core.section:answerToYourQuestion.extension:answerToYourQuestionTextValue.value[x]">
       <path value="Composition.section.section.extension.value[x]" />
