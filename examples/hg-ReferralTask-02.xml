@@ -3,7 +3,7 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask" />
     </meta>
-    <status value="draft" />
+    <status value="completed" />
     <intent value="order" />
     <code>
         <coding>
@@ -21,7 +21,7 @@
         <display value="Marc van XXX_Quigley" />
     </for>
     <authoredOn>
-        <dateTime value = "2023-06-22"/>
+        <dateTime value="2023-06-22"/>
     </authoredOn>
     <requester>
         <agent>
