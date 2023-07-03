@@ -180,7 +180,6 @@
     </element>
     <element id="Composition.section:envelope.code">
       <path value="Composition.section.code" />
-      <comment value="The code present on the pattern is temporary; the definitive code still needs to be determined." />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
@@ -329,7 +328,6 @@
     </element>
     <element id="Composition.section:core.code">
       <path value="Composition.section.code" />
-      <comment value="The code present on the pattern is temporary; the definitive code still needs to be determined." />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
