@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="hg-ReferralTask" />
     <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask" />
+    <version value="0.2.0-beta.1"/>
     <name value="HgReferralTask" />
     <title value="hg ReferralTask" />
     <status value="draft" />

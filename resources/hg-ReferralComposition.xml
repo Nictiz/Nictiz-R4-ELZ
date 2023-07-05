@@ -8,6 +8,7 @@
     <valueCode value="not-classified" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
+  <version value="0.2.0-beta.1"/>
   <name value="HgReferralComposition" />
   <title value="hg ReferralComposition" />
   <status value="draft" />
