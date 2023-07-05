@@ -1,12 +1,12 @@
 # Nictiz R4 ELZ
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for ELZ (Dutch: EersteLijnsZorg, English: Primary Care). Currently in development and therefore not yet suitable for implementation. The FHIR IG, also in draft status, can be found at the [informatiestandaarden wiki](https://informatiestandaarden.nictiz.nl/wiki/hg:V1_FHIR_ELZ).
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for ELZ (Dutch: Eerstelijnszorg, English: Primary Care). Currently in development and therefore not yet suitable for implementation. The FHIR IG, also in draft status, can be found at the [informatiestandaarden wiki](https://informatiestandaarden.nictiz.nl/wiki/hg:V1_FHIR_ELZ).
 
 This repository is maintained by the Dutch National Institute for ICT in Healthcare (Nictiz).
 
 ## Official releases
 
-Resources in this repository should be considered unstable and not suited for immediate implementation. Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages). At the moment, no package has been released for the current project.
+Resources in this repository should be considered unstable and not suited for immediate implementation. Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages).
 
 ## Profiling guidelines
 
