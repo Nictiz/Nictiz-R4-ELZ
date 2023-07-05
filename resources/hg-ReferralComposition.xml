@@ -69,9 +69,9 @@
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
-      <label value="Patient" />
       <short value="Patient" />
       <definition value="Geeft de gegevens van de patiënt en de eventuele gegevens over de contactpersonen van de patiënt." />
+      <alias value="Patient" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -159,13 +159,51 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.section:carePath">
+    <element id="Composition.section:envelope">
       <path value="Composition.section" />
+      <sliceName value="envelope" />
+      <short value="Envelope" />
+      <definition value="Geeft alle relevante gegevens in de envelop conform de richtlijn." />
+      <alias value="Envelop" />
+      <mapping>
+        <identity value="ART-DECOR-hg-Envelop" />
+        <map value="hg-dataelement-1673" />
+        <comment value="Envelop" />
+      </mapping>
+    </element>
+    <element id="Composition.section:envelope.title">
+      <path value="Composition.section.title" />
+      <example>
+        <label value="Example for referral" />
+        <valueString value="Envelop" />
+      </example>
+    </element>
+    <element id="Composition.section:envelope.code">
+      <path value="Composition.section.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="405624007" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:envelope.section">
+      <path value="Composition.section.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:envelope.section:carePath">
+      <path value="Composition.section.section" />
       <sliceName value="carePath" />
       <max value="1" />
     </element>
-    <element id="Composition.section:carePath.extension">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:envelope.section:carePath.extension">
+      <path value="Composition.section.section.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -175,8 +213,8 @@
       </slicing>
       <min value="1" />
     </element>
-    <element id="Composition.section:carePath.extension:carePathTextValue">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:envelope.section:carePath.extension:carePathTextValue">
+      <path value="Composition.section.section.extension" />
       <sliceName value="carePathTextValue" />
       <min value="1" />
       <max value="1" />
@@ -185,10 +223,10 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
     </element>
-    <element id="Composition.section:carePath.extension:carePathTextValue.value[x]">
-      <path value="Composition.section.extension.value[x]" />
+    <element id="Composition.section:envelope.section:carePath.extension:carePathTextValue.value[x]">
+      <path value="Composition.section.section.extension.value[x]" />
       <short value="CarePath" />
-      <definition value="Geeft de inhoud van het zorgpad.&#xD;&#xA; &#xD;&#xA;Voorbeeld in de HASP-richtlijn: Voorstel voor de zorgstraat of het zorgpad dat van toepassing wordt geacht voor deze patiënt of cliënt." />
+      <definition value="Geeft de inhoud van het zorgpad.&#xD;&#xA;&#xD;&#xA;Voorbeeld in de HASP-richtlijn: Voorstel voor de zorgstraat of het zorgpad dat van toepassing wordt geacht voor deze patiënt of cliënt." />
       <alias value="Zorgpad" />
       <min value="1" />
       <mapping>
@@ -197,15 +235,15 @@
         <comment value="Zorgpad" />
       </mapping>
     </element>
-    <element id="Composition.section:carePath.title">
-      <path value="Composition.section.title" />
+    <element id="Composition.section:envelope.section:carePath.title">
+      <path value="Composition.section.section.title" />
       <example>
         <label value="Example for referral" />
         <valueString value="Zorgpad" />
       </example>
     </element>
-    <element id="Composition.section:carePath.code">
-      <path value="Composition.section.code" />
+    <element id="Composition.section:envelope.section:carePath.code">
+      <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -214,13 +252,13 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:requiredConsultationFacilities">
-      <path value="Composition.section" />
+    <element id="Composition.section:envelope.section:requiredConsultationFacilities">
+      <path value="Composition.section.section" />
       <sliceName value="requiredConsultationFacilities" />
       <max value="1" />
     </element>
-    <element id="Composition.section:requiredConsultationFacilities.extension">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:envelope.section:requiredConsultationFacilities.extension">
+      <path value="Composition.section.section.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -230,8 +268,8 @@
       </slicing>
       <min value="1" />
     </element>
-    <element id="Composition.section:requiredConsultationFacilities.extension:requiredConsultationFacilitiesTextValue">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:envelope.section:requiredConsultationFacilities.extension:requiredConsultationFacilitiesTextValue">
+      <path value="Composition.section.section.extension" />
       <sliceName value="requiredConsultationFacilitiesTextValue" />
       <min value="1" />
       <max value="1" />
@@ -240,10 +278,10 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
     </element>
-    <element id="Composition.section:requiredConsultationFacilities.extension:requiredConsultationFacilitiesTextValue.value[x]">
-      <path value="Composition.section.extension.value[x]" />
+    <element id="Composition.section:envelope.section:requiredConsultationFacilities.extension:requiredConsultationFacilitiesTextValue.value[x]">
+      <path value="Composition.section.section.extension.value[x]" />
       <short value="RequiredConsultationFacilities" />
-      <definition value="Geeft de extra maatregelen of aandachtspunten die nodig zijn voor een consult met deze patiënt.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft als voorbeeld een tolkentelefoon." />
+      <definition value="Geeft de extra maatregelen of aandachtspunten die nodig zijn voor een consult met deze patiënt.&#xD;&#xA;&#xD;&#xA;De HASP-richtlijn (NHG) geeft als voorbeeld een tolkentelefoon." />
       <alias value="VoorzieningenNodigBijConsult" />
       <min value="1" />
       <mapping>
@@ -252,31 +290,68 @@
         <comment value="VoorzieningenNodigBijConsult" />
       </mapping>
     </element>
-    <element id="Composition.section:requiredConsultationFacilities.title">
-      <path value="Composition.section.title" />
+    <element id="Composition.section:envelope.section:requiredConsultationFacilities.title">
+      <path value="Composition.section.section.title" />
       <example>
         <label value="Example for referral" />
         <valueString value="Voorzieningen nodig bij consult" />
       </example>
     </element>
-    <element id="Composition.section:requiredConsultationFacilities.code">
-      <path value="Composition.section.code" />
-      <comment value="The code present on the pattern is temporary; the definitive code still needs to be determined." />
+    <element id="Composition.section:envelope.section:requiredConsultationFacilities.code">
+      <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <code value="405781008" />
+          <code value="230211000146109" />
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:messageReason">
+    <element id="Composition.section:core">
       <path value="Composition.section" />
+      <sliceName value="core" />
+      <short value="Core" />
+      <definition value="Geeft de zorginhoudelijke kerngegevens van de berichten die genoemd zijn in de verschillende NHG-richtlijnen voor verwijzing, update, ontslag, directe toegang en eindrapportage voor paramedici." />
+      <alias value="Kern" />
+      <mapping>
+        <identity value="ART-DECOR-hg-Kern" />
+        <map value="hg-dataelement-1709" />
+        <comment value="Kern" />
+      </mapping>
+    </element>
+    <element id="Composition.section:core.title">
+      <path value="Composition.section.title" />
+      <example>
+        <label value="Example for referral" />
+        <valueString value="Kern" />
+      </example>
+    </element>
+    <element id="Composition.section:core.code">
+      <path value="Composition.section.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="406550009" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:core.section">
+      <path value="Composition.section.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:core.section:messageReason">
+      <path value="Composition.section.section" />
       <sliceName value="messageReason" />
-      <label value="RedenBericht" />
       <short value="MessageReason" />
-      <definition value="Geeft de reden van de verwijzing of de update.&#xD;&#xA;Hierbij is de beschrijving als vrije tekst op aangeven van het NHG verplicht.&#xD;&#xA;Daarnaast kan er ook een ICPC-code van de episode worden meegestuurd, al dan niet aangevuld met meer details over de vastlegging van de ICPC." />
+      <definition value="Geeft de reden van de verwijzing of de update. Hierbij is de beschrijving als vrije tekst op aangeven van het NHG verplicht. Daarnaast kan er ook een ICPC-code van de episode worden meegestuurd, al dan niet aangevuld met meer details over de vastlegging van de ICPC." />
       <comment value="The ICPC code should be communicated via `Condition.code` in the resource that is referenced in the _problem_ `.entry` below." />
+      <alias value="RedenBericht" />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -285,8 +360,8 @@
         <comment value="RedenBericht" />
       </mapping>
     </element>
-    <element id="Composition.section:messageReason.extension">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:messageReason.extension">
+      <path value="Composition.section.section.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -296,8 +371,8 @@
       </slicing>
       <min value="1" />
     </element>
-    <element id="Composition.section:messageReason.extension:contextTextValue">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:messageReason.extension:contextTextValue">
+      <path value="Composition.section.section.extension" />
       <sliceName value="contextTextValue" />
       <min value="1" />
       <max value="1" />
@@ -306,8 +381,8 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
     </element>
-    <element id="Composition.section:messageReason.extension:contextTextValue.value[x]">
-      <path value="Composition.section.extension.value[x]" />
+    <element id="Composition.section:core.section:messageReason.extension:contextTextValue.value[x]">
+      <path value="Composition.section.section.extension.value[x]" />
       <short value="Context" />
       <definition value="Geeft aan waarom een zorgverlener (bijv. huisarts, paramedicus, medisch specialist) de patiënt verwijst, en waarom op dit moment.&#xD;&#xA;In de richtlijnen HASP Medisch specialist en Paramedicus wordt dit veld in het updatebericht van huisarts naar medisch specialist/paramedicus 'Reden bericht' genoemd.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft aan:&#xD;&#xA; &#xD;&#xA;De huisarts bedenkt of de geconsulteerde naast de korte verwijsreden nog extra context nodig heeft om het stokje goed te kunnen overnemen.&#xD;&#xA;&#xD;&#xA;Vaak kan de reden van een verwijzing kort zijn: de huisarts verwijst omdat er afspraken zijn om de noodzakelijke zorg in de tweede lijn te geven en het type verwijzing komt vaak voor, zie ook de voorbeelden in het volgende kader. Belangrijk is om concreet aan te geven:&#xD;&#xA;• welk alarmsymptoom de huisarts ziet;&#xD;&#xA;• welk ongewone beloop het ziektebeeld vertoont.&#xD;&#xA;Of er speelt meer mee om deze patiënt op dit moment te verwijzen; de huisarts verwijst omdat:&#xD;&#xA;• de klachten het functioneren van de patiënt te veel in de weg staan;&#xD;&#xA;• de thuissituatie hierom vraagt;&#xD;&#xA;• de huisarts de eigen koers onvoldoende vertrouwt;&#xD;&#xA;• de huisarts een oorzaak wil uitsluiten alvorens een andere weg in te slaan;&#xD;&#xA;• er sprake is van lastig te managen complexiteit.&#xD;&#xA;Juist deze aanvullingen zijn essentieel om de medisch specialist het juiste startpunt te bieden." />
       <alias value="Context" />
@@ -318,15 +393,15 @@
         <comment value="Context" />
       </mapping>
     </element>
-    <element id="Composition.section:messageReason.title">
-      <path value="Composition.section.title" />
+    <element id="Composition.section:core.section:messageReason.title">
+      <path value="Composition.section.section.title" />
       <example>
         <label value="Example for referral" />
         <valueString value="Reden bericht" />
       </example>
     </element>
-    <element id="Composition.section:messageReason.code">
-      <path value="Composition.section.code" />
+    <element id="Composition.section:core.section:messageReason.code">
+      <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -335,8 +410,8 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:messageReason.entry">
-      <path value="Composition.section.entry" />
+    <element id="Composition.section:core.section:messageReason.entry">
+      <path value="Composition.section.section.entry" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -345,8 +420,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.section:messageReason.entry:problem">
-      <path value="Composition.section.entry" />
+    <element id="Composition.section:core.section:messageReason.entry:problem">
+      <path value="Composition.section.section.entry" />
       <sliceName value="problem" />
       <short value="Problem" />
       <definition value="Een probleem beschrijft een toestand met betrekking tot de gezondheid en/of het welzijn van een individu. Deze toestand kan zijn benoemd door de patiënt zelf (een klacht), of door zijn of haar zorgverlener (onder andere een diagnose)." />
@@ -358,18 +433,18 @@
       </type>
       <mapping>
         <identity value="ART-DECOR-hg-Kern" />
-        <map value="hg-dataelement-1886" />
+        <map value="hg-dataelement-5205" />
         <comment value="Probleem" />
       </mapping>
     </element>
-    <element id="Composition.section:setTreatment">
-      <path value="Composition.section" />
+    <element id="Composition.section:core.section:setTreatment">
+      <path value="Composition.section.section" />
       <sliceName value="setTreatment" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Composition.section:setTreatment.extension">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:setTreatment.extension">
+      <path value="Composition.section.section.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -379,8 +454,8 @@
       </slicing>
       <min value="1" />
     </element>
-    <element id="Composition.section:setTreatment.extension:setTreatmentTextValue">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:setTreatment.extension:setTreatmentTextValue">
+      <path value="Composition.section.section.extension" />
       <sliceName value="setTreatmentTextValue" />
       <min value="1" />
       <max value="1" />
@@ -389,10 +464,10 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
     </element>
-    <element id="Composition.section:setTreatment.extension:setTreatmentTextValue.value[x]">
-      <path value="Composition.section.extension.value[x]" />
+    <element id="Composition.section:core.section:setTreatment.extension:setTreatmentTextValue.value[x]">
+      <path value="Composition.section.section.extension.value[x]" />
       <short value="SetTreatment" />
-      <definition value="Geeft de ingestelde behandeling in het verwijsbericht, de update en het DT-bericht.&#xD;&#xA;In de richtlijn HASP Paramedicus wordt dit veld in de verwijzing, de update door de paramedicus en het DT-bericht 'Beleid, ingestelde behandeling' genoemd.&#xD;&#xA;In de richtlijn HASP Medisch Specialist wordt dit veld in het ontslagbericht 'Beleid' genoemd.&#xD;&#xA; &#xD;&#xA;Zie voor het verwijsbericht en de update de HASP-medische specialist richtlijn en HASP-paramedische richtlijn van de NHG.&#xD;&#xA; &#xD;&#xA;Zie voor het DT-bericht de HASP-paramedische richtlijn van de NHG." />
+      <definition value="Geeft de ingestelde behandeling in het verwijsbericht, de update en het DT-bericht.&#xD;&#xA;In de richtlijn HASP Paramedicus wordt dit veld in de verwijzing, de update door de paramedicus en het DT-bericht 'Beleid, ingestelde behandeling' genoemd.&#xD;&#xA;In de richtlijn HASP Medisch Specialist wordt dit veld in het ontslagbericht 'Beleid' genoemd.&#xD;&#xA; &#xD;&#xA;Zie voor het verwijsbericht en de update de HASP-medische specialist richtlijn en HASP-paramedische richtlijn van het NHG.&#xD;&#xA; &#xD;&#xA;Zie voor het DT-bericht de HASP-paramedische richtlijn van het NHG." />
       <alias value="IngesteldeBehandeling" />
       <min value="1" />
       <mapping>
@@ -401,15 +476,15 @@
         <comment value="IngesteldeBehandeling" />
       </mapping>
     </element>
-    <element id="Composition.section:setTreatment.title">
-      <path value="Composition.section.title" />
+    <element id="Composition.section:core.section:setTreatment.title">
+      <path value="Composition.section.section.title" />
       <example>
         <label value="Example for referral" />
         <valueString value="Ingestelde behandeling" />
       </example>
     </element>
-    <element id="Composition.section:setTreatment.code">
-      <path value="Composition.section.code" />
+    <element id="Composition.section:core.section:setTreatment.code">
+      <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -418,14 +493,14 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:proposedProcedure">
-      <path value="Composition.section" />
+    <element id="Composition.section:core.section:proposedProcedure">
+      <path value="Composition.section.section" />
       <sliceName value="proposedProcedure" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Composition.section:proposedProcedure.extension">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:proposedProcedure.extension">
+      <path value="Composition.section.section.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -435,8 +510,8 @@
       </slicing>
       <min value="1" />
     </element>
-    <element id="Composition.section:proposedProcedure.extension:proposedProcedureTextValue">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:proposedProcedure.extension:proposedProcedureTextValue">
+      <path value="Composition.section.section.extension" />
       <sliceName value="proposedProcedureTextValue" />
       <min value="1" />
       <max value="1" />
@@ -445,8 +520,8 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
     </element>
-    <element id="Composition.section:proposedProcedure.extension:proposedProcedureTextValue.value[x]">
-      <path value="Composition.section.extension.value[x]" />
+    <element id="Composition.section:core.section:proposedProcedure.extension:proposedProcedureTextValue.value[x]">
+      <path value="Composition.section.section.extension.value[x]" />
       <short value="ProposedProcedure" />
       <definition value="Geeft het voorstel van de procedure in het verwijsbericht van de verwijzer (bijv. huisarts, paramedicus, medisch specialist).&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft als voorbeeld een voorstel van de huisarts voor de verdere samenwerking: ‘Graag eenmalig advies’ of ‘Gaarne overname behandeling’." />
       <alias value="ProcedureVoorstel" />
@@ -457,16 +532,15 @@
         <comment value="ProcedureVoorstel" />
       </mapping>
     </element>
-    <element id="Composition.section:proposedProcedure.title">
-      <path value="Composition.section.title" />
+    <element id="Composition.section:core.section:proposedProcedure.title">
+      <path value="Composition.section.section.title" />
       <example>
         <label value="Example for referral" />
         <valueString value="Procedurevoorstel" />
       </example>
     </element>
-    <element id="Composition.section:proposedProcedure.code">
-      <path value="Composition.section.code" />
-      <comment value="The code present on the pattern is temporary; the definitive code still needs to be determined." />
+    <element id="Composition.section:core.section:proposedProcedure.code">
+      <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -475,13 +549,13 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:furtherImportant">
-      <path value="Composition.section" />
+    <element id="Composition.section:core.section:furtherImportant">
+      <path value="Composition.section.section" />
       <sliceName value="furtherImportant" />
       <max value="1" />
     </element>
-    <element id="Composition.section:furtherImportant.extension">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:furtherImportant.extension">
+      <path value="Composition.section.section.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -491,8 +565,8 @@
       </slicing>
       <min value="1" />
     </element>
-    <element id="Composition.section:furtherImportant.extension:furtherImportantTextValue">
-      <path value="Composition.section.extension" />
+    <element id="Composition.section:core.section:furtherImportant.extension:furtherImportantTextValue">
+      <path value="Composition.section.section.extension" />
       <sliceName value="furtherImportantTextValue" />
       <min value="1" />
       <max value="1" />
@@ -501,10 +575,10 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
       </type>
     </element>
-    <element id="Composition.section:furtherImportant.extension:furtherImportantTextValue.value[x]">
-      <path value="Composition.section.extension.value[x]" />
+    <element id="Composition.section:core.section:furtherImportant.extension:furtherImportantTextValue.value[x]">
+      <path value="Composition.section.section.extension.value[x]" />
       <short value="FurtherImportant" />
-      <definition value="Geeft aan wat verder van belang is in het verwijsbericht, de updates en de eindrapportage.&#xD;&#xA; &#xD;&#xA;De HASP-richtlijn (NHG) geeft verschillende voorbeelden, zoals:&#xD;&#xA;- Eerder in 2015 speelden er surmenageklachten.&#xD;&#xA;- Lopend traject bij neuroloog vanwege spierklachten.&#xD;&#xA;- Op verzoek moeder." />
+      <definition value="Geeft aan wat verder van belang is in het verwijsbericht, de updates en de eindrapportage.&#xD;&#xA;&#xD;&#xA;De HASP-richtlijn (NHG) geeft verschillende voorbeelden, zoals:&#xD;&#xA;* Eerder in 2015 speelden er surmenageklachten.&#xD;&#xA;* Lopend traject bij neuroloog vanwege spierklachten.&#xD;&#xA;* Op verzoek moeder." />
       <alias value="VerderVanBelang" />
       <min value="1" />
       <mapping>
@@ -513,15 +587,15 @@
         <comment value="VerderVanBelang" />
       </mapping>
     </element>
-    <element id="Composition.section:furtherImportant.title">
-      <path value="Composition.section.title" />
+    <element id="Composition.section:core.section:furtherImportant.title">
+      <path value="Composition.section.section.title" />
       <example>
         <label value="Example for referral" />
         <valueString value="Verder van belang" />
       </example>
     </element>
-    <element id="Composition.section:furtherImportant.code">
-      <path value="Composition.section.code" />
+    <element id="Composition.section:core.section:furtherImportant.code">
+      <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
