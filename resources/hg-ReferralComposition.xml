@@ -25,16 +25,9 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="ART-DECOR-hg-Envelop" />
-    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20221201T095845/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
-    <name value="Huisarts- en paramedische overdrachten - Envelop" />
-    <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
-  </mapping>
-  <mapping>
-    <identity value="ART-DECOR-hg-Kern" />
-    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20221201T095845/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
-    <name value="Huisarts- en paramedische overdrachten - Kern" />
-    <comment value="This is a preliminary mapping that should not be used for immediate implementation." />
+    <identity value="hg-dataset-020-beta1-20230612" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -45,12 +38,12 @@
     <element id="Composition">
       <path value="Composition" />
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1673" />
         <comment value="Envelop" />
       </mapping>
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1709" />
         <comment value="Kern" />
       </mapping>
@@ -80,7 +73,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1676" />
         <comment value="Patient" />
       </mapping>
@@ -105,7 +98,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1678" />
         <comment value="Verzender" />
       </mapping>
@@ -122,7 +115,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5120" />
         <comment value="Zorgverlener" />
       </mapping>
@@ -138,7 +131,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5090" />
         <comment value="Zorgaanbieder" />
       </mapping>
@@ -167,7 +160,7 @@
       <definition value="Geeft alle relevante gegevens in de envelop conform de richtlijn." />
       <alias value="Envelop" />
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1673" />
         <comment value="Envelop" />
       </mapping>
@@ -231,7 +224,7 @@
       <alias value="Zorgpad" />
       <min value="1" />
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1696" />
         <comment value="Zorgpad" />
       </mapping>
@@ -286,7 +279,7 @@
       <alias value="VoorzieningenNodigBijConsult" />
       <min value="1" />
       <mapping>
-        <identity value="ART-DECOR-hg-Envelop" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1708" />
         <comment value="VoorzieningenNodigBijConsult" />
       </mapping>
@@ -315,7 +308,7 @@
       <definition value="Geeft de zorginhoudelijke kerngegevens van de berichten die genoemd zijn in de verschillende NHG-richtlijnen voor verwijzing, update, ontslag, directe toegang en eindrapportage voor paramedici." />
       <alias value="Kern" />
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1709" />
         <comment value="Kern" />
       </mapping>
@@ -356,7 +349,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1872" />
         <comment value="RedenBericht" />
       </mapping>
@@ -389,7 +382,7 @@
       <alias value="Context" />
       <min value="1" />
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1710" />
         <comment value="Context" />
       </mapping>
@@ -433,7 +426,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Problem" />
       </type>
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5205" />
         <comment value="Probleem" />
       </mapping>
@@ -472,7 +465,7 @@
       <alias value="IngesteldeBehandeling" />
       <min value="1" />
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1711" />
         <comment value="IngesteldeBehandeling" />
       </mapping>
@@ -528,7 +521,7 @@
       <alias value="ProcedureVoorstel" />
       <min value="1" />
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1712" />
         <comment value="ProcedureVoorstel" />
       </mapping>
@@ -583,7 +576,7 @@
       <alias value="VerderVanBelang" />
       <min value="1" />
       <mapping>
-        <identity value="ART-DECOR-hg-Kern" />
+        <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1713" />
         <comment value="VerderVanBelang" />
       </mapping>
