@@ -20,9 +20,7 @@
         <reference value="Patient/hg-ReferralServiceRequest-02-Patient-01" />
         <display value="Marc van XXX_Quigley" />
     </for>
-    <authoredOn>
-        <dateTime value="2022-12-01"/>
-    </authoredOn>
+    <authoredOn value="2022-12-01"/>
     <requester>
             <reference value="PractitionerRole/hg-ReferralServiceRequest-02-PractitionerRole-01"/>
             <display value="dr. P. van Schijndel"/>
