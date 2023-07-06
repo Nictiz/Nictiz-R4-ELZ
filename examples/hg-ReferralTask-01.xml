@@ -21,14 +21,11 @@
         <display value="Marijne van XXX_Prins" />
     </for>
     <authoredOn>
-        <dateTime value="2023-06-22"/>
+        <dateTime value="2022-12-01"/>
     </authoredOn>
     <requester>
-        <agent>
             <reference value="PractitionerRole/hg-ReferralServiceRequest-01-PractitionerRole-01"/>
-            <type value="PractitionerRole"/>
             <display value="dr. B.A. van Galen"/>
-        </agent>
     </requester>
     <owner>
         <reference value="Organization/hg-ReferralServiceRequest-01-Organization-01" />

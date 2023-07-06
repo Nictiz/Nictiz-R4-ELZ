@@ -30,7 +30,7 @@
             <coding>
                 <system value="http://snomed.info/sct"/>
                 <code value="406550009"/>
-                <display value="samenvatting van zorgvraag (gegevensobject)"/>
+                <display value="samenvatting van zorgvraag"/>
             </coding>
         </code>
         <section>
@@ -42,7 +42,7 @@
                 <coding>
                     <system value="http://snomed.info/sct"/>
                     <code value="440378000"/>
-                    <display value="Referral for (observable entity)"/>
+                    <display value="verwijzing voor"/>
                 </coding>
             </code>
             <text>
@@ -64,7 +64,7 @@
                 <coding>
                     <system value="http://snomed.info/sct"/>
                     <code value="108631000146107"/>
-                    <display value="behandeling lopende (situatie)"/>
+                    <display value="behandeling lopende"/>
                 </coding>
             </code>
             <text>
@@ -81,7 +81,7 @@
                 <coding>
                     <system value="http://snomed.info/sct"/>
                     <code value="240471000146100"/>
-                    <display value="vertaling toelichting op aard van verwijzing (waarneembare entiteit)"/>
+                    <display value="toelichting op aard van verwijzing"/>
                 </coding>
             </code>
             <text>
@@ -98,7 +98,7 @@
                 <coding>
                     <system value="http://snomed.info/sct"/>
                     <code value="159121000146100"/>
-                    <display value="toelichting op voorgesteld beleid (waarneembare entiteit)"/>
+                    <display value="toelichting op voorgesteld beleid"/>
                 </coding>
             </code>
             <text>
