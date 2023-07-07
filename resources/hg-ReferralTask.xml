@@ -1,130 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="hg-ReferralTask" />
-    <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask" />
-    <version value="0.2.0-beta.1"/>
-    <name value="HgReferralTask" />
-    <title value="hg ReferralTask" />
-    <status value="draft" />
-    <publisher value="Nictiz" />
-    <contact>
-        <name value="Nictiz" />
-        <telecom>
-            <system value="url" />
-            <value value="https://www.nictiz.nl" />
-            <use value="work" />
-        </telecom>
-    </contact>
-    <description value="A Task resource as used within the general practitioner referral use case in ELZ." />
-    <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
-    <fhirVersion value="4.0.1" />
-    <kind value="resource" />
-    <abstract value="false" />
-    <type value="Task" />
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
-    <derivation value="constraint" />
-    <differential>
-        <element id="Task.intent">
-            <path value="Task.intent" />
-            <fixedCode value="order" />
-        </element>
-        <element id="Task.code">
-            <path value="Task.code" />
-            <example>
-                <label value="BSeR" />
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://hl7.org/fhir/CodeSystem/task-code" />
-                        <code value="fulfill" />
-                    </coding>
-                </valueCodeableConcept>
-            </example>
-            <example>
-                <label value="Example for referral" />
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct" />
-                        <code value="3457005" />
-                    </coding>
-                </valueCodeableConcept>
-            </example>
-        </element>
-        <element id="Task.focus">
-            <path value="Task.focus" />
-            <min value="1" />
-            <type>
-                <code value="Reference" />
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest" />
-            </type>
-        </element>
-        <element id="Task.for">
-            <path value="Task.for" />
-            <min value="1" />
-            <type>
-                <code value="Reference" />
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
-            </type>
-        </element>
-        <element id="Task.authoredOn">
-            <path value="Task.authoredOn" />
-            <min value="1" />
-        </element>
-        <element id="Task.requester">
-            <path value="Task.requester" />
-            <slicing>
-                <discriminator>
-                    <type value="profile" />
-                    <path value="resolve()" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-            <definition value="The general practitioner who sent the referral of the patient." />
-            <min value="1" />
-        </element>
-        <element id="Task.requester:healthProfessional">
-            <path value="Task.requester" />
-            <sliceName value="healthProfessional" />
-            <type>
-                <code value="Reference" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
-            </type>
-        </element>
-        <element id="Task.requester:healthcareProvider">
-            <path value="Task.requester" />
-            <sliceName value="healthcareProvider" />
-            <type>
-                <code value="Reference" />
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
-            </type>
-        </element>
-        <element id="Task.owner">
-            <path value="Task.owner" />
-            <slicing>
-                <discriminator>
-                    <type value="profile" />
-                    <path value="resolve()" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-            <min value="1" />
-        </element>
-        <element id="Task.owner:healthProfessional">
-            <path value="Task.owner" />
-            <sliceName value="healthProfessional" />
-            <type>
-                <code value="Reference" />
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
-            </type>
-        </element>
-        <element id="Task.owner:healthcareProvider">
-            <path value="Task.owner" />
-            <sliceName value="healthcareProvider" />
-            <type>
-                <code value="Reference" />
-                <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
-            </type>
-        </element>
-    </differential>
+  <id value="hg-ReferralTask" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask" />
+  <version value="0.2.0-beta.1" />
+  <name value="HgReferralTask" />
+  <title value="hg ReferralTask" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Task resource as used within the general practitioner referral use case in ELZ." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Task.intent">
+      <path value="Task.intent" />
+      <fixedCode value="order" />
+    </element>
+    <element id="Task.code">
+      <path value="Task.code" />
+      <example>
+        <label value="BSeR" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/task-code" />
+            <code value="fulfill" />
+          </coding>
+        </valueCodeableConcept>
+      </example>
+      <example>
+        <label value="Example for referral" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="3457005" />
+          </coding>
+        </valueCodeableConcept>
+      </example>
+    </element>
+    <element id="Task.focus">
+      <path value="Task.focus" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest" />
+      </type>
+    </element>
+    <element id="Task.for">
+      <path value="Task.for" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+    </element>
+    <element id="Task.authoredOn">
+      <path value="Task.authoredOn" />
+      <min value="1" />
+    </element>
+    <element id="Task.requester">
+      <path value="Task.requester" />
+      <definition value="The general practitioner who sent the referral of the patient." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
+    </element>
+    <element id="Task.owner">
+      <path value="Task.owner" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
+    </element>
+  </differential>
 </StructureDefinition>

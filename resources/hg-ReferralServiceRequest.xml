@@ -8,7 +8,7 @@
     <valueCode value="patient" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest" />
-  <version value="0.2.0-beta.1"/>
+  <version value="0.2.0-beta.1" />
   <name value="HgReferralServiceRequest" />
   <title value="hg ReferralServiceRequest" />
   <status value="draft" />
@@ -123,54 +123,29 @@
     </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="Sender" />
       <definition value="Geeft de volledige identificatie- en contactgegevens van de verzender van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn van de NHG is aangegeven dat de beheerder meestal de verzender is van het bericht." />
       <alias value="Verzender" />
       <min value="1" />
       <type>
         <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1678" />
         <comment value="Verzender" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.requester:healthProfessional">
-      <path value="ServiceRequest.requester" />
-      <sliceName value="healthProfessional" />
-      <short value="HealthProfessional" />
-      <alias value="Zorgverlener" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
-      </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5120" />
         <comment value="Zorgverlener" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.requester:healthcareProvider">
-      <path value="ServiceRequest.requester" />
-      <sliceName value="healthcareProvider" />
-      <short value="HealthcareProvider" />
-      <alias value="Zorgaanbieder" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
-      </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5090" />
@@ -179,13 +154,6 @@
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="Recipient" />
       <definition value="Geeft de volledige identificatie- en contactgegevens van de ontvanger van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn wordt de ontvanger aangeduid met de geadresseerde." />
       <alias value="Ontvanger" />
@@ -193,43 +161,23 @@
       <max value="1" />
       <type>
         <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1680" />
         <comment value="Ontvanger" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.performer:healthProfessional">
-      <path value="ServiceRequest.performer" />
-      <sliceName value="healthProfessional" />
-      <short value="HealthProfessional" />
-      <alias value="Zorgverlener" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
-      </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-4849" />
         <comment value="Zorgverlener" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.performer:healthcareProvider">
-      <path value="ServiceRequest.performer" />
-      <sliceName value="healthcareProvider" />
-      <short value="HealthcareProvider" />
-      <alias value="Zorgaanbieder" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
-      </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-4989" />

@@ -8,7 +8,7 @@
     <valueCode value="not-classified" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
-  <version value="0.2.0-beta.1"/>
+  <version value="0.2.0-beta.1" />
   <name value="HgReferralComposition" />
   <title value="hg ReferralComposition" />
   <status value="draft" />
@@ -80,56 +80,29 @@
     </element>
     <element id="Composition.author">
       <path value="Composition.author" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="Sender" />
       <definition value="Geeft de volledige identificatie- en contactgegevens van de verzender van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn van de NHG is aangegeven dat de beheerder meestal de verzender is van het bericht." />
       <alias value="Verzender" />
       <max value="1" />
       <type>
         <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1678" />
         <comment value="Verzender" />
       </mapping>
-    </element>
-    <element id="Composition.author:healthProfessional">
-      <path value="Composition.author" />
-      <sliceName value="healthProfessional" />
-      <short value="HealthProfessional" />
-      <alias value="Zorgverlener" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
-      </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5120" />
         <comment value="Zorgverlener" />
       </mapping>
-    </element>
-    <element id="Composition.author:healthcareProvider">
-      <path value="Composition.author" />
-      <sliceName value="healthcareProvider" />
-      <short value="HealthcareProvider" />
-      <alias value="Zorgaanbieder" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
-      </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5090" />
