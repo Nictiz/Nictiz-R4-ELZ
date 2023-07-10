@@ -14,19 +14,23 @@
     </code>
     <focus>
         <reference value="ServiceRequest/hg-ReferralServiceRequest-01" />
+        <type value="ServiceRequest" />  
         <display value="Verwijsbrief" />       
     </focus>
     <for>
         <reference value="Patient/hg-ReferralServiceRequest-01-Patient-01" />
+        <type value="Patient" />  
         <display value="Marijne van XXX_Prins" />
     </for>
     <authoredOn value="2022-12-01"/>
     <requester>
-            <reference value="PractitionerRole/hg-ReferralServiceRequest-01-PractitionerRole-01"/>
-            <display value="dr. B.A. van Galen"/>
+        <reference value="PractitionerRole/hg-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole" />  
+        <display value="dr. B.A. van Galen" />
     </requester>
     <owner>
         <reference value="Organization/hg-ReferralServiceRequest-01-Organization-01" />
+        <type value="Organization" />
         <display value="Gezondheidscentrum Aesculaap" />
     </owner>
 </Task>
