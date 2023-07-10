@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="ext-TextValue" />
     <url value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
+    <version value="0.2.0-beta.1"/>
     <name value="ExtTextValue" />
     <title value="ext TextValue" />
     <status value="draft" />
@@ -21,7 +22,7 @@
     <abstract value="false" />
     <context>
         <type value="element" />
-        <expression value="Composition.section" />
+        <expression value="Composition.section.section" />
     </context>
     <type value="Extension" />
     <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />

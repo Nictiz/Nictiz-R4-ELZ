@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <Composition xmlns="http://hl7.org/fhir">
+<Composition xmlns="http://hl7.org/fhir">
     <id value="hg-ReferralComposition-02"/>
-     <meta>
-         <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition"/>
-     </meta>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition"/>
+    </meta>
     <status value="final"/>
     <type>
         <coding>
@@ -25,76 +25,86 @@
     </author>
     <title value="Referral note"/>
     <section>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="Dhr. heeft sinds enkele weken stemklachten. Graag onderzoek naar ernst en prognose bij logopedische therapie."/>
-        </extension>
-        <title value="Reden bericht"/>
+        <title value="Kern"/>
         <code>
             <coding>
                 <system value="http://snomed.info/sct"/>
-                <code value="440378000"/>
-                <display value="Referral for (observable entity)"/>
+                <code value="406550009"/>
+                <display value="samenvatting van zorgvraag"/>
             </coding>
         </code>
-        <text>
-            <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Reden bericht: R23 Symptomen/klachten stem, Dhr. heeft sinds enkele weken stemklachten. Graag onderzoek naar ernst en prognose bij logopedische therapie.</div>
-        </text>
-        <entry>
-            <reference value="Condition/hg-ReferralServiceRequest-02-Condition-01"/>
-            <type value="Condition"/>
-            <display value="R23 Symptomen/klachten stem"/>
-        </entry>
-    </section>
-    <section>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="geen"/>
-        </extension>
-        <title value="Ingestelde behandeling"/>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="108631000146107"/>
-                <display value="behandeling lopende (situatie)"/>
-            </coding>
-        </code>
-        <text>
-            <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Ingestelde behandeling: geen</div>
-        </text>
-    </section>
-    <section>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="Graag eenmalig onderzoek naar de stem en prognose bij eventuele logopedische therapie."/>
-        </extension>
-        <title value="Procedurevoorstel"/>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="240471000146100"/>
-                <display value="vertaling toelichting op aard van verwijzing (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <text>
-            <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Procedurevoorstel: Graag eenmalig onderzoek naar de stem en prognose bij eventuele logopedische therapie.</div>
-        </text>
-    </section>
-    <section>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
-            <valueString value="Dhr. maakt zich veel zorgen"/>
-        </extension>
-        <title value="Verder van belang"/>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="159121000146100"/>
-                <display value="toelichting op voorgesteld beleid (waarneembare entiteit)"/>
-            </coding>
-        </code>
-        <text>
-            <status value="extensions"/>
-            <div xmlns="http://www.w3.org/1999/xhtml">Verder van belang: Dhr. maakt zich veel zorgen</div>
-        </text>
+        <section>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+                <valueString value="Dhr. heeft sinds enkele weken stemklachten. Graag onderzoek naar ernst en prognose bij logopedische therapie."/>
+            </extension>
+            <title value="Reden bericht"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="440378000"/>
+                    <display value="verwijzing voor"/>
+                </coding>
+            </code>
+            <text>
+                <status value="extensions"/>
+                <div xmlns="http://www.w3.org/1999/xhtml">Reden bericht: R23 Symptomen/klachten stem, Dhr. heeft sinds enkele weken stemklachten. Graag onderzoek naar ernst en prognose bij logopedische therapie.</div>
+            </text>
+            <entry>
+                <reference value="Condition/hg-ReferralServiceRequest-02-Condition-01"/>
+                <type value="Condition"/>
+                <display value="R23 Symptomen/klachten stem"/>
+            </entry>
+        </section>
+        <section>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+                <valueString value="geen"/>
+            </extension>
+            <title value="Ingestelde behandeling"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="108631000146107"/>
+                    <display value="behandeling lopende"/>
+                </coding>
+            </code>
+            <text>
+                <status value="extensions"/>
+                <div xmlns="http://www.w3.org/1999/xhtml">Ingestelde behandeling: geen</div>
+            </text>
+        </section>
+        <section>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+                <valueString value="Graag eenmalig onderzoek naar de stem en prognose bij eventuele logopedische therapie."/>
+            </extension>
+            <title value="Procedurevoorstel"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="240471000146100"/>
+                    <display value="toelichting op aard van verwijzing"/>
+                </coding>
+            </code>
+            <text>
+                <status value="extensions"/>
+                <div xmlns="http://www.w3.org/1999/xhtml">Procedurevoorstel: Graag eenmalig onderzoek naar de stem en prognose bij eventuele logopedische therapie.</div>
+            </text>
+        </section>
+        <section>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+                <valueString value="Dhr. maakt zich veel zorgen"/>
+            </extension>
+            <title value="Verder van belang"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="159121000146100"/>
+                    <display value="toelichting op voorgesteld beleid"/>
+                </coding>
+            </code>
+            <text>
+                <status value="extensions"/>
+                <div xmlns="http://www.w3.org/1999/xhtml">Verder van belang: Dhr. maakt zich veel zorgen</div>
+            </text>
+        </section>
     </section>
 </Composition>
