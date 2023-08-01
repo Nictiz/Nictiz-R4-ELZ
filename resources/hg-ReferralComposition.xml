@@ -132,11 +132,6 @@
       <short value="Envelope" />
       <definition value="Geeft alle relevante gegevens in de envelop conform de richtlijn." />
       <alias value="Envelop" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1673" />
-        <comment value="Envelop" />
-      </mapping>
     </element>
     <element id="Composition.section:envelope.title">
       <path value="Composition.section.title" />
@@ -280,11 +275,6 @@
       <short value="Core" />
       <definition value="Geeft de zorginhoudelijke kerngegevens van de berichten die genoemd zijn in de verschillende NHG-richtlijnen voor verwijzing, update, ontslag, directe toegang en eindrapportage voor paramedici." />
       <alias value="Kern" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1709" />
-        <comment value="Kern" />
-      </mapping>
     </element>
     <element id="Composition.section:core.title">
       <path value="Composition.section.title" />
