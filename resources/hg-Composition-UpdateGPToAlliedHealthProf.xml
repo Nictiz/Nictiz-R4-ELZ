@@ -35,6 +35,10 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/hg-Composition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition.status">
+      <path value="Composition.status" />
+      <fixedCode value="amended" />
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <patternCodeableConcept>
@@ -86,7 +90,7 @@
     </element>
     <element id="Composition.section:core.section">
       <path value="Composition.section.section" />
-      <min value="3" />
+      <min value="2" />
     </element>
     <element id="Composition.section:core.section:messageReason">
       <path value="Composition.section.section" />

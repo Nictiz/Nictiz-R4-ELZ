@@ -48,10 +48,6 @@
         <comment value="Kern" />
       </mapping>
     </element>
-    <element id="Composition.status">
-      <path value="Composition.status" />
-      <fixedCode value="final" />
-    </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
       <short value="Patient" />
@@ -126,6 +122,7 @@
     </element>
     <element id="Composition.section:envelope.code">
       <path value="Composition.section.code" />
+      <min value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
@@ -270,6 +267,7 @@
     </element>
     <element id="Composition.section:core.code">
       <path value="Composition.section.code" />
+      <min value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />

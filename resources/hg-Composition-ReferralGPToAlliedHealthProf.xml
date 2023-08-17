@@ -35,6 +35,10 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/hg-Composition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition.status">
+      <path value="Composition.status" />
+      <fixedCode value="final" />
+    </element>
     <element id="Composition.type">
       <path value="Composition.type" />
       <patternCodeableConcept>
