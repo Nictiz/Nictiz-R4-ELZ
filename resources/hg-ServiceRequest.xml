@@ -43,10 +43,6 @@
         <comment value="Envelop" />
       </mapping>
     </element>
-    <element id="ServiceRequest.intent">
-      <path value="ServiceRequest.intent" />
-      <fixedCode value="order" />
-    </element>
     <element id="ServiceRequest.category">
       <path value="ServiceRequest.category" />
       <slicing>
@@ -56,6 +52,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="ServiceRequest.category:messageType">
       <path value="ServiceRequest.category" />
@@ -63,6 +60,7 @@
       <short value="MessageType" />
       <definition value="Geeft het type bericht dat verstuurd wordt door de verzender." />
       <alias value="TypeBericht" />
+      <min value="1" />
       <max value="1" />
       <patternCodeableConcept>
         <coding>

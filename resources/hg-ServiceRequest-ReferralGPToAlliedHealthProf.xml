@@ -40,14 +40,13 @@
       <comment value="In referral use cases the referral is considered done when sent by the referral initiator, hence the `.status` is set to _completed_." />
       <fixedCode value="completed" />
     </element>
-    <element id="ServiceRequest.category">
-      <path value="ServiceRequest.category" />
-      <min value="1" />
+    <element id="ServiceRequest.intent">
+      <path value="ServiceRequest.intent" />
+      <fixedCode value="order" />
     </element>
     <element id="ServiceRequest.category:messageType">
       <path value="ServiceRequest.category" />
       <sliceName value="messageType" />
-      <min value="1" />
       <patternCodeableConcept>
         <coding>
           <code value="1" />
