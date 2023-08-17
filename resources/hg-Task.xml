@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="hg-ReferralTask" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralTask" />
+  <id value="hg-Task" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-Task" />
   <version value="0.2.0-beta.1" />
-  <name value="HgReferralTask" />
-  <title value="hg ReferralTask" />
+  <name value="HgTask" />
+  <title value="hg Task" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -15,7 +15,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Task resource as used within the general practitioner referral use case in ELZ." />
+  <description value="A Task resource used within the information standard ELZ." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -54,7 +54,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ServiceRequest" />
       </type>
     </element>
     <element id="Task.for">
