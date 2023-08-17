@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Composition resource as used within the general practitioner referral use case in ELZ." />
+  <description value="A Composition resource based on the data set used within the information standard ELZ." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -52,15 +52,6 @@
       <path value="Composition.status" />
       <fixedCode value="final" />
     </element>
-    <element id="Composition.type">
-      <path value="Composition.type" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="57133-1" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
       <short value="Patient" />
@@ -69,7 +60,6 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
@@ -109,13 +99,6 @@
         <comment value="Zorgaanbieder" />
       </mapping>
     </element>
-    <element id="Composition.title">
-      <path value="Composition.title" />
-      <example>
-        <label value="Example for referral" />
-        <valueString value="Referral note" />
-      </example>
-    </element>
     <element id="Composition.section">
       <path value="Composition.section" />
       <slicing>
@@ -132,16 +115,12 @@
       <short value="Envelope" />
       <definition value="Geeft alle relevante gegevens in de envelop conform de richtlijn." />
       <alias value="Envelop" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1673" />
-        <comment value="Envelop" />
-      </mapping>
+      <max value="1" />
     </element>
     <element id="Composition.section:envelope.title">
       <path value="Composition.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Envelop" />
       </example>
     </element>
@@ -205,7 +184,7 @@
     <element id="Composition.section:envelope.section:carePath.title">
       <path value="Composition.section.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Zorgpad" />
       </example>
     </element>
@@ -260,7 +239,7 @@
     <element id="Composition.section:envelope.section:requiredConsultationFacilities.title">
       <path value="Composition.section.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Voorzieningen nodig bij consult" />
       </example>
     </element>
@@ -280,16 +259,12 @@
       <short value="Core" />
       <definition value="Geeft de zorginhoudelijke kerngegevens van de berichten die genoemd zijn in de verschillende NHG-richtlijnen voor verwijzing, update, ontslag, directe toegang en eindrapportage voor paramedici." />
       <alias value="Kern" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1709" />
-        <comment value="Kern" />
-      </mapping>
+      <max value="1" />
     </element>
     <element id="Composition.section:core.title">
       <path value="Composition.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Kern" />
       </example>
     </element>
@@ -319,7 +294,6 @@
       <definition value="Geeft de reden van de verwijzing of de update. Hierbij is de beschrijving als vrije tekst op aangeven van het NHG verplicht. Daarnaast kan er ook een ICPC-code van de episode worden meegestuurd, al dan niet aangevuld met meer details over de vastlegging van de ICPC." />
       <comment value="The ICPC code should be communicated via `Condition.code` in the resource that is referenced in the _problem_ `.entry` below." />
       <alias value="RedenBericht" />
-      <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
@@ -363,7 +337,7 @@
     <element id="Composition.section:core.section:messageReason.title">
       <path value="Composition.section.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Reden bericht" />
       </example>
     </element>
@@ -407,7 +381,6 @@
     <element id="Composition.section:core.section:setTreatment">
       <path value="Composition.section.section" />
       <sliceName value="setTreatment" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:core.section:setTreatment.extension">
@@ -446,7 +419,7 @@
     <element id="Composition.section:core.section:setTreatment.title">
       <path value="Composition.section.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Ingestelde behandeling" />
       </example>
     </element>
@@ -463,7 +436,6 @@
     <element id="Composition.section:core.section:proposedProcedure">
       <path value="Composition.section.section" />
       <sliceName value="proposedProcedure" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:core.section:proposedProcedure.extension">
@@ -502,7 +474,7 @@
     <element id="Composition.section:core.section:proposedProcedure.title">
       <path value="Composition.section.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Procedurevoorstel" />
       </example>
     </element>
@@ -557,7 +529,7 @@
     <element id="Composition.section:core.section:furtherImportant.title">
       <path value="Composition.section.section.title" />
       <example>
-        <label value="Example for referral" />
+        <label value="Example" />
         <valueString value="Verder van belang" />
       </example>
     </element>
@@ -568,6 +540,61 @@
         <coding>
           <system value="http://snomed.info/sct" />
           <code value="159121000146100" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:core.section:questionResponse">
+      <path value="Composition.section.section" />
+      <sliceName value="questionResponse" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:core.section:questionResponse.extension">
+      <path value="Composition.section.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Composition.section:core.section:questionResponse.extension:questionResponseTextValue">
+      <path value="Composition.section.section.extension" />
+      <sliceName value="questionResponseTextValue" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
+      </type>
+    </element>
+    <element id="Composition.section:core.section:questionResponse.extension:questionResponseTextValue.value[x]">
+      <path value="Composition.section.section.extension.value[x]" />
+      <short value="QuestionResponse" />
+      <definition value="Geeft in de update-berichten het antwoord op de gestelde vraag.&#xD;&#xA; &#xD;&#xA;In de HASP-paramedicus (NHG) is aangegeven dat zowel de huisarts als de paramedicus antwoord kunnen geven op vragen." />
+      <alias value="AntwoordOpUwVraag" />
+      <min value="1" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1747" />
+        <comment value="AntwoordOpUwVraag" />
+      </mapping>
+    </element>
+    <element id="Composition.section:core.section:questionResponse.title">
+      <path value="Composition.section.section.title" />
+      <example>
+        <label value="Example" />
+        <valueString value="Antwoord op uw vraag" />
+      </example>
+    </element>
+    <element id="Composition.section:core.section:questionResponse.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="240481000146103" />
         </coding>
       </patternCodeableConcept>
     </element>

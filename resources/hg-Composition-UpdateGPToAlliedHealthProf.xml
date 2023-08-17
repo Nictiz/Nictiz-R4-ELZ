@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="hg-Composition-ReferralGPToAlliedHealthProf" />
+  <id value="hg-Composition-UpdateGPToAlliedHealthProf" />
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
     <valueString value="Foundation.Documents" />
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="not-classified" />
   </extension>
-  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-Composition-ReferralGPToAlliedHealthProf" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-Composition-UpdateGPToAlliedHealthProf" />
   <version value="0.2.0-beta.1" />
-  <name value="HgCompositionReferralGPToAlliedHealthProf" />
-  <title value="hg Composition Referral from General Practitioner to Allied Health Professional" />
+  <name value="HgCompositionUpdateGPToAlliedHealthProf" />
+  <title value="hg Composition Update from General Practitioner to Allied Health Professional" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A Composition resource as used within the send referral from general practitioner to allied health professional use case in ELZ." />
+  <description value="A Composition resource as used within the send update from general practitioner to allied health professional use case in ELZ." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -55,8 +55,8 @@
     <element id="Composition.title">
       <path value="Composition.title" />
       <example>
-        <label value="Example for referral" />
-        <valueString value="Referral note" />
+        <label value="Example for referral update" />
+        <valueString value="Update to referral note" />
       </example>
     </element>
     <element id="Composition.section">
@@ -103,8 +103,7 @@
     <element id="Composition.section:core.section:proposedProcedure">
       <path value="Composition.section.section" />
       <sliceName value="proposedProcedure" />
-      <min value="1" />
-      <mustSupport value="true" />
+      <max value="0" />
     </element>
     <element id="Composition.section:core.section:furtherImportant">
       <path value="Composition.section.section" />
@@ -114,7 +113,7 @@
     <element id="Composition.section:core.section:questionResponse">
       <path value="Composition.section.section" />
       <sliceName value="questionResponse" />
-      <max value="0" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

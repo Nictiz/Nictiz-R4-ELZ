@@ -21,7 +21,7 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="A ServiceRequest resource as used within the general practitioner referral use case in ELZ." />
+  <description value="A ServiceRequest resource based on the data set used within the information standard ELZ." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -43,10 +43,6 @@
         <comment value="Envelop" />
       </mapping>
     </element>
-    <element id="ServiceRequest.status">
-      <path value="ServiceRequest.status" />
-      <definition value="In current referral use cases the referral is considered done when sent by the referral initiator. Therefore, in those use cases the `.status` is always set to _completed_." />
-    </element>
     <element id="ServiceRequest.intent">
       <path value="ServiceRequest.intent" />
       <fixedCode value="order" />
@@ -60,7 +56,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
     </element>
     <element id="ServiceRequest.category:messageType">
       <path value="ServiceRequest.category" />
@@ -68,12 +63,10 @@
       <short value="MessageType" />
       <definition value="Geeft het type bericht dat verstuurd wordt door de verzender." />
       <alias value="TypeBericht" />
-      <min value="1" />
       <max value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="urn:oid:2.16.840.1.113883.2.4.4.30.69" />
-          <code value="1" />
         </coding>
       </patternCodeableConcept>
       <mapping>
@@ -114,7 +107,6 @@
       <short value="SendDateTime" />
       <definition value="Geeft het tijdstip waarop de verzender het bericht afrondt en aanbiedt voor verzending.&#xD;&#xA; &#xD;&#xA;Dit gegeven kan automatisch worden ingevuld door de verzendende applicatie." />
       <alias value="DatumTijdVerzenden" />
-      <min value="1" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1684" />
@@ -126,7 +118,6 @@
       <short value="Sender" />
       <definition value="Geeft de volledige identificatie- en contactgegevens van de verzender van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn van de NHG is aangegeven dat de beheerder meestal de verzender is van het bericht." />
       <alias value="Verzender" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
@@ -157,7 +148,6 @@
       <short value="Recipient" />
       <definition value="Geeft de volledige identificatie- en contactgegevens van de ontvanger van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn wordt de ontvanger aangeduid met de geadresseerde." />
       <alias value="Ontvanger" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -193,22 +183,15 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
     </element>
-    <element id="ServiceRequest.supportingInfo:referralComposition">
+    <element id="ServiceRequest.supportingInfo:composition">
       <path value="ServiceRequest.supportingInfo" />
-      <sliceName value="referralComposition" />
-      <min value="1" />
+      <sliceName value="composition" />
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralComposition" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/hg-Composition" />
       </type>
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1673" />
-        <comment value="Envelop" />
-      </mapping>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1709" />
