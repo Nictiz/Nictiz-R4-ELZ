@@ -5,7 +5,7 @@
   <name value="HgEncounter" />
   <title value="hg Encounter" />
   <status value="draft" />
-  <description value="An Encounter (&quot;Contact&quot;) as used within the medical record (&quot;Dossiergegevens&quot;) section in the ELZ data set. It is based on the zib Encounter as much as possible, but adds some missing elements that are necessary for data exchange in the primary care domain." />
+  <description value="An Encounter (&quot;Contact&quot;) as used within the medical record (&quot;Dossiergegevens&quot;) section in the ELZ data set. It is based on the zib Encounter as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
   <purpose value="A derived profile from [nl-core-Encounter](http://nictiz.nl/fhir/StructureDefinition/nl-core-Encounter) to provide a version better suited for use in ELZ use cases." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -45,6 +45,11 @@
         <description value="Classification of the Encounter using NHG-Tabel 14-Contactwijze" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.103.11.3--20201104132536" />
       </binding>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-112" />
+        <comment value="ContactType" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
