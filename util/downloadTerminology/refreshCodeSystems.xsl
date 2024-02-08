@@ -16,7 +16,7 @@
     <xsl:output omit-xml-declaration="yes"/>
     <xsl:include href="rewriteTerminologyResource.xsl"/>
     
-    <xsl:param name="inputdir">../../Profiles/</xsl:param>
+    <xsl:param name="inputdir">../../resources/</xsl:param>
     <xsl:param name="outputdir">
         <xsl:choose>
             <xsl:when test="not(contains($inputdir, '/'))">
