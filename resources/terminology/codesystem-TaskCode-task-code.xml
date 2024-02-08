@@ -1,0 +1,109 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="task-code"/>
+   <meta>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/CodeSystem"/>-->
+   </meta>
+   <language value="en-US"/>
+   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+      <valueCode value="fhir"/>
+   </extension>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2019-10-30T00:00:00Z"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://hl7.org/fhir/CodeSystem/task-code"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.4.642.4.1397"/>
+   </identifier>
+   <version value="4.0.1"/>
+   <name value="TaskCode"/>
+   <title value="Task Codes"/>
+   <status value="active"/>
+   <experimental value="false"/>
+   <publisher value="HL7 International / FHIR Infrastructure"/>
+   <contact>
+      <name value="FHIR project team"/>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.hl7.org/Special/committees/fiwg"/>
+      </telecom>
+   </contact>
+   <description value="Codes indicating the type of action that is expected to be performed"/>
+   <purpose value="This CodeSystem is meant to satisfy basic FHIR validator needs. It was generated with fixed values from non-authorative source for the structuredefinition-wg extension, `publisher`, `.contact` and `.caseSensitive`. These properties may or may not be correct but should not influence validation results."/>
+   <caseSensitive value="true"/>
+   <content value="complete"/>
+   <count value="7"/>
+   <property>
+      <code value="status"/>
+      <uri value="http://hl7.org/fhir/concept-properties"/>
+      <description value="A code that indicates the status of the concept. Values found in this version of the code system are: active"/>
+      <type value="code"/>
+   </property>
+   <concept>
+      <code value="approve"/>
+      <display value="Activate/approve the focal resource"/>
+      <definition value="Take what actions are needed to transition the focus resource from 'draft' to 'active' or 'in-progress', as appropriate for the resource type. This may involve additing additional content, approval, validation, etc."/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="fulfill"/>
+      <display value="Fulfill the focal request"/>
+      <definition value="Act to perform the actions defined in the focus request. This might result in a 'more assertive' request (order for a plan or proposal, filler order for a placer order), but is intend to eventually result in events. The degree of fulfillment requested might be limited by Task.restriction."/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="abort"/>
+      <display value="Mark the focal resource as no longer active"/>
+      <definition value="Abort, cancel or withdraw the focal resource, as appropriate for the type of resource."/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="replace"/>
+      <display value="Replace the focal resource with the input resource"/>
+      <definition value="Replace the focal resource with the specified input resource"/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="change"/>
+      <display value="Change the focal resource"/>
+      <definition value="Update the focal resource of the owning system to reflect the content specified as the Task.focus"/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="suspend"/>
+      <display value="Suspend the focal resource"/>
+      <definition value="Transition the focal resource from 'active' or 'in-progress' to 'suspended'"/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+   <concept>
+      <code value="resume"/>
+      <display value="Re-activate the focal resource"/>
+      <definition value="Transition the focal resource from 'suspended' to 'active' or 'in-progress' as appropriate for the resource type."/>
+      <property>
+         <code value="status"/>
+         <valueCode value="active"/>
+      </property>
+   </concept>
+</CodeSystem>
