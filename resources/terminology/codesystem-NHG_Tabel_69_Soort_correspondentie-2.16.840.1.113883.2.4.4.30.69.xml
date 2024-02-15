@@ -1,0 +1,18 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+   <id value="nhg-tabel-69-soort-correspondentie"/>
+   <language value="en-US"/>
+   <url value="https://referentiemodel.nhg.org/tabellen/nhg-tabel-69-soort-correspondentie"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.4.30.69"/>
+   </identifier>
+   <version value="2023-08-31"/>
+   <name value="NHG_Tabel_69_Soort_correspondentie"/>
+   <title value="NHG Tabel 69 Soort correspondentie"/>
+   <status value="unknown"/>
+   <publisher value="ART-DECOR"/>
+   <description value="NHG Tabel 69 Soort correspondentie"/>
+   <content value="not-present"/>
+   <count value="0"/>
+</CodeSystem>
