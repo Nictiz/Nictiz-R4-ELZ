@@ -59,19 +59,5 @@
         <comment value="ContactType" />
       </mapping>
     </element>
-    <element id="Encounter.participant:healthProfessional">
-      <path value="Encounter.participant" />
-      <sliceName value="healthProfessional" />
-    </element>
-    <element id="Encounter.participant:healthProfessional.individual">
-      <path value="Encounter.participant.individual" />
-      <short value="ContactWith" />
-      <definition value="De medewerker van de huisartsenpraktijk waarmee het contact heeft plaatsgevonden of zal plaatsvinden.&#xD;&#xA;Deze medewerker wordt weergegeven in de presentatierol van de zorgverlener.&#xD;&#xA;Zie ter inspiratie voor de presentatierol NHG tabel 2 'soort functie'." />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-113" />
-        <comment value="ContactMet" />
-      </mapping>
-    </element>
   </differential>
 </StructureDefinition>
