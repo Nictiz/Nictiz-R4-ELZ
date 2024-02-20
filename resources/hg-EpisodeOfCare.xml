@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="hg-EpisodeOfCare" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-EpisodeOfCare" />
+  <name value="HgEpisodeOfCare" />
+  <title value="hg EpisodeOfCare" />
+  <status value="draft" />
+  <description value="An EpisodeOfCare (&quot;ZorgEpisode&quot;) as used within the medical record (&quot;Dossiergegevens&quot;) section in the ELZ data set. It is based on the zib EpisodeOfCare as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
+  <purpose value="A derived profile from [nl-core-EpisodeOfCare](http://nictiz.nl/fhir/StructureDefinition/nl-core-EpisodeOfCare) to provide a version better suited for use in ELZ use cases." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hg-dataset-020-beta1-20230612" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="EpisodeOfCare" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-EpisodeOfCare" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="EpisodeOfCare.identifier">
+      <path value="EpisodeOfCare.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1203" />
+        <comment value="Identificatienummer" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
