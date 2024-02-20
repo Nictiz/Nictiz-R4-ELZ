@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="hg-Procedure" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-Procedure" />
+  <name value="HgProcedure" />
+  <title value="hg Encounter" />
+  <status value="draft" />
+  <description value="An Procedure (Contact) as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the zib Procedure as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
+  <purpose value="A derived profile from [nl-core-Encounter](http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure) to provide a version better suited for use in ELZ use cases." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hg-dataset-020-beta1-20230612" />
+    <name value="hd-dataelement-" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-event" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure">
+      <path value="Procedure" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-172" />
+        <comment value="Verrichting" />
+      </mapping>
+    </element>
+    <element id="Procedure.identifier">
+      <path value="Procedure.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-2023061" />
+        <map value="hg-dataelement-1227" />
+        <comment value="Idenficatienummer" />
+      </mapping>
+    </element>
+    <element id="Procedure.code">
+      <path value="Procedure.code" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-175" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod">
+      <path value="Procedure.performed[x]" />
+      <sliceName value="performedPeriod" />
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod.start">
+      <path value="Procedure.performed[x].start" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-173" />
+        <comment value="VerrichtingStartDatum" />
+      </mapping>
+    </element>
+    <element id="Procedure.performed[x]:performedPeriod.end">
+      <path value="Procedure.performed[x].end" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-174" />
+        <comment value="VerrichtingEindDatum" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer">
+      <path value="Procedure.performer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1230" />
+        <comment value="VerrichtingVerantwoordelijke" />
+      </mapping>
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-2023061" />
+        <map value="hg-dataelement-5409" />
+        <comment value="Zorgverlener" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
