@@ -26,7 +26,7 @@
       <alias value="Identificatienummer" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1203" />
+        <map value="hg-dataelement-1205" />
         <comment value="Identificatienummer" />
       </mapping>
     </element>
