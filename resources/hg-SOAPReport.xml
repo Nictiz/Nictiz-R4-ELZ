@@ -30,5 +30,16 @@
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
+    <element id="Composition.encounter">
+      <path value="Composition.encounter" />
+      <short value="RelatieEncounter" />
+      <definition value="Geeft de relatie aan tussen deze bouwsteen met de Contact-bouwsteen." />
+      <alias value="RelationEncounter" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1266" />
+        <comment value="RelationEncounter" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
