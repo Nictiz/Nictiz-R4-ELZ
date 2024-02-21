@@ -35,7 +35,7 @@
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1203" />
-        <comment value="Idenficatienummer" />
+        <comment value="IdentificationNumber" />
       </mapping>
     </element>
     <element id="Encounter.class">
