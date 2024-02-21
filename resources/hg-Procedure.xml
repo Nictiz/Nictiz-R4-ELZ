@@ -10,7 +10,8 @@
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="hg-dataset-020-beta1-20230612" />
-    <name value="hd-dataelement-" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -44,40 +45,12 @@
         <map value="hg-dataelement-175" />
       </mapping>
     </element>
-    <element id="Procedure.performed[x]:performedPeriod">
-      <path value="Procedure.performed[x]" />
-      <sliceName value="performedPeriod" />
-    </element>
-    <element id="Procedure.performed[x]:performedPeriod.start">
-      <path value="Procedure.performed[x].start" />
+    <element id="Procedure.note.text">
+      <path value="Procedure.note.text" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-173" />
-        <comment value="VerrichtingStartDatum" />
-      </mapping>
-    </element>
-    <element id="Procedure.performed[x]:performedPeriod.end">
-      <path value="Procedure.performed[x].end" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-174" />
-        <comment value="VerrichtingEindDatum" />
-      </mapping>
-    </element>
-    <element id="Procedure.performer">
-      <path value="Procedure.performer" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1230" />
-        <comment value="VerrichtingVerantwoordelijke" />
-      </mapping>
-    </element>
-    <element id="Procedure.performer.actor">
-      <path value="Procedure.performer.actor" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-2023061" />
-        <map value="hg-dataelement-5409" />
-        <comment value="Zorgverlener" />
+        <map value="hg-dataelement-417" />
+        <comment value="ProcedureComment" />
       </mapping>
     </element>
   </differential>
