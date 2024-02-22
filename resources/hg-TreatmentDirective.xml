@@ -18,4 +18,14 @@
   <type value="Consent" />
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-TreatmentDirective2" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Consent.identifier">
+      <path value="Consent.identifier" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1273" />
+        <comment value="Indentificationnumber" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>
