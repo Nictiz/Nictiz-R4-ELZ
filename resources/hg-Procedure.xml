@@ -5,8 +5,8 @@
   <name value="HgProcedure" />
   <title value="hg Encounter" />
   <status value="draft" />
-  <description value="An Procedure (Contact) as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the zib Procedure as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
-  <purpose value="A derived profile from [nl-core-Encounter](http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure) to provide a version better suited for use in ELZ use cases." />
+  <description value="An Procedure as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the zib Procedure as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
+  <purpose value="A derived profile from [nl-core-Procedure-event](http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-event) to provide a version better suited for use in ELZ use cases." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="hg-dataset-020-beta1-20230612" />
