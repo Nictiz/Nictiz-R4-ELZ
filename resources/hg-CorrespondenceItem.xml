@@ -29,5 +29,66 @@
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
+    <element id="Communication.category">
+      <path value="Communication.category" />
+      <binding>
+        <strength value="required" />
+        <description value="valyeCodes for general categories of communications such as alerts, instructions, etc." />
+        <valueSet value="https://decor.nictiz.nl/ad/#/hg-/terminology/valueset/2.16.840.1.113883.2.4.3.11.60.103.11.24" />
+      </binding>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-587" />
+        <comment value="CorrespondenceCategory" />
+      </mapping>
+    </element>
+    <element id="Communication.encounter">
+      <path value="Communication.encounter" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1285" />
+        <comment value="RelationContact" />
+      </mapping>
+    </element>
+    <element id="Communication.recipient">
+      <path value="Communication.recipient" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-536" />
+        <comment value="CorrespondenceAddressee" />
+      </mapping>
+    </element>
+    <element id="Communication.sender">
+      <path value="Communication.sender" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-382" />
+        <comment value="CorrespondenceSender" />
+      </mapping>
+    </element>
+    <element id="Communication.note.author[x]">
+      <path value="Communication.note.author[x]" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-581" />
+        <comment value="CorrespondenceProcessor" />
+      </mapping>
+    </element>
+    <element id="Communication.note.time">
+      <path value="Communication.note.time" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-583" />
+        <comment value="CorrespondenceProcessingDate" />
+      </mapping>
+    </element>
+    <element id="Communication.note.text">
+      <path value="Communication.note.text" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-381" />
+        <comment value="CorrespondenceSummary" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
