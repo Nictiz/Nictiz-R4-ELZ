@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="hg-CorrespondenceItem" />
-  <url value="https://example.org/fhir/StructureDefinition/hg-CorrespondenceItem" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-CorrespondenceItem" />
   <name value="HgCorrespondenceItem" />
   <status value="draft" />
   <description value="An CorrespondenceItem as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the HL7 FHIR Communcation core 4.0.1 resource as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
