@@ -1,0 +1,43 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="2.16.840.1.113883.2.4.3.11.60.103.11.24" />
+  <meta>
+    <source value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
+    <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
+    <tag>
+      <system value="http://hl7.org/fhir/FHIR-version" />
+      <code value="4.0.1" />
+    </tag>
+  </meta>
+  <!-- <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+    <valuePeriod>
+      <start value="2020-09-01T00:00:00Z" />
+    </valuePeriod>
+  </extension> -->
+  <url value="https://decor.nictiz.nl/ad/#/hg-/terminology/valueset/2.16.840.1.113883.2.4.3.11.60.103.11.24" />
+  <!--  <identifier>
+    <use value="official" />
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.2.14.1.8" /> 
+  </identifier>
+  <version value="2020-09-01T00:00:00" />-->
+  <name value="SoortCorrespondentieNHGCodelijst" />
+  <title value="SoortCorrespondentieNHGCodelijst" />
+  <status value="draft" />
+  <experimental value="true" />
+  <!-- <publisher value="ntb" />
+  <contact>
+    <name value="ntb" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nhg.nl" />
+    </telecom>
+  </contact> -->
+  <description value="NHG tabel 69 Soort correspondentie - Alle waarden" />
+  <immutable value="false" />
+  <compose>
+    <include>
+      <system value="https://referentiemodel.nhg.org/tabellen/nhg-tabel-69-soort-correspondentie" />
+    </include>
+  </compose>
+</ValueSet>
