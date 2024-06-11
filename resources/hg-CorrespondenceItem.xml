@@ -29,6 +29,14 @@
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
+    <element id="Communication.basedOn">
+      <path value="Communication.basedOn" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1288" />
+        <comment value="EpisodeOfCare" />
+      </mapping>
+    </element>
     <element id="Communication.category">
       <path value="Communication.category" />
       <binding>
