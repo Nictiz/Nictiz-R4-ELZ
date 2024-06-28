@@ -45,13 +45,5 @@
         <map value="hg-dataelement-175" />
       </mapping>
     </element>
-    <element id="Procedure.note.text">
-      <path value="Procedure.note.text" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-417" />
-        <comment value="ProcedureComment" />
-      </mapping>
-    </element>
   </differential>
 </StructureDefinition>
