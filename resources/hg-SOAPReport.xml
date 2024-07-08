@@ -19,6 +19,22 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SOAPReport" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition.extension:SOAPReportbasedOn">
+      <path value="Composition.extension" />
+      <sliceName value="SOAPReportbasedOn" />
+      <short value="RelatieZorgEpisode" />
+      <definition value="Geeft de relatie aan tussen deze bouwsteen met de Zorgepisode-bouwsteen." />
+      <alias value="RelationEpisodeOfCare" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/event-basedOn" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1215" />
+        <comment value="RelationEpisodeOfCare" />
+      </mapping>
+    </element>
     <element id="Composition.identifier">
       <path value="Composition.identifier" />
       <short value="IdentificationNumber" />
