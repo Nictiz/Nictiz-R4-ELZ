@@ -5,8 +5,18 @@
   <name value="HgProcedureRequest" />
   <title value="hg ProcedureRequest" />
   <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
   <description value="An Procedure Request as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the zib Procedure request as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
   <purpose value="A derived profile from [nl-core-Procedure-request](http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-request) to provide a version better suited for use in ELZ use cases." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="hg-dataset-020-beta1-20230612" />
@@ -33,6 +43,7 @@
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1307" />
         <comment value="EpisodeOfCare" />
+        <comment value="Relation with the ELZ data set." />
       </mapping>
     </element>
   </differential>
