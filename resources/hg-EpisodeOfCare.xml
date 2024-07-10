@@ -22,7 +22,7 @@
     <identity value="hg-dataset-020-beta1-20230612" />
     <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
     <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
-    <comment value="Mapping with the ELZ data set." />
+    <comment value="Relation with the ELZ data set." />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -46,6 +46,7 @@
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5322" />
+        <comment value="Report Responsible" />
       </mapping>
     </element>
   </differential>
