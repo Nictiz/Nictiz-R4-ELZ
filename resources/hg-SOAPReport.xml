@@ -30,9 +30,9 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-SOAPReport" />
   <derivation value="constraint" />
   <differential>
-    <element id="Composition.extension:SOAPReportworkflow-episodeOfCare">
+    <element id="Composition.extension:soapReportworkflow-episodeOfCare">
       <path value="Composition.extension" />
-      <sliceName value="SOAPReportworkflow-episodeOfCare" />
+      <sliceName value="soapReportworkflow-episodeOfCare" />
       <short value="RelatieZorgEpisode" />
       <definition value="Geeft de relatie aan tussen deze bouwsteen met de Zorgepisode-bouwsteen." />
       <alias value="RelationEpisodeOfCare" />
