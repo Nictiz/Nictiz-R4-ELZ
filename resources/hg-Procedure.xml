@@ -30,31 +30,24 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-event" />
   <derivation value="constraint" />
   <differential>
-    <element id="Procedure">
-      <path value="Procedure" />
-      <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-172" />
-        <comment value="Verrichting" />
-      </mapping>
-    </element>
     <element id="Procedure.identifier">
       <path value="Procedure.identifier" />
       <short value="IdentificationNumber" />
       <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
       <alias value="Identificatienummer" />
       <mapping>
-        <identity value="hg-dataset-020-beta1-2023061" />
-        <map value="hg-dataelement-1227" />
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1201" />
         <comment value="Identificationnumber" />
       </mapping>
     </element>
-    <element id="Procedure.code">
-      <path value="Procedure.code" />
+    <element id="Procedure.recorder">
+      <path value="Procedure.recorder" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-175" />
+        <map value="hg-dataelement-5322" />
+        <comment value="ProcedureResponsible" />
       </mapping>
     </element>
-   </differential>
+  </differential>
 </StructureDefinition>

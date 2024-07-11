@@ -22,6 +22,7 @@
     <identity value="hg-dataset-020-beta1-20230612" />
     <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
     <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+    <comment value="Relation with the ELZ data set." />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -29,6 +30,22 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-request" />
   <derivation value="constraint" />
   <differential>
+    <element id="ServiceRequest.identifier">
+      <path value="ServiceRequest.identifier" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1201" />
+        <comment value="IndentificationNumber" />
+      </mapping>
+    </element>
+    <element id="ServiceRequest.encounter">
+      <path value="ServiceRequest.encounter" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1215" />
+        <comment value="Encounter" />
+      </mapping>
+    </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
       <mapping>
@@ -37,13 +54,20 @@
         <comment value="Requester" />
       </mapping>
     </element>
+    <element id="ServiceRequest.performer">
+      <path value="ServiceRequest.performer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-5322" />
+        <comment value="Performer" />
+      </mapping>
+    </element>
     <element id="ServiceRequest.supportingInfo">
       <path value="ServiceRequest.supportingInfo" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1307" />
-        <comment value="EpisodeOfCare" />
-        <comment value="Relation with the ELZ data set." />
+        <map value="hg-dataelement-1215" />
+        <comment value="Episodeofcare" />
       </mapping>
     </element>
   </differential>
