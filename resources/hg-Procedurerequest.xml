@@ -67,7 +67,7 @@
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1215" />
-        <comment value="Episodeofcare" />
+        <comment value="RelationEpisodeofcare" />
       </mapping>
     </element>
   </differential>
