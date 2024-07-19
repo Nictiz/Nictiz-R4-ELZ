@@ -30,6 +30,21 @@
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-EpisodeOfCare" />
   <derivation value="constraint" />
   <differential>
+    <element id="EpisodeOfCare.meta">
+      <path value="EpisodeOfCare.meta" />
+    </element>
+    <element id="EpisodeOfCare.meta.tag">
+      <path value="EpisodeOfCare.meta.tag" />
+    </element>
+    <element id="EpisodeOfCare.meta.tag.userSelected">
+      <path value="EpisodeOfCare.meta.tag.userSelected" />
+      <definition value="Indicates the episode that the general practitioner wants to 'monitor'. These can be either open or closed episodes." />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1829" />
+        <comment value="AttentionFlag" />
+      </mapping>
+    </element>
     <element id="EpisodeOfCare.identifier">
       <path value="EpisodeOfCare.identifier" />
       <short value="IdentificationNumber" />
