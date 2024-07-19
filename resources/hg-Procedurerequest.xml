@@ -42,8 +42,8 @@
       <path value="ServiceRequest.encounter" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1215" />
-        <comment value="Encounter" />
+        <map value="hg-dataelement-1212" />
+        <comment value="RelationEncounter" />
       </mapping>
     </element>
     <element id="ServiceRequest.requester">
