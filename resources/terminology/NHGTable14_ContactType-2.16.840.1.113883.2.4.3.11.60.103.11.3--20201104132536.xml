@@ -1,0 +1,43 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+   <id value="2.16.840.1.113883.2.4.3.11.60.103.11.3--20201104132536"/>
+   <meta>
+      <source value="http://decor.nictiz.nl/fhir/4.0/hg-"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
+      <tag>
+         <system value="http://hl7.org/fhir/FHIR-version"/>
+         <code value="4.0.1"/>
+      </tag>
+   </meta>
+   <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+      <valuePeriod>
+         <start value="2020-11-04T13:25:36Z"/>
+      </valuePeriod>
+   </extension>
+   <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.103.11.3--20201104132536"/>
+   <identifier>
+      <use value="official"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.103.11.3"/>
+   </identifier>
+   <version value="2020-11-04T13:25:36"/>
+   <name value="NHGTable14_ContactType"/>
+   <title value="NHG-Tabel 14 - ContactType"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <publisher value="Nictiz"/>
+   <contact>
+      <name value="Nictiz"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://www.nictiz.nl"/>
+      </telecom>
+   </contact>
+   <description value="NHG-Tabel 14 - ContactType"/>
+   <immutable value="false"/>
+   <compose>
+      <include>
+         <system value="https://referentiemodel.nhg.org/tabellen/nhg-tabel-14-contactwijze"/>
+      </include>
+   </compose>
+</ValueSet>
