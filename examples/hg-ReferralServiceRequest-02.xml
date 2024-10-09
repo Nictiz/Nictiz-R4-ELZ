@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="hg-ReferralServiceRequest-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-ReferralServiceRequest"/>
+    </meta>
+    <status value="completed"/>
+    <intent value="order"/>
+    <category>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.30.69"/>
+            <code value="1"/>
+            <display value="Verwijsbrief"/>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/hg-ReferralServiceRequest-02-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Marc van XXX_Quigley"/>
+    </subject>
+    <authoredOn value="2022-12-01"/>
+    <requester>
+        <reference value="PractitionerRole/hg-ReferralServiceRequest-02-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. P. van Schijndel"/>
+    </requester>
+    <performer>
+        <reference value="PractitionerRole/hg-ReferralServiceRequest-02-PractitionerRole-02"/>
+        <type value="PractitionerRole"/>
+        <display value="K. Hees MSc"/>
+    </performer>
+    <supportingInfo>
+        <reference value="Composition/hg-ReferralComposition-02"/>
+        <type value="Composition"/>
+        <display value="Referral note"/>
+    </supportingInfo>
+</ServiceRequest>
