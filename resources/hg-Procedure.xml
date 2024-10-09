@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="hg-Procedure" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-Procedure" />
+  <name value="HgProcedure" />
+  <title value="hg Procedure" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Procedure as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the zib Procedure as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
+  <purpose value="A derived profile from [nl-core-Procedure-event](http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-event) to provide a version better suited for use in ELZ use cases." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hg-dataset-020-beta1-20230612" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+    <comment value="Relation with the ELZ data set." />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Procedure-event" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.identifier">
+      <path value="Procedure.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1201" />
+        <comment value="Identificationnumber" />
+      </mapping>
+    </element>
+    <element id="Procedure.recorder">
+      <path value="Procedure.recorder" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-5322" />
+        <comment value="ProcedureResponsible" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
