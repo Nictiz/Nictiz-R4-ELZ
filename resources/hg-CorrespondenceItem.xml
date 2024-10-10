@@ -53,7 +53,7 @@
       <path value="Communication.category" />
       <binding>
         <strength value="required" />
-        <description value="valyeCodes for general categories of communications such as alerts, instructions, etc." />
+        <description value="valueCodes for general categories of communications such as alerts, instructions, etc." />
         <valueSet value="https://decor.nictiz.nl/ad/#/hg-/terminology/valueset/2.16.840.1.113883.2.4.3.11.60.103.11.24" />
       </binding>
       <mapping>
