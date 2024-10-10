@@ -86,6 +86,22 @@
         <comment value="CorrespondenceSender" />
       </mapping>
     </element>
+    <element id="Communication.reasonReference">
+      <path value="Communication.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-Document" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-374" />
+        <comment value="Document" />
+      </mapping>
+    </element>
     <element id="Communication.note.author[x]">
       <path value="Communication.note.author[x]" />
       <mapping>
