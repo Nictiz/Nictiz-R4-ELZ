@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="hg-CorrespondenceItem" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-CorrespondenceItem" />
+  <name value="HgCorrespondenceItem" />
+  <title value="hg CorrespondenceItem" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An CorrespondenceItem as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the HL7 FHIR Communcation core 4.0.1 resource as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
+  <purpose value="A derived profile from [Communication](http://hl7.org/fhir/R4/communication.html) to provide a version better suited for use in ELZ use cases." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hg-dataset-020-beta1-20230612" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+    <comment value="Relation with the ELZ data set." />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Communication" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Communication" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Communication.identifier">
+      <path value="Communication.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1282" />
+        <comment value="IdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Communication.basedOn">
+      <path value="Communication.basedOn" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1288" />
+        <comment value="EpisodeOfCare" />
+      </mapping>
+    </element>
+    <element id="Communication.category">
+      <path value="Communication.category" />
+      <binding>
+        <strength value="required" />
+        <description value="valueCodes for general categories of communications such as alerts, instructions, etc." />
+        <valueSet value="https://decor.nictiz.nl/ad/#/hg-/terminology/valueset/2.16.840.1.113883.2.4.3.11.60.103.11.24" />
+      </binding>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-587" />
+        <comment value="CorrespondenceCategory" />
+      </mapping>
+    </element>
+    <element id="Communication.encounter">
+      <path value="Communication.encounter" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1285" />
+        <comment value="RelationContact" />
+      </mapping>
+    </element>
+    <element id="Communication.recipient">
+      <path value="Communication.recipient" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-536" />
+        <comment value="CorrespondenceAddressee" />
+      </mapping>
+    </element>
+    <element id="Communication.sender">
+      <path value="Communication.sender" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-382" />
+        <comment value="CorrespondenceSender" />
+      </mapping>
+    </element>
+    <element id="Communication.reasonReference">
+      <path value="Communication.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/hg-Document" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-374" />
+        <comment value="Document" />
+      </mapping>
+    </element>
+    <element id="Communication.note.author[x]">
+      <path value="Communication.note.author[x]" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-581" />
+        <comment value="CorrespondenceProcessor" />
+      </mapping>
+    </element>
+    <element id="Communication.note.time">
+      <path value="Communication.note.time" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-583" />
+        <comment value="CorrespondenceProcessingDate" />
+      </mapping>
+    </element>
+    <element id="Communication.note.text">
+      <path value="Communication.note.text" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-381" />
+        <comment value="CorrespondenceSummary" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
