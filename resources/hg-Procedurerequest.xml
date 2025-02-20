@@ -32,6 +32,9 @@
   <differential>
     <element id="ServiceRequest.identifier">
       <path value="ServiceRequest.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1227" />
@@ -40,6 +43,9 @@
     </element>
     <element id="ServiceRequest.encounter">
       <path value="ServiceRequest.encounter" />
+      <short value="RelationEncounter" />
+      <definition value="The relation between this procedure and the encounter." />
+      <alias value="RelatieContact" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1212" />
@@ -48,6 +54,8 @@
     </element>
     <element id="ServiceRequest.requester">
       <path value="ServiceRequest.requester" />
+      <short value="Requester" />
+      <definition value="The healthprofessional who requested the procedure." />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5322" />
@@ -56,6 +64,8 @@
     </element>
     <element id="ServiceRequest.performer">
       <path value="ServiceRequest.performer" />
+      <short value="Performer" />
+      <definition value="The healthprofessional who peform the procedure." />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5322" />
@@ -64,6 +74,8 @@
     </element>
     <element id="ServiceRequest.supportingInfo">
       <path value="ServiceRequest.supportingInfo" />
+      <short value="RelationEpisodeofcare" />
+      <definition value="The relation between this procedure and the episodeofcare." />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1215" />
