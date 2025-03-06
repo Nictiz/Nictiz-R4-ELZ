@@ -38,18 +38,19 @@
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-1201" />
-        <comment value="Identificationnumber" />
+        <comment value="IdentificationNumber" />
       </mapping>
     </element>
     <element id="Procedure.recorder">
       <path value="Procedure.recorder" />
       <type>
         <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
       </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
