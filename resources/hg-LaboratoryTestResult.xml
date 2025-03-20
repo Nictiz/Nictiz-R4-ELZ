@@ -28,4 +28,17 @@
   <type value="Observation" />
   <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-LaboratoryTestResult" />
   <derivation value="constraint" />
+  <differential>
+    <element id="Observation.identifier">
+      <path value="Observation.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1201" />
+        <comment value="IdentificationNumber" />
+      </mapping>
+    </element>
+  </differential>
 </StructureDefinition>
