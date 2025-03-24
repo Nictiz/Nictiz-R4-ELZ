@@ -36,7 +36,62 @@
       <alias value="Identificatienummer" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1201" />
+        <map value="hg-dataelement-1217" />
+        <comment value="IdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Observation.basedOn">
+      <path value="Observation.basedOn" />
+      <short value="RelationEpisodeOfCare" />
+      <definition value="The current resource (LaboratoryTestResult) is a part of the EpisodeOfCare." />
+      <comment value="This must point to some sort of a 'Request' resource, such as CarePlan, CommunicationRequest, ServiceRequest, MedicationRequest, etc." />
+      <alias value="RelatieZorgepisode" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-EpisodeOfCare" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1302" />
+        <comment value="RelationEpisodeOfCare" />
+      </mapping>
+    </element>
+    <element id="Observation.basedOn.identifier">
+      <path value="Observation.basedOn.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1303" />
+        <comment value="IdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter" />
+      <short value="RelationContact" />
+      <definition value="The current resource (LaboratoryTestResult) is a part of the Encounter." />
+      <alias value="RelatieContact" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Encounter" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1300" />
+        <comment value="RelationContact" />
+      </mapping>
+    </element>
+    <element id="Observation.encounter.identifier">
+      <path value="Observation.encounter.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="IdentificatieNummer" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-1301" />
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
@@ -48,7 +103,33 @@
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
         <map value="hg-dataelement-5362" />
-        <comment value="Zorgaanbieder" />
+        <comment value="HealthcareProvider" />
+      </mapping>
+    </element>
+    <element id="Observation.performer:testResponsible">
+      <path value="Observation.performer" />
+      <sliceName value="testResponsible" />
+      <short value="testResponsible" />
+      <definition value="The person responsible for the result of the laboratory test." />
+      <alias value="LaboratoriumUitslagVerantwoordelijke" />
+      <alias value="Zorgverlener" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-5406" />
+        <comment value="testResponsible" />
+      </mapping>
+    </element>
+    <element id="Observation.performer:requestor">
+      <path value="Observation.performer" />
+      <sliceName value="requestor" />
+      <short value="requestor" />
+      <definition value="Person requesting the laboratory test." />
+      <alias value="Aanvrager" />
+      <alias value="Zorgverlener" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-5407" />
+        <comment value="Zorgverlener" />
       </mapping>
     </element>
   </differential>
