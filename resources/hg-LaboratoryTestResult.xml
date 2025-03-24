@@ -40,5 +40,16 @@
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
+    <element id="Observation.performer:performer">
+      <path value="Observation.performer" />
+      <sliceName value="performer" />
+      <short value="HealthcareProvider" />
+      <alias value="Zorgaanbieder" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-5362" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+    </element>
   </differential>
 </StructureDefinition>
