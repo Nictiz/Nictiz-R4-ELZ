@@ -37,7 +37,7 @@
       <alias value="Identificatienummer" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1217" />
+        <map value="hg-dataelement-1201" />
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
@@ -54,7 +54,7 @@
       </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1302" />
+        <map value="hg-dataelement-1213" />
         <comment value="RelationEpisodeOfCare" />
       </mapping>
     </element>
@@ -65,7 +65,7 @@
       <alias value="Identificatienummer" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1303" />
+        <map value="hg-dataelement-1215" />
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
@@ -81,7 +81,7 @@
       </type>
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1300" />
+        <map value="hg-dataelement-1210" />
         <comment value="RelationContact" />
       </mapping>
     </element>
@@ -92,7 +92,7 @@
       <alias value="IdentificatieNummer" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-1301" />
+        <map value="hg-dataelement-1212" />
         <comment value="IdentificationNumber" />
       </mapping>
     </element>
@@ -116,7 +116,7 @@
       <alias value="Zorgverlener" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-5406" />
+        <map value="hg-dataelement-5322" />
         <comment value="testResponsible" />
       </mapping>
     </element>
@@ -129,8 +129,8 @@
       <alias value="Zorgverlener" />
       <mapping>
         <identity value="hg-dataset-020-beta1-20230612" />
-        <map value="hg-dataelement-5407" />
-        <comment value="Zorgverlener" />
+        <map value="hg-dataelement-5322" />
+        <comment value="Requestor" />
       </mapping>
     </element>
   </differential>
