@@ -2,3 +2,4 @@ resources/fhirpkg.lock.json
 *.project
 docker-compose.yml
 resources/.simplifier/folder.settings.json
+Nictiz-R4-ELZ.xpr
