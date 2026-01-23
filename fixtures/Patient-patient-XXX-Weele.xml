@@ -1,32 +1,32 @@
-<Practitioner xmlns="http://hl7.org/fhir">
-   <id value="prac-000001111"/>
+<Patient xmlns="http://hl7.org/fhir">
+   <id value="patient-XXX-Weele"/>
    <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
    </meta>
    <identifier>
-      <value value="000001111"/>
+      <system value="http://fhir.nl/fhir/NamingSystem/bsn"/>
+      <value value="999910255"/>
    </identifier>
    <name>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+         <valueCode value="NL1"/>
+      </extension>
       <use value="official"/>
-      <text value="Peter (Peter) van Pulver"/>
-      <family value="van Pulver">
-         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
-            <valueString value="van"/>
-         </extension>
+      <text value="Hendrik (Hendrik) XXX_Weele"/>
+      <family value="XXX_Weele">
          <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
-            <valueString value="Pulver"/>
+            <valueString value="XXX_Weele"/>
          </extension>
       </family>
-      <given value="Peter">
+      <given value="Hendrik">
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
             <valueCode value="BR"/>
          </extension>
       </given>
-      <prefix value="dr."/>
    </name>
    <name>
       <use value="usual"/>
-      <given value="Peter"/>
+      <given value="Hendrik"/>
    </name>
    <telecom>
       <system value="phone">
@@ -40,42 +40,48 @@
             </valueCodeableConcept>
          </extension>
       </system>
-      <value value="+31434073576"/>
-      <use value="work"/>
+      <value value="06-22223333"/>
+      <use value="home"/>
    </telecom>
    <telecom>
       <system value="email"/>
-      <value value="xxx_petervanpulder@valkendael.com"/>
-      <use value="work"/>
+      <value value="Hendrik.XXX_Weele@test.test.nl"/>
+      <use value="home"/>
    </telecom>
+   <gender value="male">
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+         <valueCodeableConcept>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
+               <code value="M"/>
+               <display value="Man"/>
+            </coding>
+         </valueCodeableConcept>
+      </extension>
+   </gender>
+   <birthDate value="1954-07-25"/>
    <address>
       <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
          <valueCodeableConcept>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
-               <code value="WP"/>
-               <display value="Werkadres"/>
+               <code value="PHYS"/>
+               <display value="Woon-/verblijfadres"/>
             </coding>
          </valueCodeableConcept>
       </extension>
-      <use value="work"/>
-      <line value="Valkendael by 45 A I">
+      <use value="home"/>
+      <type value="physical"/>
+      <line value="Knolweg 1000">
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
-            <valueString value="Valkendael"/>
+            <valueString value="Knolweg"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
-            <valueString value="45"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
-            <valueString value="A I"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
-            <valueString value="by"/>
+            <valueString value="1000"/>
          </extension>
       </line>
-      <city value="Maastricht"/>
-      <district value="Maastricht"/>
-      <postalCode value="6245 HK"/>
+      <city value="Enschede"/>
+      <postalCode value="9999XA"/>
       <country value="Nederland">
          <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
             <valueCodeableConcept>
@@ -89,15 +95,4 @@
          </extension>
       </country>
    </address>
-   <gender value="male">
-      <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
-         <valueCodeableConcept>
-            <coding>
-               <system value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
-               <code value="M"/>
-               <display value="Man"/>
-            </coding>
-         </valueCodeableConcept>
-      </extension>
-   </gender>
-</Practitioner>
+</Patient>
