@@ -1,26 +1,25 @@
 {
   "name": "nictiz.fhir.nl.r4.elz",
   "version": "0.2.0-beta.1",
-  "homepage": "https://informatiestandaarden.nictiz.nl/wiki/hg:V1_FHIR_ELZ",
-  "title": "FHIR implementation of ELZ",
   "description": "NL package of FHIR R4 conformance resources for ELZ.",
+  "author": "Nictiz",
   "dependencies": {
-    "nictiz.fhir.nl.r4.nl-core": "0.9.0-beta.1",
-    "hl7.fhir.r4.core": "4.0.x"
+    "hl7.fhir.uv.extensions.r4": "5.1.0",
+    "nictiz.fhir.nl.r4.nl-core": "0.11.0-beta.1"
   },
-  "fhirVersions": [
-    "4.0.1"
-  ],
   "keywords": [
     "nl",
     "Nictiz"
   ],
-  "author": "Nictiz",
+  "license": "CC0-1.0",
+  "homepage": "https://informatiestandaarden.nictiz.nl/wiki/hg:V1_FHIR_ELZ",
+  "title": "FHIR implementation of ELZ",
+  "fhirVersions": [
+    "4.0.1"
+  ],
   "maintainers": [
     {
-      "name": "Nictiz",
-      "url": "https://www.nictiz.nl"
+      "name": "Nictiz"
     }
-  ],
-  "license": "CC0-1.0"
+  ]
 }

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="hg-ContactPerson" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/hg-ContactPerson" />
+  <name value="HgContactPerson" />
+  <title value="hg ContactPerson" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A ContactPerson (ContactPersoon) as used within the medical record (Dossiergegevens) section in the ELZ data set. It is based on the zib ContactPerson as much as possible, but adds some elements that are necessary for data exchange in the primary care domain." />
+  <purpose value="A derived profile from [nl-core-ContactPerson](http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson) to provide a version better suited for use in ELZ use cases." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hg-dataset-020-beta1-20230612" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+    <comment value="Relation with the ELZ data set." />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/nl-core-ContactPerson" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="RelatedPerson">
+      <path value="RelatedPerson" />
+      <alias value="hg-ContactPerson" />
+    </element>
+    <element id="RelatedPerson.extension:comment">
+      <path value="RelatedPerson.extension" />
+      <sliceName value="comment" />
+      <short value="Comment" />
+      <definition value="Additional information about the contact. For example, information such as 'the father is also a medical doctor' can be included here. In addition, if the contact works at an organization, the organization can be mentioned here. If the organization is listed as a contact and no actual contact is known, this can also be stated here. In this case, the name information can be left blank." />
+      <alias value="Toelichting" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/note" />
+      </type>
+      <isModifier value="false" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-5289" />
+        <comment value="Comment" />
+      </mapping>
+    </element>
+    <element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship" />
+      <short value="Defines the contact’s familial relationship to the patient." />
+      <definition value="The relationship defines the contact’s familial relationship to the patient." />
+      <binding>
+        <strength value="preferred" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype">
+          <extension url="http://hl7.org/fhir/StructureDefinition/11179-permitted-value-conceptmap">
+            <valueCanonical value="http://nictiz.nl/fhir/ConceptMap/conceptmap-RolSnomedCodelijst-to-RolCodelijst" />
+          </extension>
+        </valueSet>
+      </binding>
+      <mapping>
+        <identity value="zib-ContactPerson-v3.4-2020EN" />
+        <map value="NL-CM:3.1.3" />
+        <comment value="Relationship" />
+      </mapping>
+    </element>
+    <element id="RelatedPerson.relationship:roleSnomed">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="roleSnomed" />
+      <definition value="In primary care use cases often SNOMED is used to convey information on the role of a contact person. In order to be zib compliant the ConceptMap &lt;http://nictiz.nl/fhir/ConceptMap-RolSnomedCodelijst-to-RolCodelijst&gt; can be used to relate these two ValueSets. The SNOMED code can be conveyed via the dedicated slice." />
+      <binding>
+        <strength value="extensible" />
+        <description value="Use ConceptMap RolSnomedCodelijst_to_RolCodelijst to translate terminology from RolSnomedCodelijst to RolCodelijst." />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20200901000000" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship:relationshipSnomed">
+      <path value="RelatedPerson.relationship" />
+      <sliceName value="relationshipSnomed" />
+      <definition value="In primary care use cases often SNOMED is used to convey information on the role of a contact person. In order to be zib compliant the ConceptMap &lt;http://nictiz.nl/fhir/ConceptMap-RelatieSnomedCodelijst-to-RelatieCodelijst&gt; can be used to relate these two ValueSets. The SNOMED code can be conveyed via the dedicated slice." />
+      <binding>
+        <strength value="extensible" />
+        <description value="Use ConceptMap RelatieSnomedCodelijst_to_RelatieCodelijst to translate terminology from RelatieSnomedCodelijst to RelatieCodelijst." />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20200901000000" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.period.end">
+      <path value="RelatedPerson.period.end" />
+      <mapping>
+        <identity value="hg-dataset-020-beta1-20230612" />
+        <map value="hg-dataelement-5290" />
+        <comment value="EndDate" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

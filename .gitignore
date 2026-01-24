@@ -1,2 +1,4 @@
 resources/fhirpkg.lock.json
 *.project
+resources/.simplifier/folder.settings.json
+docker-compose.yml
