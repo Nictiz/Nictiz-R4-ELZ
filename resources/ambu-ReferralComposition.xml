@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ambu-ReferralComposition" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
+    <valueString value="Foundation.Documents" />
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
+    <valueCode value="not-classified" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralComposition" />
+  <version value="0.1.0-beta.1" />
+  <name value="AmbuReferralComposition" />
+  <title value="ambu ReferralComposition" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Composition resource as used within the ambulance referral use case in ELZ." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hg-dataset-2026" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Composition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Composition">
+      <path value="Composition" />
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-1709" />
+        <comment value="Kern" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-1725" />
+        <comment value="Dossiergegevens" />
+      </mapping>
+    </element>
+    <element id="Composition.type">
+      <path value="Composition.type" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="57133-1" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.subject">
+      <path value="Composition.subject" />
+      <short value="Patient" />
+      <definition value="Geeft de gegevens van de patiënt en de eventuele gegevens over de contactpersonen van de patiënt." />
+      <alias value="Patient" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-1676" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <short value="Sender" />
+      <definition value="Geeft de volledige identificatie- en contactgegevens van de verzender van het bericht.&#xD;&#xA; &#xD;&#xA;In de HASP-richtlijn van de NHG is aangegeven dat de beheerder meestal de verzender is van het bericht." />
+      <alias value="Verzender" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5089" />
+        <comment value="Verzender" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5398" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5391" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+    </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <example>
+        <label value="Example for referral" />
+        <valueString value="Referral note" />
+      </example>
+    </element>
+    <element id="Composition.section">
+      <path value="Composition.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:treatmentGiven">
+      <path value="Composition.section" />
+      <sliceName value="treatmentGiven" />
+      <short value="Treatment given" />
+      <definition value="Geeft de ingestelde behandeling in het verwijsbericht, de update en het DT-bericht.&#xD;&#xA;&#xD;&#xA;In de richtlijn HASP Paramedicus wordt dit veld in de verwijzing, de update door de paramedicus en het DT-bericht 'Beleid, ingestelde behandeling' genoemd.&#xD;&#xA;&#xD;&#xA;In de richtlijn HASP Medisch Specialist wordt dit veld in het ontslagbericht 'Beleid' genoemd.&#xD;&#xA;&#xD;&#xA;In de richtlijn NHG - Acute Zorg wordt dit veld gemapt op het veld 'Beleid'&#xD;&#xA;&#xD;&#xA;Zie voor het verwijsbericht en de update de HASP-medische specialist richtlijn en HASP-paramedische richtlijn van het NHG.&#xD;&#xA;Zie voor het DT-bericht de HASP-paramedische richtlijn van het NHG." />
+      <alias value="IngesteldeBehandeling" />
+    </element>
+    <element id="Composition.section:treatmentGiven.extension">
+      <path value="Composition.section.extension" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:treatmentGiven.extension:treatmentGivenTextValue">
+      <path value="Composition.section.extension" />
+      <sliceName value="treatmentGivenTextValue" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:treatmentGiven.extension:treatmentGivenTextValue.value[x]">
+      <path value="Composition.section.extension.value[x]" />
+      <short value="Treatment given" />
+      <definition value="Geeft de ingestelde behandeling in het verwijsbericht, de update en het DT-bericht.&#xD;&#xA;&#xD;&#xA;In de richtlijn HASP Paramedicus wordt dit veld in de verwijzing, de update door de paramedicus en het DT-bericht 'Beleid, ingestelde behandeling' genoemd.&#xD;&#xA;&#xD;&#xA;In de richtlijn HASP Medisch Specialist wordt dit veld in het ontslagbericht 'Beleid' genoemd.&#xD;&#xA;&#xD;&#xA;In de richtlijn NHG - Acute Zorg wordt dit veld gemapt op het veld 'Beleid'&#xD;&#xA;&#xD;&#xA;Zie voor het verwijsbericht en de update de HASP-medische specialist richtlijn en HASP-paramedische richtlijn van het NHG.&#xD;&#xA;Zie voor het DT-bericht de HASP-paramedische richtlijn van het NHG." />
+      <alias value="IngesteldeBehandeling" />
+      <min value="1" />
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-1711" />
+        <comment value="IngesteldeBehandeling" />
+      </mapping>
+    </element>
+    <element id="Composition.section:treatmentGiven.title">
+      <path value="Composition.section.title" />
+      <example>
+        <label value="Example for referral" />
+        <valueString value="Kern" />
+      </example>
+    </element>
+    <element id="Composition.section:treatmentGiven.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="182991002" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:DiagnosisConclusion">
+      <path value="Composition.section" />
+      <sliceName value="DiagnosisConclusion" />
+      <definition value="Geeft de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de HASP-paramedicus richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'DT' van de paramedicus komt de diagnose of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'eindrapportage van de paramedicus komt de conclusie.&#xD;&#xA;&#xD;&#xA; &#xD;&#xA;In de HASP-medische specialist richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'ontslag' van de medische specialist komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de HASP-GGZ richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'na intake' van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'kennisgeving overdracht behandeling' van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'einde behandeling / voortgang' ontslagbericht van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de richtlijn NHG - Acute Zorg wordt dit veld gemapt op de opsommingen van de titels van de toestandsbeelden in de Ambulance." />
+    </element>
+    <element id="Composition.section:DiagnosisConclusion.extension">
+      <path value="Composition.section.extension" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:DiagnosisConclusion.extension:diagnosisConclusionTextValue">
+      <path value="Composition.section.extension" />
+      <sliceName value="diagnosisConclusionTextValue" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:DiagnosisConclusion.extension:diagnosisConclusionTextValue.value[x]">
+      <path value="Composition.section.extension.value[x]" />
+      <short value="Diagnosis / Conclusions" />
+      <definition value="Geeft de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de HASP-paramedicus richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'DT' van de paramedicus komt de diagnose of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'eindrapportage van de paramedicus komt de conclusie.&#xD;&#xA;&#xD;&#xA; &#xD;&#xA;In de HASP-medische specialist richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'ontslag' van de medische specialist komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de HASP-GGZ richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'na intake' van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'kennisgeving overdracht behandeling' van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'einde behandeling / voortgang' ontslagbericht van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de richtlijn NHG - Acute Zorg wordt dit veld gemapt op de opsommingen van de titels van de toestandsbeelden in de Ambulance." />
+      <alias value="Diagnose / Conclusie" />
+      <min value="1" />
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-1749" />
+        <comment value="Diagnose / Conclusie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:DiagnosisConclusion.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="60022001" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+  </differential>
+</StructureDefinition>

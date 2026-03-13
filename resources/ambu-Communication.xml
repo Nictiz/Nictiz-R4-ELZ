@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ambu-Communication" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ambu-Communication" />
+  <version value="0.1.0-beta.1" />
+  <name value="AmbuCommunication" />
+  <title value="ambu Communication" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="A Communication resource as used within the ambulance referral use case in ELZ." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hg-dataset-2026" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
+    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Communication" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Communication" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Communication">
+      <path value="Communication" />
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5457" />
+        <comment value="CommunicatieItem" />
+      </mapping>
+    </element>
+    <element id="Communication.identifier">
+      <path value="Communication.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5458" />
+        <comment value="Identificatienummer" />
+      </mapping>
+    </element>
+    <element id="Communication.recipient">
+      <path value="Communication.recipient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5468" />
+        <comment value="CommunicatieGeadresseerde" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5469" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5470" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5471" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+    <element id="Communication.sender">
+      <path value="Communication.sender" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5464" />
+        <comment value="CommunicatieAfzender" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5466" />
+        <comment value="Zorgverlener" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5465" />
+        <comment value="Zorgaanbieder" />
+      </mapping>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5467" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+    <element id="Communication.reasonReference">
+      <path value="Communication.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/ambu-DocumentReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+      </type>
+      <mapping>
+        <identity value="hg-dataset-2026" />
+        <map value="hg-dataelement-5472" />
+        <comment value="Document" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
