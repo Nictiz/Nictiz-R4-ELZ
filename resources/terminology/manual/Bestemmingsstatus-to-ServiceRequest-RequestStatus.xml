@@ -1,0 +1,48 @@
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="Bestemmingsstatus-to-ServiceRequest-RequestStatus" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="true" />
+  </extension>
+  <url value="http://nictiz.nl/fhir/ConceptMap/Bestemmingsstatus-to-ServiceRequest-RequestStatus" />
+  <name value="Bestemmingsstatus_to_ServiceRequest_RequestStatus" />
+  <title value="Bestemmingsstatus to ServiceRequest-RequestStatus" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Maps Bestemmingsstatus codes as found in the Dutch EmergencyCare (v3-ActStatus) to `ServiceRequest.status` codes as found in FHIR R4." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <sourceCanonical value="https://decor.nictiz.nl/ad/#/hg-/terminology/valueset/2.16.840.1.113883.2.4.3.11.60.55.11.116/2025-08-27T00:00:00" />
+  <targetCanonical value="http://hl7.org/fhir/ValueSet/request-status" />
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/v3-ActStatus" />
+    <target value="http://hl7.org/fhir/ValueSet/request-status" />
+    <element>
+      <code value="active" />
+      <target>
+        <code value="active" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="cancelled" />
+      <target>
+        <code value="revoked" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+    <element>
+      <code value="completed" />
+      <target>
+        <code value="completed" />
+        <equivalence value="equal" />
+      </target>
+    </element>
+  </group>
+</ConceptMap>

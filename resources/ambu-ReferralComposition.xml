@@ -8,7 +8,7 @@
     <valueCode value="not-classified" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralComposition" />
-  <version value="0.1.0-beta.1" />
+  <version value="V1.0.0 Alpha.2" />
   <name value="AmbuReferralComposition" />
   <title value="ambu ReferralComposition" />
   <status value="draft" />
@@ -25,9 +25,9 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="hg-dataset-2026" />
+    <identity value="hg-dataset-20260317" />
     <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
-    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+    <name value="ART-DECOR dataset AMBU-HAP V1.0.0 Alpha.2 20260318" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -69,7 +69,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1676" />
         <comment value="Patient" />
       </mapping>
@@ -90,17 +90,17 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5089" />
         <comment value="Verzender" />
       </mapping>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5398" />
         <comment value="Zorgverlener" />
       </mapping>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5391" />
         <comment value="Zorgaanbieder" />
       </mapping>
@@ -126,7 +126,7 @@
       <path value="Composition.section" />
       <sliceName value="treatmentGiven" />
       <short value="Treatment given" />
-      <definition value="Geeft de ingestelde behandeling in het verwijsbericht, de update en het DT-bericht.&#xD;&#xA;&#xD;&#xA;In de richtlijn HASP Paramedicus wordt dit veld in de verwijzing, de update door de paramedicus en het DT-bericht 'Beleid, ingestelde behandeling' genoemd.&#xD;&#xA;&#xD;&#xA;In de richtlijn HASP Medisch Specialist wordt dit veld in het ontslagbericht 'Beleid' genoemd.&#xD;&#xA;&#xD;&#xA;In de richtlijn NHG - Acute Zorg wordt dit veld gemapt op het veld 'Beleid'&#xD;&#xA;&#xD;&#xA;Zie voor het verwijsbericht en de update de HASP-medische specialist richtlijn en HASP-paramedische richtlijn van het NHG.&#xD;&#xA;Zie voor het DT-bericht de HASP-paramedische richtlijn van het NHG." />
+      <definition value="In de uitwisseling Ambulance - HAP vanuit de richtlijn NHG - Acute Zorg wordt dit veld gemapt op het veld 'Beleid'." />
       <alias value="IngesteldeBehandeling" />
     </element>
     <element id="Composition.section:treatmentGiven.extension">
@@ -151,7 +151,7 @@
       <alias value="IngesteldeBehandeling" />
       <min value="1" />
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1711" />
         <comment value="IngesteldeBehandeling" />
       </mapping>
@@ -176,7 +176,7 @@
     <element id="Composition.section:DiagnosisConclusion">
       <path value="Composition.section" />
       <sliceName value="DiagnosisConclusion" />
-      <definition value="Geeft de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de HASP-paramedicus richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'DT' van de paramedicus komt de diagnose of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'eindrapportage van de paramedicus komt de conclusie.&#xD;&#xA;&#xD;&#xA; &#xD;&#xA;In de HASP-medische specialist richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'ontslag' van de medische specialist komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de HASP-GGZ richtlijn (NHG) is aangegeven:&#xD;&#xA;&#xD;&#xA;In het bericht 'na intake' van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'kennisgeving overdracht behandeling' van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In het bericht 'einde behandeling / voortgang' ontslagbericht van de GGZ komt de diagnose en/of conclusie.&#xD;&#xA;&#xD;&#xA;In de richtlijn NHG - Acute Zorg wordt dit veld gemapt op de opsommingen van de titels van de toestandsbeelden in de Ambulance." />
+      <definition value="In de uitwisseling Ambulance - HAP vanuit de richtlijn NHG - Acute Zorg wordt dit veld gemapt op de opsommingen van de titels van de toestandsbeelden in de Ambulance." />
     </element>
     <element id="Composition.section:DiagnosisConclusion.extension">
       <path value="Composition.section.extension" />
@@ -200,7 +200,7 @@
       <alias value="Diagnose / Conclusie" />
       <min value="1" />
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1749" />
         <comment value="Diagnose / Conclusie" />
       </mapping>

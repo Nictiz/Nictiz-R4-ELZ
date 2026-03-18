@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ambu-ReferralTask" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralTask" />
-  <version value="0.1.0-beta.1" />
+  <version value="V1.0.0 Alpha.2" />
   <name value="AmbuReferralTask" />
   <title value="ambu ReferralTask" />
   <status value="draft" />
@@ -18,6 +18,11 @@
   <description value="A Task resource as used within the ambulance referral use case in ELZ." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="hd-dataelement-20260317" />
+    <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20260317T103425/index.html" />
+    <name value="ART-DECOR dataset AMBU-HAP V1.0.0 Alpha.2 20260317" />
+  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Task" />

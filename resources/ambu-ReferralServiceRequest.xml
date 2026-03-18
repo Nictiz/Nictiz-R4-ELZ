@@ -8,7 +8,7 @@
     <valueCode value="patient" />
   </extension>
   <url value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralServiceRequest" />
-  <version value="0.1.0-beta.1" />
+  <version value="V1.0.0 Alpha.2" />
   <name value="AmbuReferralServiceRequest" />
   <title value="ambu ReferralServiceRequest" />
   <status value="draft" />
@@ -25,9 +25,9 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="hg-dataset-2026" />
+    <identity value="hg-dataset-20260317" />
     <uri value="https://decor.nictiz.nl/pub/eerstelijnszorg/hg-html-20230612T223800/ds-2.16.840.1.113883.2.4.3.11.60.103.1.1-2020-10-19T175239.html" />
-    <name value="ART-DECOR dataset ELZ 0.2.0-beta.1 20230612" />
+    <name value="ART-DECOR dataset AMBU-HAP V1.0.0 Alpha.2 20260317" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -45,7 +45,12 @@
     </element>
     <element id="ServiceRequest.status">
       <path value="ServiceRequest.status" />
-      <definition value="In current referral use cases the referral is considered done when sent by the referral initiator." />
+      <definition value="In current referral use cases the referral is considered done when sent by the referral initiator.&#xD;&#xA;&#xD;&#xA;Geeft de status van de ambulance naar deze bestemming. De waarden zijn:&#xD;&#xA;&#xD;&#xA;Active = patiënt is onderweg naar de bestemming. &#xD;&#xA;Revoked = patiënt gaat niet meer naar de bestemming. Dit is het laatste bericht van de ambulance naar de bestemming.&#xD;&#xA;Completed =  patiënt is overgedragen aan de bestemming. Dit is het laatste bericht van de ambulance naar de bestemming." />
+      <mapping>
+        <identity value="hg-dataset-20260317" />
+        <map value="hg-dataelement-5556" />
+        <comment value="Bestemmingsstatus" />
+      </mapping>
     </element>
     <element id="ServiceRequest.intent">
       <path value="ServiceRequest.intent" />
@@ -78,7 +83,7 @@
         </coding>
       </patternCodeableConcept>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1685" />
         <comment value="TypeBericht" />
       </mapping>
@@ -89,7 +94,7 @@
       <definition value="Geeft de inhoud van de urgentie.&#xD;&#xA; &#xD;&#xA;In de verdere uitwerking van de NHG HASP-richtlijn is met het NHG bepaald dat dit een gecodeerde waardelijst kan zijn in plaats van tekst. Er is gekozen om de FHIR ValueSet RequestPriority te gebruiken." />
       <alias value="Urgentie" />
       <mapping>
-        <identity value="hg-dataset-020-beta1-20230612" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1702" />
         <comment value="Urgentie" />
       </mapping>
@@ -105,7 +110,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1676" />
         <comment value="Patient" />
       </mapping>
@@ -117,7 +122,7 @@
       <alias value="DatumTijdVerzenden" />
       <min value="1" />
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1684" />
         <comment value="DatumTijdVerzenden" />
       </mapping>
@@ -138,17 +143,17 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5089" />
         <comment value="Verzender" />
       </mapping>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5398" />
         <comment value="Zorgverlener" />
       </mapping>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5391" />
         <comment value="Zorgaanbieder" />
       </mapping>
@@ -170,31 +175,32 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1680" />
         <comment value="Ontvanger" />
       </mapping>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5399" />
         <comment value="Zorgverlener" />
       </mapping>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5400" />
         <comment value="Zorgaanbieder" />
       </mapping>
     </element>
     <element id="ServiceRequest.reasonCode">
       <path value="ServiceRequest.reasonCode" />
+      <definition value="In de uitwisseling Ambulance - HAP vanuit de richtlijn NHG - Acute Zorg wordt dit veld gemapt op de 'Reden van melding'." />
       <min value="1" />
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1872" />
         <comment value="RedenBericht" />
       </mapping>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1710" />
         <comment value="Context" />
       </mapping>
@@ -220,7 +226,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralComposition" />
       </type>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-1709" />
         <comment value="Kern" />
       </mapping>
@@ -235,14 +241,14 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/ambu-Communication" />
       </type>
       <mapping>
-        <identity value="hg-dataset-2026" />
+        <identity value="hg-dataset-20260317" />
         <map value="hg-dataelement-5457" />
         <comment value="CommunicatieItem" />
       </mapping>
     </element>
     <element id="ServiceRequest.patientInstruction">
       <path value="ServiceRequest.patientInstruction" />
-      <definition value="Instructions in terms that are understood by the patient or consumer.&#xD;&#xA;&#xD;&#xA;In de uitwisseling Ambulance - HAP wordt dit veld vanuit de richtlijn NHG - Acute Zorg gemapt op het veld 'Afspraken met patiënt'." />
+      <definition value="In de uitwisseling Ambulance - HAP vanuit de richtlijn NHG - Acute Zorg wordt dit veld gemapt op het veld 'Afspraken met patiënt'." />
       <alias value="AfgesprokenMetPatient" />
       <mapping>
         <identity value="hg-dataset-2026" />
