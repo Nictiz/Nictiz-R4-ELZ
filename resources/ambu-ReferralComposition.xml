@@ -177,6 +177,7 @@
       <path value="Composition.section" />
       <sliceName value="DiagnosisConclusion" />
       <definition value="In de uitwisseling Ambulance - HAP vanuit de richtlijn NHG - Acute Zorg wordt dit veld gemapt op de opsommingen van de titels van de toestandsbeelden in de Ambulance." />
+      <alias value="Diagnose / Conclusie" />
     </element>
     <element id="Composition.section:DiagnosisConclusion.extension">
       <path value="Composition.section.extension" />

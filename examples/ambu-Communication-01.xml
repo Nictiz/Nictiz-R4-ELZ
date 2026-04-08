@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Communication xmlns="http://hl7.org/fhir">
+    <id value="ambu-Communication-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ambu-Communication"/>
+    </meta>
+</Communication>

@@ -1,0 +1,36 @@
+<Task xmlns="http://hl7.org/fhir">
+    <id value="ambu-ReferralTask-01" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralTask" />
+    </meta>
+    <status value="requested" />
+    <intent value="order" />
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="3457005" />
+            <display value="verwijzen van patiënt" />
+        </coding>
+    </code>
+    <focus>
+        <reference value="ServiceRequest/ambu-ReferralServiceRequest-01" />
+        <type value="ServiceRequest" />  
+        <display value="Verwijzing" />       
+    </focus>
+    <for>
+        <reference value="Patient/ambu-ReferralServiceRequest-01-Patient-01" />
+        <type value="Patient" />  
+        <display value="Marijne van XXX_Prins" />
+    </for>
+    <authoredOn value="2026-04-01"/>
+    <requester>
+        <reference value="PractitionerRole/ambu-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole" />  
+        <display value="dr. B.A. van Galen" />
+    </requester>
+    <owner>
+        <reference value="Organization/ambu-ReferralServiceRequest-01-Organization-01" />
+        <type value="Organization" />
+        <display value="Gezondheidscentrum Aesculaap" />
+    </owner>
+</Task>

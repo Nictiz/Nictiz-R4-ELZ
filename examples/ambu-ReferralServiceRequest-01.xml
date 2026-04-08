@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceRequest xmlns="http://hl7.org/fhir">
+    <id value="ambu-ReferralServiceRequest-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralServiceRequest"/>
+    </meta>
+    <status value="revoked"/>
+    <intent value="order"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="3457005"/>
+            <display value="Patient referral"/>
+        </coding>
+    </category>
+    <priority>
+        <coding>
+            <system value="http://hl7.org/fhir/ValueSet/request-priority"/>
+            <code value="routine"/>
+            <display value="Routine"/>
+        </coding>
+    </priority>
+    <subject>
+        <reference value="Patient/ambu-ReferralServiceRequest-01-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Marijne van XXX_Prins"/>
+    </subject>
+    <authoredOn value="2062-04-01"/>
+    <requester>
+        <reference value="PractitionerRole/ambu-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. B.A. van Galen"/>
+    </requester>
+    <performer>
+        <reference value="PractitionerRole/ambu-ReferralServiceRequest-01-PractitionerRole-02"/>
+        <type value="PractitionerRole"/>
+        <display value="P. Snaar MSc"/>
+    </performer>
+    <reasoncode>
+        <system value="http://terminology.hl7.org/ValueSet/v3-NullFlavor"/>
+        <code value="OTH"/>
+        <text value="enkeldistorsie, verdenking breuk"/>
+    </reasoncode>
+    <supportingInfo>
+        <reference value="Composition/ambu-ReferralComposition-01"/>
+        <type value="Referral note"/>
+        <display value=""/>
+    </supportingInfo>
+    <supportingInfo>
+        <reference value="Communication/ambu-Communication-01"/>
+        <type value="Communication"/>
+        <display value="CommunicationItem"/>
+    </supportingInfo>
+    <patientinstruction>
+        <string value="Bij opnieuw klachten direct contact opnemen."/>
+    </patientinstruction>
+</ServiceRequest>

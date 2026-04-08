@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composition xmlns="http://hl7.org/fhir">
+    <id value="ambu-ReferralComposition-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ambu-ReferralComposition"/>
+    </meta>
+    <status value="final"/>
+    <type>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="57133-1"/>
+            <display value="Referral note"/>
+        </coding>
+    </type>
+    <subject>
+        <reference value="Patient/ambu-ReferralServiceRequest-01-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Marijne van XXX_Prins"/>
+    </subject>
+    <date value="2026-04-01"/>
+    <author>
+        <reference value="PractitionerRole/ambu-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. B.A. van Galen"/>
+    </author>
+    <title value="Referral note"/>
+    <section>
+        <section>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+                <valueString value="paracetamol indien nodig"/>
+            </extension>
+            <title value="Ingestelde behandeling"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="182991002"/>
+                    <display value="behandeling gegeven"/>
+                </coding>
+            </code>
+        </section>
+        <section>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-TextValue">
+                <valueString value="Hemiplegische migraine"/>
+            </extension>
+            <title value="Diagnose / Conclusie"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="60022001"/>
+                    <display value="mogelijke diagnose"/>
+                </coding>
+            </code>
+        </section>
+    </section>
+</Composition>
