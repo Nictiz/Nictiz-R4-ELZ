@@ -7,11 +7,11 @@
     <type>
         <coding>
             <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
-            <code value="0404"/>
-            <display value="Fysiotherapeuten, manuele therapie"/>
+            <code value="0100"/>
+            <display value="Huisartsen, niet nader gespecificeerd"/>
         </coding>
     </type>
-    <name value="Fysiotherapie de Krakert"/>
+    <name value="Huisarts de Krakert"/>
     <telecom>
         <system value="phone">
             <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
