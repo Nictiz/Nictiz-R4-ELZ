@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Communication xmlns="http://hl7.org/fhir">
-    <id value="ambu-Communication-01"/>
+    <id value="communication-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ambu-Communication"/>
     </meta>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.103.2.3.5458"/>
+        <value value="PDF1"/>
+    </identifier>
+    <status value="in-progress"/>
+    <subject>
+        <reference value="Patient/ambu-ReferralServiceRequest-01-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Marijne van XXX_Prins"/>
+    </subject>
+    <recipient>
+        <reference value="Organization/ambu-ReferralServiceRequest-01-Organization-02"/>
+        <type value="Organization"/>
+        <display value="Huisarts de Krakert"/>
+    </recipient>
+    <recipient>
+        <reference value="PractitionerRole/ambu-ReferralServiceRequest-01-PractitionerRole-02"/>
+        <type value="PractitionerRole"/>
+        <display value="P. Snaar MSc"/>
+    </recipient>
+    <sender>
+        <reference value="PractitionerRole/ambu-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. B.A. van Galen"/>
+    </sender>
+    <reasonReference>
+        <reference value="DocumentReference/documentreference-01"/>
+        <type value="DocumentReference"/>
+        <display value="Document"/>
+    </reasonReference>
 </Communication>

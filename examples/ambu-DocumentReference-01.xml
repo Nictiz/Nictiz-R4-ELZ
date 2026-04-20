@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentReference xmlns="http://hl7.org/fhir">
+    <id value="documentreference-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ambu-DocumentReference"/>
+    </meta>
+    <masterIdentifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.103.2.3.5473"/>
+        <value value="*"/>
+    </masterIdentifier>
+    <identifier>
+        <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.103.2.3.5474"/>
+        <value value="**"/>
+    </identifier>
+    <status value="current"/>
+    <type>
+        <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.55.5.16"/>
+            <code value="006"/>
+            <display value="intern rapport/overdracht"/>
+        </coding>
+    </type>
+    <subject>
+        <reference value="Patient/ambu-ReferralServiceRequest-01-Patient-01"/>
+        <type value="Patient"/>
+        <display value="Marijne van XXX_Prins"/>
+    </subject>
+    <author>
+        <reference value="PractitionerRole/ambu-ReferralServiceRequest-01-PractitionerRole-01"/>
+        <type value="PractitionerRole"/>
+        <display value="dr. B.A. van Galen"/>
+    </author>
+    <content>
+        <attachment>
+            <contentType value="pdf"/>
+            <data value="blob"/>
+            <title value="pdf verwijzing"/>
+            <creation value="2062-04-01"/>
+        </attachment>
+    </content>
+</DocumentReference>
