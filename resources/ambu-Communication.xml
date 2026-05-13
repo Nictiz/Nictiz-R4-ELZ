@@ -47,6 +47,29 @@
         <comment value="Identificatienummer" />
       </mapping>
     </element>
+    <element id="Communication.category">
+      <path value="Communication.category" />
+      <example>
+        <label value="Example for referral letter (&quot;Verwijsbrief&quot;)" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.30.69" />
+            <code value="1" />
+            <display value="Verwijsbrief" />
+          </coding>
+        </valueCodeableConcept>
+      </example>
+      <binding>
+        <strength value="extensible" />
+        <description value="Catergory of the Communication using NHG-Tabel 69 Soort correspondentie" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.4.30.69" />
+      </binding>
+      <mapping>
+        <identity value="hg-dataset-20260317" />
+        <map value="hg-dataelement-5463" />
+        <comment value="CommunicatieCategorie" />
+      </mapping>
+    </element>
     <element id="Communication.recipient">
       <path value="Communication.recipient" />
       <type>
